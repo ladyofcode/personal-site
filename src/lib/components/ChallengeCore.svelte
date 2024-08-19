@@ -4,12 +4,12 @@
     import { onMount } from "svelte";
     import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-    gsap.registerPlugin(ScrollTrigger);
-
-
+	
+	
 	let boxes = [];
-
+	
     onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		// Apply ScrollTrigger animations for each div
 		boxes.forEach((div) => {
 			gsap.from(div, {
