@@ -1,0 +1,608 @@
+[
+    {
+        "full_text": "Apparently I'm gonna learn Rust fml 🙃",
+        "created_at": "Thu Dec 29 10:34:51 +0000 2022",
+        "id": "1608411215843180547",
+        "media": false
+    },
+    {
+        "full_text": "@YoLyristis and @Alomoadev are joining me in learning Rust. Anyone else is welcome to join us https://t.co/jncU7g3saw!\n\nI covered Chapter 1/20 in the The Rust Programming Language book today.\n\nAnd so it begins...\n\n1/100 Days of Grid @gridapphq https://t.co/XJyNwCi9wJ",
+        "created_at": "Sun Jan 01 22:16:56 +0000 2023",
+        "id": "1609675065544609798",
+        "media": "https://t.co/XJyNwCi9wJ"
+    },
+    {
+        "full_text": "Met with friends from Atlantis today; only managed half of Chapter 2.\n\nBut hey, feels good to be coding already. Somehow Rust syntax and paradigm choices make sense?? Weird 😆\n\nI don't have that level of appreciation of JavaScript 🤣\n\n2/100 Days of Grid @gridapphq",
+        "created_at": "Mon Jan 02 23:59:22 +0000 2023",
+        "id": "1610063231954948096",
+        "media": false
+    },
+    {
+        "full_text": "Started Ch 3 of the Rust book. Soooo wasn't feeling it today though💀\n\nIt feels like I'm in a suspended mode until after my environment changes and I can actually focus. So I'll just do what I can until next week.\n\n3/100 Days of Grid @gridapphq",
+        "created_at": "Wed Jan 04 00:40:32 +0000 2023",
+        "id": "1610435977423556611",
+        "media": false
+    },
+    {
+        "full_text": "Continued with ch 3 and saw more of mutable variables.\n\nDoes Rust have an equivalent of JavaScript's let vs const debate?\n\n4/100 Days of Grid @gridapphq",
+        "created_at": "Thu Jan 05 02:09:52 +0000 2023",
+        "id": "1610820849434591237",
+        "media": false
+    },
+    {
+        "full_text": "Continued with Ch 3. Don't think I quite realised until now just how much proper language design can help clarify the intention of the programmer.\n\nOnly tiny progress today. Spent most of it helping Mom with travel paperwork. 🤷🏽‍♀️\n\n5/100 Days of Grid @gridapphq",
+        "created_at": "Fri Jan 06 00:31:08 +0000 2023",
+        "id": "1611158390268649472",
+        "media": false
+    },
+    {
+        "full_text": "Ridiculously sick today. Caught whatever my grandparents got. \n\nRead a bit about Rust data types. That's about all I could manage. \n\nnn 😊\n\n6/100 Days of Grid @gridapphq",
+        "created_at": "Fri Jan 06 19:52:05 +0000 2023",
+        "id": "1611450552512139267",
+        "media": false
+    },
+    {
+        "full_text": "Spent most of the day sick and asleep so read a bit more on scalar data types. Curious how debugging will feel, tbh.\n\nAbsolute minimum kind of day.\n\n7/100 Days of Grid @gridapphq",
+        "created_at": "Sun Jan 08 01:50:14 +0000 2023",
+        "id": "1611903071826890752",
+        "media": false
+    },
+    {
+        "full_text": "I love the idea of compiler panic and hope it doesn't also make me panic xD\n\nGonna take me forever to get through Ch 3 at this rate. But w/e,  can't schedule sickness away with a meeting 💀\n\n8/100 Days of Grid @gridapphq",
+        "created_at": "Sun Jan 08 20:12:13 +0000 2023",
+        "id": "1612180392152555520",
+        "media": false
+    },
+    {
+        "full_text": "Finally moved onto functions.\n\nTired of being tired all the time but w/e.\n\n9/100 Days of Grid @gridapphq",
+        "created_at": "Mon Jan 09 21:26:44 +0000 2023",
+        "id": "1612561536052269056",
+        "media": false
+    },
+    {
+        "full_text": "Is there a difference in how *you* use 'parameter' and 'argument'?\n\n10/100 Days of Grid @gridapphq",
+        "created_at": "Wed Jan 11 00:31:32 +0000 2023",
+        "id": "1612970428632563713",
+        "media": false
+    },
+    {
+        "full_text": "Comments: no comment.\n\nYay for tiny dent.\n\nokbye.\n\n11/100 Days of Grid @gridapphq",
+        "created_at": "Thu Jan 12 01:52:41 +0000 2023",
+        "id": "1613353239864397824",
+        "media": false
+    },
+    {
+        "full_text": "Started speedrunning through a couple of JS courses I've done as a review (idk why but just in case??) before I get around to my TypeScript course (as a refresher) in February.\n\n12/100 Days of Grid @gridapphq",
+        "created_at": "Fri Jan 13 02:11:57 +0000 2023",
+        "id": "1613720477494804482",
+        "media": false
+    },
+    {
+        "full_text": "Scoping, hoisting, the usual - unexpectedly, I know enough to notice 'that doesn't sound quite right' and look for accurate meaningful explanations elsewhere.\n\nAnd I know when I've found it.\n\nFuuuck, I love code.\n\n13/100 Days of Grid @gridapphq",
+        "created_at": "Sat Jan 14 00:41:29 +0000 2023",
+        "id": "1614060096144936961",
+        "media": false
+    },
+    {
+        "full_text": "Spent time refreshing what I know about execution contexts :D\n\nLong day.\n\n14/100 Days of Grid @gridapphq",
+        "created_at": "Sun Jan 15 01:34:37 +0000 2023",
+        "id": "1614435856667840512",
+        "media": false
+    },
+    {
+        "full_text": "Today was the execution stack and scope chain. Long day again, so little ground covered.\n\nI might make some flash/note cards and post them - more for my own benefit, but I like pretty notes. :3\n\n15/100 Days of Grid @gridapphq",
+        "created_at": "Mon Jan 16 01:35:45 +0000 2023",
+        "id": "1614798527116480514",
+        "media": false
+    },
+    {
+        "full_text": "Down *this* rabbithole :3\n\nOne of my favourites in JavaScript 😆\n\n16/100 Days of Grid @gridapphq",
+        "created_at": "Tue Jan 17 02:54:52 +0000 2023",
+        "id": "1615180827473633280",
+        "media": false
+    },
+    {
+        "full_text": "Back to Rust with control flow. Hopefully I'll be able to get some extra focus time in tomorrow.\n\n17/100 Days of Grid @gridapphq\n\n- technically yesterday's and reposted with correct number oops xD",
+        "created_at": "Thu Jan 19 01:31:08 +0000 2023",
+        "id": "1615884531348668418",
+        "media": false
+    },
+    {
+        "full_text": "'Unlike languages such as Ruby and JavaScript, Rust will not automatically try to convert non-Boolean types to a Boolean\n\nYou must be explicit...'\n\nIs it weird I see this as a no-bs approach? 😆 \n\n18/100 Days of Grid @gridapphq",
+        "created_at": "Thu Jan 19 01:35:05 +0000 2023",
+        "id": "1615885523381256193",
+        "media": false
+    },
+    {
+        "full_text": "Returned to the little tutorial program I was writing in Rust. Left it for so long I had a lot of re-reading to do &gt;_&gt;\n\n19/100 Days of Grid @gridapphq",
+        "created_at": "Fri Jan 20 00:54:24 +0000 2023",
+        "id": "1616237673743523840",
+        "media": false
+    },
+    {
+        "full_text": "The guessing game in Rust worked! With error handling :D\n\nFully aware this is turning into 100 Days of Rust and TypeScript but it's okayyyyyyyyyyyyyyyy~\n\n20/100 Days of Grid @gridapphq https://t.co/77zXMQUdBr",
+        "created_at": "Fri Jan 20 20:18:09 +0000 2023",
+        "id": "1616530543243313152",
+        "media": "https://t.co/77zXMQUdBr"
+    },
+    {
+        "full_text": "Freakin' sick again so read more about control flow. That's iiiit.\n\n21/100 Days of Grid @gridapphq",
+        "created_at": "Sun Jan 22 02:46:33 +0000 2023",
+        "id": "1616990673386995712",
+        "media": false
+    },
+    {
+        "full_text": "Decided to go through the chapters and write actual notes with pen and paper 'cause things weren't sticking. That helped considerably. Did half of Ch 3.\n\nActually remember deets about integer overflow now xD\n\n22/100 Days of Grid @gridapphq",
+        "created_at": "Sun Jan 22 23:29:14 +0000 2023",
+        "id": "1617303403251605510",
+        "media": false
+    },
+    {
+        "full_text": "Notes are caught up until loops. Will finish that tomorrow and start on Ownership 🥳\n\nHope all this Rust is worth it. Wonder how many frameworks and CMSs there are 💀\n\n23/100 Days of Grid @gridapphq",
+        "created_at": "Mon Jan 23 21:12:21 +0000 2023",
+        "id": "1617631346545000448",
+        "media": false
+    },
+    {
+        "full_text": "Covered the rest of control flow and started on Ownership on stream.\n\nStack and heap: we meet again, old friends.\n\n24/100 Days of Grid @gridapphq",
+        "created_at": "Tue Jan 24 13:13:05 +0000 2023",
+        "id": "1617873121410953216",
+        "media": false
+    },
+    {
+        "full_text": "Started on using Strings to demonstrate memory and allocation concepts.\n\n25/100 Days of Grid @gridapphq",
+        "created_at": "Wed Jan 25 23:13:32 +0000 2023",
+        "id": "1618386616002957312",
+        "media": false
+    },
+    {
+        "full_text": "Back to JS for a quiz on reference and syntax errors. Now onto destructuring again.\n\nGonna try to focus on that over the weekend.\n\n26/100 Days of Grid @gridapphq",
+        "created_at": "Thu Jan 26 21:37:31 +0000 2023",
+        "id": "1618724841871515650",
+        "media": false
+    },
+    {
+        "full_text": "I literally don't remember destructuring the results of function invocations wth xD Do I even code?\n\n27/100 Days of Grid @gridapphq",
+        "created_at": "Sat Jan 28 23:11:36 +0000 2023",
+        "id": "1619473294654345216",
+        "media": false
+    },
+    {
+        "full_text": "Went over destructuring and shorthand again 😊\n\nSo boring now :3\n\n28/100 Days of Grid @gridapphq",
+        "created_at": "Mon Jan 30 01:27:50 +0000 2023",
+        "id": "1619869965619974146",
+        "media": false
+    },
+    {
+        "full_text": "Computed properties and template literals today 😊\n\nLooks like I'll probably finish my JS review tomorrow, get on with the Advanced review, and start my TypeScript refresher soon. Decided I'd like to work on the frontend while I learn Rust.\n\n29/100 Days of Grid @gridapphq",
+        "created_at": "Tue Jan 31 01:54:38 +0000 2023",
+        "id": "1620239098580709377",
+        "media": false
+    },
+    {
+        "full_text": "Arrow functions, anonymous functions, implict returns, and...\n\n✨️this✨️; more on different sorts of binding.\n\nS o o n.\n\n30/100 Days of Grid @gridapphq",
+        "created_at": "Wed Feb 01 03:21:57 +0000 2023",
+        "id": "1620623461407416320",
+        "media": false
+    },
+    {
+        "full_text": "Think I need to spend more time understanding function contexts tbh. But then I can move on.\n\n31/100 Days of Grid @gridapphq",
+        "created_at": "Thu Feb 02 02:35:46 +0000 2023",
+        "id": "1620974224449081345",
+        "media": false
+    },
+    {
+        "full_text": "Default parameters, compiling, and polyfills. ^^ Nearly doooooneeee. Looks like 2 more days if I can crank it up a notch.\n\n32/100 Days of Grid @gridapphq",
+        "created_at": "Fri Feb 03 02:14:20 +0000 2023",
+        "id": "1621331219303604225",
+        "media": false
+    },
+    {
+        "full_text": "I'll actually remember how *this* works now. Also more on callbacks, promises, and async/await. idk but going over this stuff again makes it clearer.\n\nI definitely didn't spend enough time updating my knowledge of JS while using it 💀\n\n33/100 Days of Grid @gridapphq",
+        "created_at": "Fri Feb 03 19:26:35 +0000 2023",
+        "id": "1621590995254001665",
+        "media": false
+    },
+    {
+        "full_text": "Covered functional instantiation (w/shared methods, and  Object.create() ), prototypal instantiation, pseudoclassical instantiation, Classes, Array methods, agnostic constructor functions, Modules, IIFEs, and Class Fields.\n\nJargon. Much smort.\n\n34/100 Days of Grid @gridapphq",
+        "created_at": "Sat Feb 04 17:21:44 +0000 2023",
+        "id": "1621921961101115394",
+        "media": false
+    },
+    {
+        "full_text": "Delved deeper into execution contexts, scope chaining, the call stack, hoisting, and closures.\n\nWanted to rush ahead to finish the next set of modules, but eh, it's better to just take my time to understand.\n\n35/100 Days of Grid @gridapphq",
+        "created_at": "Sun Feb 05 16:12:36 +0000 2023",
+        "id": "1622266953506209792",
+        "media": false
+    },
+    {
+        "full_text": "Notes on *this*, the event loop, call stack, task queue, job queue, and async JS.\n\n36/100 Days of Grid @gridapphq",
+        "created_at": "Mon Feb 06 13:48:23 +0000 2023",
+        "id": "1622593046201217024",
+        "media": false
+    },
+    {
+        "full_text": "Using functional programming to explain OOP is kind of hilarious to me - mostly as I'm familiar with the concepts already &gt;.&lt; \n\nAnyway: classes, inheritance, composition, and array methods with JavaScript's all done :D\n\nTypeScript refresher next!\n\n37/100 Days of Grid @gridapphq",
+        "created_at": "Tue Feb 07 18:48:54 +0000 2023",
+        "id": "1623031064351412239",
+        "media": false
+    },
+    {
+        "full_text": "Went through the TypeScript pre-reqs.\n\nFeel like I'm moving slowly but happy there's decent progress, and the JS refreshers weren't a waste.\n\n38/100 Days of Grid @gridapphq",
+        "created_at": "Wed Feb 08 21:35:35 +0000 2023",
+        "id": "1623435398805590017",
+        "media": false
+    },
+    {
+        "full_text": "The quirks of Types, and set up Typescript. Gotta love that you can't check if NaN is NaN. xD\n\nI wanna get back to the design board for Grid so baaaad(ly). \n\nBut work.\n\n39/100 Days of Grid @gridapphq",
+        "created_at": "Thu Feb 09 11:58:17 +0000 2023",
+        "id": "1623652505090461697",
+        "media": false
+    },
+    {
+        "full_text": "Short day. P. much just went over implicit and contextual type checking.\n\n40/100 Days of Grid @gridapphq",
+        "created_at": "Fri Feb 10 15:37:40 +0000 2023",
+        "id": "1624070099664601089",
+        "media": false
+    },
+    {
+        "full_text": "Assigning types; function declarations, function type expressions, callbacks, objects, restructuring parameters, optional/defaults...\n\n.... and return types ehehehehehe 😆\n\n41/100 Days of Grid @gridapphq",
+        "created_at": "Sat Feb 11 11:18:51 +0000 2023",
+        "id": "1624367356062453761",
+        "media": false
+    },
+    {
+        "full_text": "Smol effort. any and unknown types 😅\n\n42/100 Days of Grid @gridapphq",
+        "created_at": "Sun Feb 12 17:15:32 +0000 2023",
+        "id": "1624819505137389568",
+        "media": false
+    },
+    {
+        "full_text": "Interfaces. P. straightforward. :D\n\n43/100 Days of Grid @gridapphq",
+        "created_at": "Mon Feb 13 20:22:13 +0000 2023",
+        "id": "1625228872114380808",
+        "media": false
+    },
+    {
+        "full_text": "Enums and tuples~~\n\nDying to get work finished so I can just spend entire days on Grid 😩\n\n44/100 Days of Grid @gridapphq",
+        "created_at": "Tue Feb 14 17:54:02 +0000 2023",
+        "id": "1625553971937959938",
+        "media": false
+    },
+    {
+        "full_text": "void/never types, and started on type aliases\n\nIt's taking me a while to get through these but eh. With travels to London, Portsmouth, and Edinburgh coming up soon, getting through anything at all on top of work is a feat.\n\n45/100 Days of Grid @gridapphq",
+        "created_at": "Wed Feb 15 19:23:45 +0000 2023",
+        "id": "1625938937708523520",
+        "media": false
+    },
+    {
+        "full_text": "Finished off type aliases. Time to pack and spend the rest of the day working 💀\n\nWho else basically just does laundry/cleaning the whole week and then packs the day they leave? xD\n\n46/100 Days of Grid @gridapphq",
+        "created_at": "Thu Feb 16 11:45:16 +0000 2023",
+        "id": "1626185944645656578",
+        "media": false
+    },
+    {
+        "full_text": "Union types.\n\nThat's p. much it 💖 okay byeee~\n\n47/100 Days of Grid @gridapphq",
+        "created_at": "Tue Feb 21 00:46:06 +0000 2023",
+        "id": "1627831997811793922",
+        "media": false
+    },
+    {
+        "full_text": "Basics of intersection types. Long day ^^\n\n48/100 Days of Grid @gridapphq",
+        "created_at": "Tue Feb 21 00:46:36 +0000 2023",
+        "id": "1627832123263426562",
+        "media": false
+    },
+    {
+        "full_text": "Literal types~~\n\nAnd some exercises.\n\n49/100 Days of Grid @gridapphq",
+        "created_at": "Tue Feb 21 00:46:52 +0000 2023",
+        "id": "1627832188711456769",
+        "media": false
+    },
+    {
+        "full_text": "Started class definitions ^^\n\n50/100 Days of Grid @gridapphq",
+        "created_at": "Tue Feb 21 01:32:51 +0000 2023",
+        "id": "1627843764449341440",
+        "media": false
+    },
+    {
+        "full_text": "Revisited my old UI designs in Figma. Reaction: displeased. I can do better.\n\nFelt I needed to get a move on w/*building*. Started the new client repo (Svelte); will do more wireframing and sorting out project priorities shortly.\n\n51/100 Days of Grid @gridapphq",
+        "created_at": "Tue Feb 21 19:05:27 +0000 2023",
+        "id": "1628108657459068955",
+        "media": false
+    },
+    {
+        "full_text": "Revisited my project management board and made some adjustments to focus entirely on frontend/design for now. Funnily enough, I'm spending minimum effort on organisation. 😆\n\nI also did some TypeScript-in-a-project with Tic Tac Toe.\n\n52/100 Days of Grid @gridapphq https://t.co/hPBCOxFbPw",
+        "created_at": "Wed Feb 22 13:51:24 +0000 2023",
+        "id": "1628392014541725696",
+        "media": "https://t.co/hPBCOxFbPw"
+    },
+    {
+        "full_text": "Finished Class Definitions and started a competitor overview; it's been a while since I checked what was already out there and how they've grown.\n\n53/100 Days of Grid @gridapphq",
+        "created_at": "Thu Feb 23 12:10:59 +0000 2023",
+        "id": "1628729129628536844",
+        "media": false
+    },
+    {
+        "full_text": "Started wireframing the new Grid site with intentions for copy using a pen and paper.\n\nPen ran out after a minute. 💀\n\nDid the bare minimum in Figma. Long day.\n\n54/100 Days of Grid @gridapphq",
+        "created_at": "Fri Feb 24 23:13:47 +0000 2023",
+        "id": "1629258318509121538",
+        "media": false
+    },
+    {
+        "full_text": "Caught up on a few days' worth of notes and went onto class modifiers.\n\nTypeScript is p. cool of an addition to something that normally yeets the notion of type safety out the window.\n\nSide note: pen acquired. I will not be defeated.\n\n55/100 Days of Grid @gridapphq",
+        "created_at": "Sat Feb 25 21:46:07 +0000 2023",
+        "id": "1629598641575927810",
+        "media": false
+    },
+    {
+        "full_text": "Spent some time dwelling on UI decisions and learning about Vitest.\n\nTomorrow I'll probs start coding and then go back to figuring out Vitest as writing tests is a habit I'd like to develop early.\n\n56/100 Days of Grid @gridapphq",
+        "created_at": "Sun Feb 26 19:51:52 +0000 2023",
+        "id": "1629932278225809408",
+        "media": false
+    },
+    {
+        "full_text": "tf is this +page.svelte business? Strict patterns are better ig but it seems less simple at a glance 😩 Routing's sorted though.\n\nAnyway: hello from Scotland.\n\n57/100 Days of Grid @gridapphq https://t.co/Tg39UVPKcg",
+        "created_at": "Mon Feb 27 22:59:49 +0000 2023",
+        "id": "1630341963919572998",
+        "media": "https://t.co/Tg39UVPKcg"
+    },
+    {
+        "full_text": "And so it begins.\n\nGonna look nasty af for a while 🤣\n\nSorted out some global variables, briefly glanced at theming, and... well, the menu's a weird flex, but okay.\n\nSuddenly remembered mobile like 'Oh yeaaaah... that exists'. The shame. xD\n\n58/100 Days of Grid @gridapphq https://t.co/o3retBTnRY",
+        "created_at": "Tue Feb 28 09:57:31 +0000 2023",
+        "id": "1630507481142116352",
+        "media": "https://t.co/o3retBTnRY"
+    },
+    {
+        "full_text": "Still terrible. But switched out hard-coded data to loading from JSON files so I can loop through.\n\nI edit those files as I think about the response structure I'd expect from the db I'll be rebuilding.\n\nMental model development in action, eh?\n\n59/100 Days of Grid @gridapphq https://t.co/qHwbSboOhu",
+        "created_at": "Wed Mar 01 19:26:43 +0000 2023",
+        "id": "1631013111946792967",
+        "media": "https://t.co/qHwbSboOhu"
+    },
+    {
+        "full_text": "Mainly focused on *work work* today so looked at inspo.\n\nMan, I should have done the branding exercise I do with clients with myself 😆 Like, a while ago. Got some interesting visual design ideas but I'm not capable...\n\n... Yet.\n\n60/100 Days of Grid @gridapphq",
+        "created_at": "Thu Mar 02 23:15:56 +0000 2023",
+        "id": "1631433183831945218",
+        "media": false
+    },
+    {
+        "full_text": "Added the secondary menu but can't get HMR to work on WSL2 whyyyyyy 😩\n\n61/100 Days of Grid @gridapphq",
+        "created_at": "Sat Mar 04 02:32:16 +0000 2023",
+        "id": "1631844983417315328",
+        "media": false
+    },
+    {
+        "full_text": "Added the chat/content area and everything looks so damn gross xD Probs going to focus on mobile for a while now.\n\nI kinda just want functionality/layout roughed in because I know I'm going to do a proper UI update in a few months.\n\n62/100 Days of Grid @gridapphq",
+        "created_at": "Sun Mar 05 11:39:33 +0000 2023",
+        "id": "1632345097961451522",
+        "media": false
+    },
+    {
+        "full_text": "Added chat components which also look terrible. Y'know, to match.\n\nHm. No idea how to append things to the same block but I guess I'll figure that out later.\n\nFor now:\n\nFlexbox all the thingsssssss 😄\n\n63/100 Days of Grid @gridapphq",
+        "created_at": "Mon Mar 06 03:04:00 +0000 2023",
+        "id": "1632577742368808961",
+        "media": false
+    },
+    {
+        "full_text": "Worked for like 14 hours today on a work project so... Minimum kind of day. Sorry, Grid.\n\nStarted on the calendar layouts though :D\n\n64/100 Days of Grid @gridapphq",
+        "created_at": "Tue Mar 07 00:20:30 +0000 2023",
+        "id": "1632898983411449861",
+        "media": false
+    },
+    {
+        "full_text": "Started planning out the events module ^^\n\nMight actually build that before I build out the chat stuff tbh.\n\n65/100 Days of Grid @gridapphq",
+        "created_at": "Wed Mar 08 01:35:33 +0000 2023",
+        "id": "1633280261252055042",
+        "media": false
+    },
+    {
+        "full_text": "Literally just a few minutes today on the account and profile system 😭\n\nLooking forward to being able to put more chunks of time into this, though.\n\n66/100 Days of Grid @gridapphq",
+        "created_at": "Wed Mar 08 23:26:12 +0000 2023",
+        "id": "1633610094549114883",
+        "media": false
+    },
+    {
+        "full_text": "Did a round of Kapferer's Brand Prism.\n\nThere is clearly an intersection with my personal brand, so I thought hard about differences.\n\nIt's 5h by bus to London; have an early morning tomorrow, so I do what I can, when I can 🥱😆\n\n67/100 Days of Grid @gridapphq",
+        "created_at": "Thu Mar 09 21:16:21 +0000 2023",
+        "id": "1633939807838646273",
+        "media": false
+    },
+    {
+        "full_text": "Long day in Portsmouth so p. much just did some competitor research.\n\nWas  kinda funny to see one competitor writing about two others then pitching themselves underneath it all 😆\n\n68/100 Days of Grid @gridapphq",
+        "created_at": "Fri Mar 10 23:49:55 +0000 2023",
+        "id": "1634340841295687680",
+        "media": false
+    },
+    {
+        "full_text": "Did more competitor research.\n\nAt a local program pre-startup teams were often asked a question along the lines of 'If your competitors adopted your product's features, what would you do?'\n\nIt plagues me sometimes, but I think I got it 😊\n\n69 (nice)/100 Days of Grid @gridapphq",
+        "created_at": "Sun Mar 12 00:16:30 +0000 2023",
+        "id": "1634709918845485056",
+        "media": false
+    },
+    {
+        "full_text": "Brainstormed areas of monetisation for *users* that wasn't essentially an additional service 😆\n\n70/100 Days of Grid @gridapphq",
+        "created_at": "Mon Mar 13 00:47:52 +0000 2023",
+        "id": "1635080200768880640",
+        "media": false
+    },
+    {
+        "full_text": "Started on a theme switcher, 'cause we need both light and dark riiiight 😆\n\n71/100 Days of Grid @gridapphq",
+        "created_at": "Tue Mar 14 00:02:06 +0000 2023",
+        "id": "1635431069632659465",
+        "media": false
+    },
+    {
+        "full_text": "Continued with the theme switcher. Got some issues with the svelte stores loading and switching the CSS so I'll figure that one out tomorrow.\n\nSpent so long doing data entry today my brain's kinda fried 😩🫡\n\n72/100 Days of Grid @gridapphq",
+        "created_at": "Tue Mar 14 23:40:10 +0000 2023",
+        "id": "1635787939874570243",
+        "media": false
+    },
+    {
+        "full_text": "Started on the login page. Decided I'll roll with the Login screen(s?) for the first part of my 100 Days of Daily UI Challenge I did all that time ago.\n\nMay finish it tomorrow, we'll seeeee~\n\n73/100 Days of Grid @gridapphq",
+        "created_at": "Wed Mar 15 23:53:15 +0000 2023",
+        "id": "1636153616879763462",
+        "media": false
+    },
+    {
+        "full_text": "Added some logic (still mocked up) so the layout will render a login form when a user's not logged in, and the rest of the app otherwise.\n\nMoved that form to a component too; I'm unsure how I'll need to use it when it comes to redirects and stuff.\n\n74/100 Days of Grid @gridapphq",
+        "created_at": "Fri Mar 17 00:43:19 +0000 2023",
+        "id": "1636528605764239362",
+        "media": false
+    },
+    {
+        "full_text": "Got nothing on the actual UI design, but that's alright :D\n\nI'll do the finicky bits later 😊\n\n75/100 Days of Grid @gridapphq https://t.co/PGFy3g8O7I",
+        "created_at": "Fri Mar 17 20:36:10 +0000 2023",
+        "id": "1636828796916514840",
+        "media": "https://t.co/PGFy3g8O7I"
+    },
+    {
+        "full_text": "Started pulling data from json files; I think I have some TypeScript problems plus need a deeper understanding of how Svelte works.\n\nI'll get there eventually.\n\n76/100 Days of Grid @gridapphq",
+        "created_at": "Sun Mar 19 01:01:54 +0000 2023",
+        "id": "1637258056504336384",
+        "media": false
+    },
+    {
+        "full_text": "Tempted to see how long I can leave things garish.\n\nProbably not too long. 🤣\n\nI love flexbox though; I remember trying to do chat without it and it was just one big nope.\n\nN O P E .\n\n77/100 Days of Grid @gridapphq https://t.co/6QqBHkJyhB",
+        "created_at": "Sun Mar 19 20:39:07 +0000 2023",
+        "id": "1637554314938929154",
+        "media": "https://t.co/6QqBHkJyhB"
+    },
+    {
+        "full_text": "Added some mock cards for the members page.\n\nI need to get to building the backend like... Next month xD\n\ntbh, probably will. Heading back to the grandparents' for Ramadan and that will be Productive Month for me.\n\n78/100 Days of Grid @gridapphq",
+        "created_at": "Mon Mar 20 22:13:39 +0000 2023",
+        "id": "1637940493764927488",
+        "media": false
+    },
+    {
+        "full_text": "Was my last day in London for a month, so did research on the train home and started making some lists.\n\nI have my work cut out for me purely with micro-interactions 💀\n\n79/100 Days of Grid @gridapphq",
+        "created_at": "Tue Mar 21 21:22:11 +0000 2023",
+        "id": "1638289927224918016",
+        "media": false
+    },
+    {
+        "full_text": "Did a bit more styling, and now have flexbox item + margin woes. Yay~\n\nSooooo looking forward to the dwindling project backlog; projects are indeed getting ticked off :D\n\nBetter than me getting ticked off, at any rate. 😆\n\n80/100 Days of Grid @gridapphq",
+        "created_at": "Wed Mar 22 21:02:58 +0000 2023",
+        "id": "1638647480232321025",
+        "media": false
+    },
+    {
+        "full_text": "Exported custom icons I made; that's it. Fk it 😆\n\nI spent most of the day yeeting other freelance projects off my plate (2 down *today*!!) so I can free up longer chunks of time for Grid in April.\n\nSOON (TM).\n\n81/100 Days of Grid @gridapphq",
+        "created_at": "Thu Mar 23 20:59:07 +0000 2023",
+        "id": "1639008897926148096",
+        "media": false
+    },
+    {
+        "full_text": "Started the form page for the server and admin settings.\n\nGoing to need longer chunks of time p. soon to be able to get some of the UI down.\n\n82/100 Days of Grid @gridapphq",
+        "created_at": "Fri Mar 24 20:18:07 +0000 2023",
+        "id": "1639360967376003081",
+        "media": false
+    },
+    {
+        "full_text": "Tried to sort out flex woes to no avail. I'll probably get back to this on Monday because I wanna finish another personal project tomorrow.\n\nI need to do something smaller and... idk, less code-y on short-of-time days. \n\n83/100 Days of Grid @gridapphq",
+        "created_at": "Sat Mar 25 20:57:11 +0000 2023",
+        "id": "1639733188019859459",
+        "media": false
+    },
+    {
+        "full_text": "Experimented a bit with glassmorphism for one of my UI concepts.\n\n84/100 Days of Grid @gridapphq",
+        "created_at": "Sun Mar 26 18:26:59 +0000 2023",
+        "id": "1640057779099430913",
+        "media": false
+    },
+    {
+        "full_text": "More competitor research! Found one I hadn't seen before and started reading more copy across their sites.\n\nI just... Why is the UX just so shit, even when browsing the site before using the app?\n\n85/100 Days of Grid @gridapphq",
+        "created_at": "Mon Mar 27 20:41:33 +0000 2023",
+        "id": "1640454028529106948",
+        "media": false
+    },
+    {
+        "full_text": "Started redesigning the homepage.\n\nApparently I had some good ideas from when I did 100 Days of Design, heh. The content needs streamlining; somehow I need to communicate more with less 😆\n\n86/100 Days of Grid @gridapphq",
+        "created_at": "Tue Mar 28 18:24:34 +0000 2023",
+        "id": "1640781943041040410",
+        "media": false
+    },
+    {
+        "full_text": "Did a bit more on the main website.\n\nGlassmorphism incoming. I think I'm getting addicted.\n\n87/100 Days of Grid @gridapphq",
+        "created_at": "Wed Mar 29 20:26:33 +0000 2023",
+        "id": "1641175032234758149",
+        "media": false
+    },
+    {
+        "full_text": "I have a specific sort of background in mind for the site, so we'll see how it goes. Mainly did research today on CSS animations with gradients and organic shapes.\n\n88/100 Days of Grid @gridapphq",
+        "created_at": "Thu Mar 30 20:37:28 +0000 2023",
+        "id": "1641540166165643265",
+        "media": false
+    },
+    {
+        "full_text": "Set up the repo for the main website woohooooo~\n\n89/100 Days of Grid @gridapphq",
+        "created_at": "Fri Mar 31 20:10:19 +0000 2023",
+        "id": "1641895721711423490",
+        "media": false
+    },
+    {
+        "full_text": "Added a bit of markup and started scaffolding the site.\n\nI rarely start a site this small with a framework, but I do expect this one to have quite a bit of content by the end of the year.\n\n90/100 Days of Grid @gridapphq",
+        "created_at": "Sat Apr 01 19:59:17 +0000 2023",
+        "id": "1642255331110666240",
+        "media": false
+    },
+    {
+        "full_text": "Added the rest of the copy from the homepage I designed a while ago.\n\nThere will be a finished website by the end of next week, even if I don't intend on it. 😆\n\n91/100 Days of Grid @gridapphq",
+        "created_at": "Sun Apr 02 20:18:18 +0000 2023",
+        "id": "1642622504265973760",
+        "media": false
+    },
+    {
+        "full_text": "Added dark mode with cookies and prefers-color-scheme in Svelte tomy own site today, so started setting up the same thing for the main Grid site.\n\nDoing both the more enjoyable and annoying things first. :D\n\n92/100 Days of Grid @gridapphq",
+        "created_at": "Mon Apr 03 22:40:11 +0000 2023",
+        "id": "1643020599046856708",
+        "media": false
+    },
+    {
+        "full_text": "Sort out the global CSS and the general sections. \n\nNeed to actually sort out the visual brand some degree at some point. Bleh xD\n\nProbably going to sort out the background and images next.\n\n93/100 Days of Grid @gridapphq",
+        "created_at": "Tue Apr 04 20:26:06 +0000 2023",
+        "id": "1643349246245060609",
+        "media": false
+    },
+    {
+        "full_text": "Added images for the general layout. Mobile should be sorted p. soon for the home page.\n\n94/100 Days of Grid @gridapphq",
+        "created_at": "Wed Apr 05 20:31:11 +0000 2023",
+        "id": "1643712913356587012",
+        "media": false
+    },
+    {
+        "full_text": "Main site is now roughly responsive.\n\nI let go of trying to do much while I get other projects off of my plate for the time being. I don't like that chose to, but I do love having a shorter queue. \n\nOnce that's through I can focus on this.\n\n95/100 Days of Grid @gridapphq",
+        "created_at": "Thu Apr 06 20:40:13 +0000 2023",
+        "id": "1644077573045993478",
+        "media": false
+    },
+    {
+        "full_text": "I did it. I added glass panels to the website. They're going to stay there until the brand evolves better visuals.\n\n🤣\n\n96/100 Days of Grid @gridapphq",
+        "created_at": "Fri Apr 07 18:02:49 +0000 2023",
+        "id": "1644400351339003904",
+        "media": false
+    },
+    {
+        "full_text": "Started animating an aurora background; unsure if I'm going to keep it, though. Kinda need to see how the site looks in its entirety.\n\nThat's it for today though. Time to game and guitar~\n\n97/100 Days of Grid @gridapphq",
+        "created_at": "Sat Apr 08 11:56:09 +0000 2023",
+        "id": "1644670462952087552",
+        "media": false
+    },
+    {
+        "full_text": "Added markup for the tab/accordion thing I have going on. Unsure how many I want to add just yet.\n\nTabcordion? Accortabs? 😆\n\nIt's an accordion in mobile and tabbed component in desktop.\n\n98/100 Days of Grid @gridapphq",
+        "created_at": "Sun Apr 09 20:19:18 +0000 2023",
+        "id": "1645159470572380161",
+        "media": false
+    },
+    {
+        "full_text": "Added a light/dark mode switch for the main site Svelte project.\n\nNow I just have to design both adequately 💀\n\n99/100 Days of Grid @gridapphq",
+        "created_at": "Mon Apr 10 04:21:37 +0000 2023",
+        "id": "1645280849879769090",
+        "media": false
+    },
+    {
+        "full_text": "Fixed the flexbox layouts for desktop, minus the tab-accordion thing I added previously.\n\nThat's it for 100 Days! WOO.\n\nI'll see you on May 1st for 100 Days of Illustration 😉 \n\nFor now, I'll continue ticking off projects in my backlog!\n\n100/100 Days of Grid @gridapphq",
+        "created_at": "Tue Apr 11 04:34:21 +0000 2023",
+        "id": "1645646444546646018",
+        "media": false
+    }
+]

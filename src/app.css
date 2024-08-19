@@ -1,0 +1,128 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* Custom CSS */
+
+:root {
+	--clr-paper-light: #f5f3ed;
+    --clr-aged-paper: rgb(246, 238, 229);
+    --clr-dark-aged-paper: rgb(197, 190, 182);
+    --clr-charcoal-paper: #141414;
+	--clr-ink-black: #000;
+	--clr-leather-dark: #613105;
+
+	--fnt-size-normal: 1.125rem;
+
+    --space-unit: 0.5rem;
+	--space-xs: calc(var(--space-unit) * 0.5); /* 0.25rem = 4px */
+	--space-sm: var(--space-unit); /* 0.5rem = 8px */
+	--space-md: calc(var(--space-unit) * 2); /* 1rem = 16px */
+	--space-lg: calc(var(--space-unit) * 3); /* 1.5rem = 24px */
+	--space-xl: calc(var(--space-unit) * 4); /* 2rem = 32px */
+	--space-xxl: calc(var(--space-unit) * 6); /* 3rem = 48px */
+	--space-xxxl: calc(var(--space-unit) * 8); /* 4rem = 64px */
+	--space-xxxxl: calc(var(--space-unit) * 16); /* 8rem = 128px */
+
+    --height-main-menu: 72px;
+    --width-site: 1200px;
+    --width-content: 720px;
+}
+
+[data-theme='dark'] {
+    --clr-bg-main: var(--clr-charcoal-paper);
+	--clr-bg-main-dark: var(--clr-dark-charcoal-paper);
+}
+
+[data-theme='light'] {
+    --clr-bg-main: var(--clr-aged-paper);
+    --clr-bg-main-dark: var(--clr-dark-aged-paper);
+}
+
+html, body {
+	height: 100%;
+}
+
+html {
+	background: var(--clr-bg-main);
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	max-width: var(--width-site);
+	margin: 0 auto;
+	padding: 4rem 2rem;
+}
+
+
+/* 100 Days sections */
+
+.desk {
+	height: 100%;
+	background: url('/images/desk_bg.jpg') repeat;
+}
+
+.title-paper {
+	height: fit-content;
+	width: fit-content;
+	filter: drop-shadow(-6px 6px 6px rgba(0, 0, 0, 0.1))
+		drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+.title-paper > h1 {
+	clip-path: polygon(2px 11%, 95.65% 2px, 95.8% 96.75%, 0.1% 99.75%);
+		background-color: var(--clr-paper-light);
+		padding: 1rem 2rem;
+		height: 100%;
+		width: fit-content;
+		margin-bottom: 2rem;
+		font-size: 4rem;
+		font-family: 'Fredericka the Great', serif;
+}
+
+@media (min-width: 1024px) {
+	.container {
+		padding: inherit 0;
+	}
+}

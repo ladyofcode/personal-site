@@ -1,0 +1,608 @@
+[
+    {
+        "full_text": "1, 2, 3, 4\n100 days of code I swore\n\n5, 6, 7, 8\nI'll try not to post too late 💀\n\nThreejs &amp; 3D for 100 Days, comin' at ya 🔥\n\n#100DaysOfThreejs\n#100DaysOfCode",
+        "created_at": "Wed Sep 01 04:48:14 +0000 2021",
+        "id": "1432928262506696704",
+        "media": false
+    },
+    {
+        "full_text": "Pretty much learnt the very basics of how graphics work. There are some really freaking cool projects and I'm so inspired... Even though it's clearly a phenomenal amount of work 💀\n\nhttps://t.co/jhQJiNE7PV\n\n1/100\n#100DaysOfThreejs\n#100DaysOfCode https://t.co/dQlTiHts4h",
+        "created_at": "Wed Sep 01 13:41:52 +0000 2021",
+        "id": "1433062555803553796",
+        "media": "https://t.co/dQlTiHts4h"
+    },
+    {
+        "full_text": "Took me two hours to get through ~35 mins of video. It's one of those days. 😩 \n\n12-hour stream on Sat 🔥💀 (probs Svelte).\n\nPosting this uggo threejs cube for comparison purposes later.\n\n2/#100DaysOfThreeJS\n#100DaysOfCode https://t.co/smdd29RN7i",
+        "created_at": "Thu Sep 02 07:52:47 +0000 2021",
+        "id": "1433337091614670853",
+        "media": "https://t.co/smdd29RN7i"
+    },
+    {
+        "full_text": "I'm considering a monthly subscription to the 'I hate webpack' club\n\nWhat's your relationship with webpack like? 😆🥲\n\n3/#100DaysOfThreejs\n#100DaysOfCode",
+        "created_at": "Fri Sep 03 09:41:26 +0000 2021",
+        "id": "1433726823418904578",
+        "media": false
+    },
+    {
+        "full_text": "Still on 12 hour stream for another 10 hours. Come say hi :D https://t.co/IkdQVwBGIo\n\nUggo blue cube has progressed to three uggo cubes. Gonna be on basics for a while.\n\nOnto some Svelte!\n\n4/#100DaysOfThreejs\n#100DaysOfCode https://t.co/fN6PSvAJNZ",
+        "created_at": "Sat Sep 04 03:12:53 +0000 2021",
+        "id": "1433991426610655239",
+        "media": "https://t.co/fN6PSvAJNZ"
+    },
+    {
+        "full_text": "I'm an animation expert now and will be available for hire next week 💀\n\nTo be honest, I appreciated understanding why we bind animations to time calcs: to avoid them playing at different frame rates dictated by hardware. P. cool!\n\n5/#100DaysOfThreejs\n#100DaysOfCode https://t.co/iydGnjLOkz",
+        "created_at": "Sun Sep 05 14:32:25 +0000 2021",
+        "id": "1434524828325662724",
+        "media": "https://t.co/iydGnjLOkz"
+    },
+    {
+        "full_text": "I might be that student where everything I learned in school becomes relevant. Learnt about camera projections in today's lesson (and in uni), but the first time was in my Design &amp; Technology class.\n\nKrebs cycle, where you at?\n\n6/#100DaysOfThreejs\n#100DaysOfCode",
+        "created_at": "Mon Sep 06 17:04:24 +0000 2021",
+        "id": "1434925461163839490",
+        "media": false
+    },
+    {
+        "full_text": "Cameras seem to be about as complicated in terms of theory when rendering graphics as they are in actual photography (depth-dependent, of course).\n\nZ-fighting definitely sounds like an anime thing though.\n\n7/#100DaysOfThreejs\n#100DaysOfCode https://t.co/SOQgQidZPT",
+        "created_at": "Tue Sep 07 17:27:17 +0000 2021",
+        "id": "1435293610325409794",
+        "media": "https://t.co/SOQgQidZPT"
+    },
+    {
+        "full_text": "Did more on cameras but I'm not absorbing much so will probably repeat tomorrow :3\n\nI might just grind the videos 'cause textures and materials are coming up soon 🥳 Gimme shiny!!\n\n8/#100DaysOfThreejs\n#100DaysOfCode https://t.co/xs63VdOXfm",
+        "created_at": "Wed Sep 08 17:50:00 +0000 2021",
+        "id": "1435661713379000325",
+        "media": "https://t.co/xs63VdOXfm"
+    },
+    {
+        "full_text": "LOL. I was noticing so much more while not sleep-deprived I almost thought it was a different video entirely. 😆\n\nThat was another good reminder that sleep &gt; trying to do shit tired. That's two pieces of proof. Take that, brain!\n\n9/#100DaysOfThreejs\n#100DaysOfCode",
+        "created_at": "Thu Sep 09 16:06:54 +0000 2021",
+        "id": "1435998155254890505",
+        "media": false
+    },
+    {
+        "full_text": "It's basically the next day but I haven't slept so it 100% counts. XP Too lazy to post a gif but I just did a bit of camera POV experimenting. Need to get on top of my shit.\n\nnn!! &lt;3\n\n10/#100DaysOfThreejs\n#100DaysOfCode",
+        "created_at": "Fri Sep 10 21:54:00 +0000 2021",
+        "id": "1436447892844146690",
+        "media": false
+    },
+    {
+        "full_text": "Managed to finish that video that took like... five days idk. 💀 Moved on to fullscreen, damping, and mouse control :D\n\nI wanted to finish another two videos but ya know what? I'm tired. Just gonna axe it and pick it up tomorrow.\n\n11/#100DaysofThreejs\n#100DaysOfCode https://t.co/7HngoXkjcm",
+        "created_at": "Sat Sep 11 16:20:43 +0000 2021",
+        "id": "1436726407862779911",
+        "media": "https://t.co/7HngoXkjcm"
+    },
+    {
+        "full_text": "I can make custom planes and shapes by generating triangles from points in an array. Unsure if I'll be taking that anywhere in the future if I can import and use models... But we'll see. I'll leave it at this mess below for now :3\n\n12/#100DaysOfThreejs\n#100DaysofCode https://t.co/6vbI4G1A3H",
+        "created_at": "Sun Sep 12 08:13:41 +0000 2021",
+        "id": "1436966229877542912",
+        "media": "https://t.co/6vbI4G1A3H"
+    },
+    {
+        "full_text": "Added dat.gui to make tweaks to mesh properties. Rather straightforward. ^_^\n\ndat gui doe\n\n(textures tomorrow aaaahhhh!!)\n\n13/#100DaysOfThreejs\n#100DaysOfCode https://t.co/qgfuNahoLZ",
+        "created_at": "Mon Sep 13 15:50:52 +0000 2021",
+        "id": "1437443673692594176",
+        "media": "https://t.co/qgfuNahoLZ"
+    },
+    {
+        "full_text": "This door texture by João Paulo is made of a bunch of layered 'maps': base colour, diffuse, normal, displacement, roughness, ambient occlusion, opacity, and metallic.\n\nSo for people who thought it was a single image.. It takes more 😆\n\n14/#100DaysOfThreejs\n#100DaysOfCode https://t.co/cebxeO4bvW",
+        "created_at": "Tue Sep 14 17:39:41 +0000 2021",
+        "id": "1437833443472142336",
+        "media": "https://t.co/cebxeO4bvW"
+    },
+    {
+        "full_text": "Current Threejs level: Minecraft\n\nTime to clone you-know-what huh? :3\n\n15/#100DaysOfThreejs\n#100DaysOfCode https://t.co/CLAGuKRV7Q",
+        "created_at": "Wed Sep 15 14:23:15 +0000 2021",
+        "id": "1438146397350481927",
+        "media": "https://t.co/CLAGuKRV7Q"
+    },
+    {
+        "full_text": "Mightily unimpressive, I know, but prepping for tomorrow. Have to cut it here as I spent pretty much the entire evening dwelling on Twitter Space graphics &gt;_&gt;\n\n16/#100DaysOfThreejs\n#100DaysOfCode https://t.co/P4HsZZ5WhV",
+        "created_at": "Thu Sep 16 17:13:30 +0000 2021",
+        "id": "1438551631302328322",
+        "media": "https://t.co/P4HsZZ5WhV"
+    },
+    {
+        "full_text": "Materials all done. 12 Hour UI Stream on (oceanic) Sat for a game in Unreal Engine! Link below.\n\nAlso learnt about normal, height, and ambient occlusion textures to control the 'realness' of objects. Cool stuff!\n\n17/#100DaysOfThreejs\n#100DaysOfCode https://t.co/2fcZhxsWD7",
+        "created_at": "Fri Sep 17 15:37:59 +0000 2021",
+        "id": "1438889980814716937",
+        "media": "https://t.co/2fcZhxsWD7"
+    },
+    {
+        "full_text": "Did this on stream without actually running it. Only two tiny bugs! xD There's no light in this scene.\n\nThanks all for tuning today btw &lt;3 Celebrating 900 in two weeks with another 12H stream ;)\n\nI need donuts.\n\n18/#100DaysOfThreejs\n#100DaysOfCode https://t.co/MY2RA3vSoA",
+        "created_at": "Sat Sep 18 16:53:24 +0000 2021",
+        "id": "1439271350082834434",
+        "media": "https://t.co/MY2RA3vSoA"
+    },
+    {
+        "full_text": "Added lights and light helpers. Apparently there's a cap at light 50 lights or something, so a lot of the time baking light into textures is a thing. Lots of Maya/Blender incoming 💀🔥\n\n19/#100DaysOfThreejs\n#100DaysOfCode https://t.co/NcxLU8oFXd",
+        "created_at": "Sun Sep 19 18:10:02 +0000 2021",
+        "id": "1439653019927285761",
+        "media": "https://t.co/NcxLU8oFXd"
+    },
+    {
+        "full_text": "Haunted House! Shiny door, random bushes, gravestones, little ghosties, choppy gif recording, all check :3\n\n20/100 Days of Threejs\n#100DaysOfCode https://t.co/p36OmSRez5",
+        "created_at": "Mon Sep 20 15:10:00 +0000 2021",
+        "id": "1439970104532291589",
+        "media": "https://t.co/p36OmSRez5"
+    },
+    {
+        "full_text": "YoU dOn'T nEeD mAtHs To PrOgRaM\n\nIf I wanna make stuff like this I damn well do. 💀 Threejs is still web dev and it is an exception to the no-maths ish.\n\nGuess who's got to start way back at Year 9 trig.\n\n💀💀💀\n\n21/100 Days of Threejs\n#100DaysOfCode https://t.co/Ud3Z4I6DC5",
+        "created_at": "Tue Sep 21 14:41:31 +0000 2021",
+        "id": "1440325320758861832",
+        "media": "https://t.co/Ud3Z4I6DC5"
+    },
+    {
+        "full_text": "I know this looks boring af. Buuut this is raycasting. It's used for things involving line of sight, projectiles, etc.\n\nOver here the camera view is the ray origin :3 The mouse is the destination. The circles turn blue when they intersect.\n\n22/100 Days of Threejs\n#100DaysOfCode https://t.co/qx82HzfWTp",
+        "created_at": "Wed Sep 22 17:21:15 +0000 2021",
+        "id": "1440727907630911496",
+        "media": "https://t.co/qx82HzfWTp"
+    },
+    {
+        "full_text": "Had NO idea there were basically two separate ~realms~ that coexist to use physics. The engine lib is basically a theoretical mathematical world where changes happen; we update threejs meshes to those values.\n\nIt's not just animation 💀\n\n23/100 Days of Threejs\n#100DaysOfCode https://t.co/0WqvWS2L6H",
+        "created_at": "Thu Sep 23 14:18:11 +0000 2021",
+        "id": "1441044224216952832",
+        "media": "https://t.co/0WqvWS2L6H"
+    },
+    {
+        "full_text": "Modelling is a bitch.\nLighting is more of a bitch.\n\nI feel fancy talking about 'tone mapping exposure' and 'environment map intensity'... But it's not, really.\n\nThat about sums up the three lessons I did today 😆\n\n24/100 Days of Threejs\n#100DaysOfCode https://t.co/xbA6BD84gs",
+        "created_at": "Fri Sep 24 19:11:43 +0000 2021",
+        "id": "1441480484131786759",
+        "media": "https://t.co/xbA6BD84gs"
+    },
+    {
+        "full_text": "I was always apprehensive of shaders. I had the impression they're difficult af and *maths* and *pain*.  \n\nThe apprehension has disappeared but I REALLY need to relearn circle geometry, matrices, and vectors after this course 💀\n\n25/100 Days of Threejs\n#100DaysOfCode https://t.co/AlgKcVChzI",
+        "created_at": "Sat Sep 25 17:15:15 +0000 2021",
+        "id": "1441813562297446401",
+        "media": "https://t.co/AlgKcVChzI"
+    },
+    {
+        "full_text": "Ahhh yes, required semicolons for things to work. All feels right with the world 💀\n\n-- \n\n*writes one tiny GLSL shader*\n*adds GLSL to CV*\n\n💀\n\nDon't worry, I didn't! :3\n\n26/100 Days of Threejs\n#100DaysOfCode https://t.co/SJbWtdqYWv",
+        "created_at": "Sun Sep 26 17:37:30 +0000 2021",
+        "id": "1442181547898007555",
+        "media": "https://t.co/SJbWtdqYWv"
+    },
+    {
+        "full_text": "Shader patterns! I went through freakin' 50 of these.\n\nThis course is really putting me through my paces omg 😆🔥\n\n27/100 Days of Threejs\n#100DaysOfCode https://t.co/4GOycKvNen",
+        "created_at": "Mon Sep 27 17:04:20 +0000 2021",
+        "id": "1442535591023837187",
+        "media": "https://t.co/4GOycKvNen"
+    },
+    {
+        "full_text": "I am deceased after all that shader programming. 💀\n\nThis was built from a flat plane with nothing on it - essentially a blank square in space. He did well teaching.\n\n28/100 Days of Threejs\n#100DaysOfCode https://t.co/LsoLo12w2O",
+        "created_at": "Tue Sep 28 15:25:05 +0000 2021",
+        "id": "1442873003302215687",
+        "media": "https://t.co/LsoLo12w2O"
+    },
+    {
+        "full_text": "Learnt more shader animation. My braaaiiiinn. 😩\n\nI aspire to think up stuff like this one day. Maths everywhere. All the maths. 😆\n\n29/100 Days of Threejs\n#100DaysOfCode https://t.co/hXBZkA4y67",
+        "created_at": "Wed Sep 29 19:22:25 +0000 2021",
+        "id": "1443295117574430721",
+        "media": "https://t.co/hXBZkA4y67"
+    },
+    {
+        "full_text": "Went through a chunk today learning about performance optimisation, adding a loader, and combining HTML with WebGL.\n\nMost productive stream in a while ehehehehe :'D\n\nCya for a 12 hour stream on Sat with Svelte! 💀🔥\n\n30/100 Days of Threejs\n#100DaysOfCode https://t.co/hPkUrhTRNZ",
+        "created_at": "Thu Sep 30 18:35:45 +0000 2021",
+        "id": "1443645758939402253",
+        "media": "https://t.co/hPkUrhTRNZ"
+    },
+    {
+        "full_text": "Started 3D modelling. I don't wanna share progress yet so have a gif from the workshop hosted by my friends on Unreal Engine particle emitters (Niagara).\n\nI actually knew what he was talking about because of working with threejs :D :D :D\n\n31/100 Days Of Threejs\n#100DaysOfCode https://t.co/VUA9tNAQ7c",
+        "created_at": "Fri Oct 01 17:44:35 +0000 2021",
+        "id": "1443995269641609216",
+        "media": "https://t.co/VUA9tNAQ7c"
+    },
+    {
+        "full_text": "That was a *long* stream. Slightly miffed because I got to the end and can't render and export because my system keeps freezing :/ Still proud I finished that model and tried UV texture unwrapping!\n\n32/100 Days of Threejs\n#100DaysOfCode https://t.co/GAHJdINZ2L",
+        "created_at": "Sat Oct 02 22:56:33 +0000 2021",
+        "id": "1444436167739338753",
+        "media": "https://t.co/GAHJdINZ2L"
+    },
+    {
+        "full_text": "Fakegate done. Course is DONE!!\n\nThat was *intense*.\n\nAnd this is only the beginning 💀\n\n33/100 Days of Threejs\n#100DaysOfCode https://t.co/usoLhRcbSh",
+        "created_at": "Sun Oct 03 12:46:14 +0000 2021",
+        "id": "1444644964386807817",
+        "media": "https://t.co/usoLhRcbSh"
+    },
+    {
+        "full_text": "Decided to sit down with the threejs editor and get to know it better today. A bit underwhelming but it needed to be done.\n\nStill struggling with setting up rollup from scratch as an alternative to webpack &gt;_&gt; Tomorrow!\n\n34/100 Days Of Threejs\n#100DaysOfCode https://t.co/QeYZKhbl8g",
+        "created_at": "Mon Oct 04 06:21:27 +0000 2021",
+        "id": "1444910518230151169",
+        "media": "https://t.co/QeYZKhbl8g"
+    },
+    {
+        "full_text": "Because of that hard drive failure disaster, I only spared a bit of time. Started The Book of Shaders and checking out https://t.co/ySZbdzbLhG\n\nThis shader is by ohanegby (link below). Mesmerising!\n\n35/100 Days of Threejs\n#100DaysOfCode https://t.co/oCVewEBAS6",
+        "created_at": "Tue Oct 05 16:39:11 +0000 2021",
+        "id": "1445428365893136388",
+        "media": "https://t.co/oCVewEBAS6"
+    },
+    {
+        "full_text": "More from The Book of Shaders. It's a fantastic intro and I really wish the book was completed. It's been way too many years without an update :/\n\nhttps://t.co/hY5aZrOeh3\n\nIn others news, I lost all my threejs projects :D\n\n36/100 Days Of Threejs\n#100DaysOfCode",
+        "created_at": "Wed Oct 06 12:47:43 +0000 2021",
+        "id": "1445732499926093826",
+        "media": false
+    },
+    {
+        "full_text": "Spent some time going over uniforms again and picking out some Blender tutorials for tomorrow.\n\n3D model practice projects incoming! 🥰 If you have any spooky requests, let me know :D I have a few queued up.\n\n37/100 Days of Threejs\n#100DaysOfCode",
+        "created_at": "Thu Oct 07 16:50:35 +0000 2021",
+        "id": "1446156008154275853",
+        "media": false
+    },
+    {
+        "full_text": "I decided on a small threejs project. Started the 3D modelling part🤐💀\n\nHope you're having a good end to the work week! &lt;3\n\n38/100 Days Of Threejs\n#100DaysOfCode",
+        "created_at": "Fri Oct 08 11:53:45 +0000 2021",
+        "id": "1446443694802944005",
+        "media": false
+    },
+    {
+        "full_text": "Compared modelling techniques for this object from a bunch of videos 💀. Vaguely planned out the threejs scene as well so I think I'll be able to finish this project by the end of next week!\n\n39/100 Days Of Threejs\n#100DaysOfCode",
+        "created_at": "Sat Oct 09 13:50:36 +0000 2021",
+        "id": "1446835489370034179",
+        "media": false
+    },
+    {
+        "full_text": "Working on my first simple custom fragment shader. I'm just mixing colours but hoooooboi this is going to take some time getting used to 💀\n\n40/100 Days of Threejs\n#100DaysOfCode",
+        "created_at": "Sun Oct 10 15:24:57 +0000 2021",
+        "id": "1447221622478295041",
+        "media": false
+    },
+    {
+        "full_text": "Started modelling again :3 I got further but it's too obvious AHAHAHA\n\n&gt;_&gt;\n\n41/100 Days Of Threejs\n#100DaysOfCode https://t.co/hbVcpvRwEg",
+        "created_at": "Mon Oct 11 14:59:32 +0000 2021",
+        "id": "1447577612151242761",
+        "media": "https://t.co/hbVcpvRwEg"
+    },
+    {
+        "full_text": "PROGRESS: A jack o'lantern in Blender!\n\nComment below and I'll make one inspired by your profile pic!\n\nThemes (e.g. 'cute'), accessories, or yelling 'RNGesus/Random' are also welcome.\n\nThey'll go into a threejs scene too! 🤐\n\n42/100 Days Of Threejs\n#100DaysOfCode https://t.co/ZUGeUGwY4x",
+        "created_at": "Tue Oct 12 14:35:25 +0000 2021",
+        "id": "1447933933371461635",
+        "media": "https://t.co/ZUGeUGwY4x"
+    },
+    {
+        "full_text": "Started on the pumpkins y'all indulged me in by replying to yesterday's thread ;) Excited!\n\nI'm making them all from scratch. In the pic below I've already pumpkinified a sphere and that's where the fun starts.\n\n43/100 Days Of Threejs\n#100DaysOfCode https://t.co/iEVA7SqeiL https://t.co/VX8ucjYdsT",
+        "created_at": "Wed Oct 13 13:46:22 +0000 2021",
+        "id": "1448283978377543681",
+        "media": "https://t.co/VX8ucjYdsT"
+    },
+    {
+        "full_text": "Don't wanna spoil so here's Alom's uwu lantern in the making.\n\nIf all goes well on Friday, I'll finish the project during my 16 hour stream on Sat to celebrate 1000 followers on Twitch! 🥰🔥\n\n44/100 Days Of Threejs\n#100DaysOfCode https://t.co/2jVr6Xf3MQ https://t.co/gntKXhXJR8",
+        "created_at": "Thu Oct 14 13:06:21 +0000 2021",
+        "id": "1448636293777281037",
+        "media": "https://t.co/gntKXhXJR8"
+    },
+    {
+        "full_text": "Stuff cropped up today so only a tiny bit of progress.\n\nI'll probs attempt shaders at the beginning of tomorrow's 16 Hour celebration stream and then attempt to re-code the portfolio I lost during the HDD crash.\n\nSvelte ftw.\n\n45/100 Days of Threejs\n#100DaysOfCode https://t.co/j24m8QebJk",
+        "created_at": "Fri Oct 15 13:41:30 +0000 2021",
+        "id": "1449007526138183697",
+        "media": false
+    },
+    {
+        "full_text": "Added low-poly hay bales.\n\nIt occurred to me now I can literally just click the eye to hide and unhide instead of clustering them behind the hay omgggg 💀🤣 Time for sleep, methinks~\n\n46/100 Days Of Threejs\n#100DaysOfCode https://t.co/ecrBfqq1ot",
+        "created_at": "Sat Oct 16 15:18:20 +0000 2021",
+        "id": "1449394285040660486",
+        "media": "https://t.co/ecrBfqq1ot"
+    },
+    {
+        "full_text": "Managed to get more pumpkins done xD This scene looks like shit rn it's so bad 🤣 I'm fairly certain I'll finish the jack o'lantern project by the weekend though.\n\nHeadache kicked back in so gonna sleep BEFORE midnight :O Byeeee~\n\n47/100 Days of Threejs\n#100DaysOfCode https://t.co/lHERlBLXCV",
+        "created_at": "Sun Oct 17 11:17:14 +0000 2021",
+        "id": "1449695996917661703",
+        "media": "https://t.co/lHERlBLXCV"
+    },
+    {
+        "full_text": "Almost halfway, hot damn.\n\nContinued with a bit of the pumpkin modelling. Got my second jab today so focused most of my efforts on writing and planning article content.\n\n48/100 Days Of Threejs\n#100DaysOfCode",
+        "created_at": "Mon Oct 18 13:48:12 +0000 2021",
+        "id": "1450096375861891074",
+        "media": false
+    },
+    {
+        "full_text": "Went back to circle geometry. Realised I needed trig.\nWent back to trig. Realised I needed algebra.\nWent back to algebra. Realised I need to practice fractions.\n\nFML let's goooo🤣💀🔥\n\n49/100 Days Of Threejs",
+        "created_at": "Tue Oct 19 16:20:06 +0000 2021",
+        "id": "1450496991192969220",
+        "media": false
+    },
+    {
+        "full_text": "Started pre-calculus.\n\nHopefully it'll be enough, but we'll see. I might have to stick to this and modelling until I can get my new PC to get a render out of Blender.\n\n50/100 Days Of Threejs https://t.co/xr5CBTA9Z5",
+        "created_at": "Wed Oct 20 16:42:32 +0000 2021",
+        "id": "1450865025384521736",
+        "media": false
+    },
+    {
+        "full_text": "Was mopey and stressing about time so I changed my shower tunes into shower maths and it was actually fun💀\n\nCovered the rest of the precalc intro video :D Turns out I vaguely remember algebra, so all hope is not lost.\n\n51/100 Days of Threejs",
+        "created_at": "Thu Oct 21 15:22:58 +0000 2021",
+        "id": "1451207389999341578",
+        "media": false
+    },
+    {
+        "full_text": "Hi I did more precalc, specifically about algebraic functions okay bye &lt;3\n\n52/100 Days Of Threejs",
+        "created_at": "Fri Oct 22 14:54:21 +0000 2021",
+        "id": "1451562576265973766",
+        "media": false
+    },
+    {
+        "full_text": "Did a tiny bit of precalc before stream xD\n\nWas gonna do 16h but I figured I should sleep because head hurts, and stream agreed so I only feel half disappointed. Next Sat! :D \n\n53/100 Days of Threejs",
+        "created_at": "Sat Oct 23 11:08:54 +0000 2021",
+        "id": "1451868225533202438",
+        "media": false
+    },
+    {
+        "full_text": "Just algebra today.\n\nThe precalc playlist I'm using is a total of 2 days, 16 hours, 13 minutes, and 30 seconds long.\n\nWhile a part of me wants to rush it, I'll just adjust my plan to include more 3D modelling until I can handle custom shaders.\n\n54/100 Days of Threejs",
+        "created_at": "Sun Oct 24 12:15:26 +0000 2021",
+        "id": "1452247361045123075",
+        "media": false
+    },
+    {
+        "full_text": "Covered 'The principles of painting with maths' (link below).\n\nTomorrow I'll start attempting to juggle one maths video a day with some 3D/shaders and see how it goes. If my energy is shit I'll just be doing one of the two.\n\n55/100 Days of Threejs",
+        "created_at": "Mon Oct 25 11:51:08 +0000 2021",
+        "id": "1452603630310199299",
+        "media": false
+    },
+    {
+        "full_text": "Spent a lot of today moping so chose precalc instead of fun 3D stuff.\n\nDifferential quotients ftw :D I remember literally nothing about what they had to do with slopes. This is so bad.\n\nSo bad.\n\nTime to stream some Gatsby~~\n\n56/100 Days of Threejs",
+        "created_at": "Tue Oct 26 09:14:15 +0000 2021",
+        "id": "1452926537230024704",
+        "media": false
+    },
+    {
+        "full_text": "Finding a Domain, done!\n\nNo, we're not buying any. 💀 A domain for a functions.\n\nAlso: please enjoy me gently trolling the Literature Society at uni. They challenged us (Artifex) and it's feeling like a one-sided rivalry. \n💀💀💀\n\n57/100 Days of Threejs https://t.co/HHvaDggqKX",
+        "created_at": "Wed Oct 27 12:37:38 +0000 2021",
+        "id": "1453340110846529551",
+        "media": "https://t.co/HHvaDggqKX"
+    },
+    {
+        "full_text": "Can't believe I forgot about imaginary numbers and polynomials wtf.\n\nAnyway, I did that early so I'm not sitting here at night up late trying to understand maths 💀💀💀\n\n58/100 Days of Threejs",
+        "created_at": "Thu Oct 28 12:16:35 +0000 2021",
+        "id": "1453697198265307137",
+        "media": false
+    },
+    {
+        "full_text": "HA. HAHAAAA. I covered features of graphs, the vertical line test, and operations of functions in the car otw to and from dropping off a PC + dindin.\n\nI cannot be defeated 💀 I SHALL BE IN BED BEFORE MIDNIGHT ONCE MORE!\n\n59/100 Days of Threejs https://t.co/6Y1do0zPLo",
+        "created_at": "Fri Oct 29 10:52:57 +0000 2021",
+        "id": "1454038538912026632",
+        "media": "https://t.co/6Y1do0zPLo"
+    },
+    {
+        "full_text": "Got all the pumpkin models out! Going to finish them and the initial lighting + colouring hopefully tomorrow morning, and by evening I'll do the final renders.\n\nHere is Sephi humouring me. \n\n60/100 Days of Threejs https://t.co/0071S5p014",
+        "created_at": "Sat Oct 30 12:26:19 +0000 2021",
+        "id": "1454424424707289095",
+        "media": "https://t.co/0071S5p014"
+    },
+    {
+        "full_text": "Was hoping to finish the models today but fuck it :P I need sleep and it's almost midnight. At least tomorrow it'll be Halloween somewhere by the time I finish 🤣🤣\n\n61/100 Days of Threejs",
+        "created_at": "Sun Oct 31 12:57:46 +0000 2021",
+        "id": "1454794728491212804",
+        "media": false
+    },
+    {
+        "full_text": "I did increasing and decreasing functions and that was all I had energy for okay byeeee &lt;3\n\n62/100 Days of Threejs",
+        "created_at": "Mon Nov 01 14:36:57 +0000 2021",
+        "id": "1455182077825978383",
+        "media": false
+    },
+    {
+        "full_text": "Started on the 3D wagon.\n\nIt does not look like a wagon yet and I won't post a screenshot.\n\nNobody from stream out me for preferring to talk about desk setups pls &gt;_&gt;\n\n63/100 Days of Threejs",
+        "created_at": "Tue Nov 02 13:40:33 +0000 2021",
+        "id": "1455530268958339075",
+        "media": false
+    },
+    {
+        "full_text": "Extrema. That's it.\n\nngl that sounds like a p. cool word :3\n\nalso this instructor makes me feel guilty for not working out at the gym &gt;_&gt;\n\n64/100 Days of Threejs",
+        "created_at": "Wed Nov 03 13:24:39 +0000 2021",
+        "id": "1455888658553131019",
+        "media": false
+    },
+    {
+        "full_text": "Average Rate of Change of a function, done!\n\nThe comments had me ded. They were talking about the instructor's biceps :') I swear the more I work through the series the funnier it gets. 🤣\n\n65/100 Days of Threejs https://t.co/gUBSqm2JTY",
+        "created_at": "Thu Nov 04 12:52:08 +0000 2021",
+        "id": "1456242862538969095",
+        "media": "https://t.co/gUBSqm2JTY"
+    },
+    {
+        "full_text": "Piecewise functions, heck yeaaah~~~ SORTED~\n\nIf the pieces were truly wise, the function would be for cutting a cake or some other delicious edible.\n\n66/100 Days of Threejs https://t.co/bM2zHMzIKh",
+        "created_at": "Fri Nov 05 11:08:28 +0000 2021",
+        "id": "1456579159291879433",
+        "media": "https://t.co/bM2zHMzIKh"
+    },
+    {
+        "full_text": "Graph patterns. Boring tbh :P Kinda feeling the need to grind through all this sooner but it's just so... much xD\n\n67/100 Days of Threejs https://t.co/vquXJfNTN5",
+        "created_at": "Sat Nov 06 13:23:11 +0000 2021",
+        "id": "1456975450048110595",
+        "media": "https://t.co/vquXJfNTN5"
+    },
+    {
+        "full_text": "Intro to graphing transformations.\n\nHe teaches how to understand what causes the patterns. This is more powerful than simply knowing the pattern and applying it.\n\nThis attitude applies to code, too.\n\n68/100 Days of Threejs https://t.co/Ma2Amq6j3c",
+        "created_at": "Sun Nov 07 09:30:38 +0000 2021",
+        "id": "1457279316400566276",
+        "media": "https://t.co/Ma2Amq6j3c"
+    },
+    {
+        "full_text": "f ( x + h ) is a shift left\nf ( x - h ) is a shift right\n\nIt's unintuitive; it's basically as if you're working from the result backwards and not from the input (x) forward :3\n\n69 (nice) / 100 Days of Threejs",
+        "created_at": "Mon Nov 08 16:33:00 +0000 2021",
+        "id": "1457747994812375063",
+        "media": false
+    },
+    {
+        "full_text": "Finished off the transformations but d a m n.\n\nPlease behold this meme by Alom that accurately summarises the transformed 100 days of threejs journey . :3\n\n70/100 Days of Threejs https://t.co/92wLfppATr",
+        "created_at": "Tue Nov 09 19:32:28 +0000 2021",
+        "id": "1458155548252073987",
+        "media": "https://t.co/92wLfppATr"
+    },
+    {
+        "full_text": "Transformations was not finished yesterday. It is now. Quadratics soon. I remember I used to enjoy these in school!\n\n71/100 Days of Threejs https://t.co/qJfBa6Ocrr",
+        "created_at": "Wed Nov 10 15:20:54 +0000 2021",
+        "id": "1458454626164899843",
+        "media": "https://t.co/qJfBa6Ocrr"
+    },
+    {
+        "full_text": "'The problem is ... we learn techniques without understanding what we are doing.'\n\nThis is one thing that sets many professionals apart from others. Across industries. \n\nOwn it. 💀\n\nQuadratics started.\n\n72/100 Days of Threejs",
+        "created_at": "Thu Nov 11 18:15:35 +0000 2021",
+        "id": "1458860975843528706",
+        "media": false
+    },
+    {
+        "full_text": "So exhausted I spent like 10 mins on the square root method and I'm calling it a night. I WILL SLEEP BEFORE MIDNIGHT.\n\nHope you're having a good day ^_^\n\n73/100 Days of Threejs",
+        "created_at": "Fri Nov 12 12:15:02 +0000 2021",
+        "id": "1459132629479919624",
+        "media": false
+    },
+    {
+        "full_text": "I got like another 15 mins of The Square Root Method in Solving Quadratics in today. It's so hard to focus I think I will start the day with it henceforth.\n\nActual threejs coming back in soon XP\n\n74/100 Days of Threejs",
+        "created_at": "Sat Nov 13 12:12:27 +0000 2021",
+        "id": "1459494366322388996",
+        "media": false
+    },
+    {
+        "full_text": "I finished a maths video big whoop okay bye I'm going to bed at 7 AM again\n\n75?/100 Days of Threejs https://t.co/wnRhsWvR3V",
+        "created_at": "Sun Nov 14 20:01:01 +0000 2021",
+        "id": "1459974673601490946",
+        "media": "https://t.co/wnRhsWvR3V"
+    },
+    {
+        "full_text": "factoring okay bye xD\n\nCan you tell I am at my lowest energy point? lmao\n\n76/100 Days of Threejs (now mathsjs I swear)",
+        "created_at": "Mon Nov 15 15:42:19 +0000 2021",
+        "id": "1460271955823579140",
+        "media": false
+    },
+    {
+        "full_text": "I did like 5 minutes of video :') More factoring to solve quadratics lolol\n\nI'll make up for it later in the week.\n\n77/100 Days of Threejs",
+        "created_at": "Tue Nov 16 20:22:18 +0000 2021",
+        "id": "1460704805605675008",
+        "media": false
+    },
+    {
+        "full_text": "Literally just continued what I could from yesterday. My brain is partially fried. I am fine. I'm frontloading work so I don't have crunchtime in two weeks before a deadline. :3\n\n78/100 Days of Threejs/maths",
+        "created_at": "Wed Nov 17 16:17:50 +0000 2021",
+        "id": "1461005668094132227",
+        "media": false
+    },
+    {
+        "full_text": "Managed to get past half of that solving quadratics video :') Will see if I can finish it tomorrow.\n\nMight see y'all on stream too if I have the energy. Need to get some other work done and eyes on me coworking might be useful :3\n\n79/100 Days of Threejs",
+        "created_at": "Thu Nov 18 15:44:02 +0000 2021",
+        "id": "1461359551354007559",
+        "media": false
+    },
+    {
+        "full_text": "Did the fucking minimum. I have realised that:\n\n1. As a kid, I took the speed at which I could do this correctly in my head for granted. Like, WAY.\n2. I'll need to rewatch w/ a pencil to learn this factoring 'shortcut'. I should learn it anyway. \n\n80/100 Days of Threejs",
+        "created_at": "Fri Nov 19 18:00:58 +0000 2021",
+        "id": "1461756399915081737",
+        "media": false
+    },
+    {
+        "full_text": "Bah. Still the minimum again. I have so much work to finish by end of Nov I might swap to 3D for last 20ish days because it's more chill. I'll fit the maths in when I can. :D\n\n81/100 Days of Threejs",
+        "created_at": "Sat Nov 20 17:54:39 +0000 2021",
+        "id": "1462117199213039618",
+        "media": false
+    },
+    {
+        "full_text": "Yeah I'm gonna have to stop here and do quadratics examples lmao. I actually expect to find it therapeutic after some time.\n\n3D starting tomorrow!\n\n82/100 Days of Threejs",
+        "created_at": "Sun Nov 21 17:43:06 +0000 2021",
+        "id": "1462476677682896898",
+        "media": false
+    },
+    {
+        "full_text": "Completing the square started 💀\n\nI lament that I ever forgot anything ever pertaining to Maths.\n\n83 / 100 Days of Threejs",
+        "created_at": "Mon Nov 22 22:47:46 +0000 2021",
+        "id": "1462915741036937216",
+        "media": false
+    },
+    {
+        "full_text": "Did some practice questions for the first time. Needs a bit of correction but ya girl still got it! :D\n\n84/100 Days of Threejs",
+        "created_at": "Tue Nov 23 17:28:02 +0000 2021",
+        "id": "1463197664300847109",
+        "media": false
+    },
+    {
+        "full_text": "Returned to the Book of Shaders for some variety. Chapter 5 Algorithmic Drawing let's go :D\n\n85/100 Days of Threejs",
+        "created_at": "Wed Nov 24 10:50:51 +0000 2021",
+        "id": "1463460096407584770",
+        "media": false
+    },
+    {
+        "full_text": "More Book of Shaders! Haven't really spent time thinking about the shape of functions and how they affect the output so this has been useful.\n\n86/100 Days of Threejs",
+        "created_at": "Thu Nov 25 16:16:03 +0000 2021",
+        "id": "1463904324438822914",
+        "media": false
+    },
+    {
+        "full_text": "Learnt about step and smoothstep. Ngl, even though this book isn't gonna be finished it's still ridiculously helpful for developing the finer details of that mental model.\n\n87/100 Days of Threejs https://t.co/7UcEX7OoLf",
+        "created_at": "Fri Nov 26 16:09:04 +0000 2021",
+        "id": "1464264953238491140",
+        "media": "https://t.co/7UcEX7OoLf"
+    },
+    {
+        "full_text": "This ish is what I'm relearning a shit ton of maths for. MUAHAHAHA.\n\nNot the animation, just what it represents xD\n\n88/100 Days of Threejs https://t.co/Z6OciA4Xhc",
+        "created_at": "Sat Nov 27 23:26:03 +0000 2021",
+        "id": "1464737313771057152",
+        "media": "https://t.co/Z6OciA4Xhc"
+    },
+    {
+        "full_text": "A few more exercises to follow up from yesterday.\n\nI might be at my minimum but damn, it's defo a consistent minimum :')\n\n89/100 Days of Threejs https://t.co/7SUxPlZT0h",
+        "created_at": "Sun Nov 28 18:46:27 +0000 2021",
+        "id": "1465029338345074691",
+        "media": "https://t.co/7SUxPlZT0h"
+    },
+    {
+        "full_text": "I'm starting to understand this maths shit wtf man xD\n\nhttps://t.co/wuppDgVfVF\n\n90/100 Days of Threejs https://t.co/Bk2NbMdRht",
+        "created_at": "Mon Nov 29 11:46:16 +0000 2021",
+        "id": "1465285981636947985",
+        "media": "https://t.co/Bk2NbMdRht"
+    },
+    {
+        "full_text": "Went through a bunch of functions and maths about signals. Only about halfway lost :3 Will probs need to reread later.\n\nThanks for the company on stream too, ya nerds ❤️\n\n91/100 Days of Threejs https://t.co/qRiwKIdRDk",
+        "created_at": "Tue Nov 30 09:17:16 +0000 2021",
+        "id": "1465610874605817857",
+        "media": "https://t.co/qRiwKIdRDk"
+    },
+    {
+        "full_text": "Worked through some examples in the exercise to follow up from yesterday.\n\nThis tool is amazing. https://t.co/9DDHOQwdli\n\n92/100 Days of Threejs https://t.co/2iELrVaqcE",
+        "created_at": "Wed Dec 01 10:22:28 +0000 2021",
+        "id": "1465989669892472835",
+        "media": "https://t.co/2iELrVaqcE"
+    },
+    {
+        "full_text": "Started on colour theory! Leaving the exercises for tomorrow.\n\n93/100 Days of Threejs https://t.co/mdmU6hrOzc",
+        "created_at": "Thu Dec 02 11:04:26 +0000 2021",
+        "id": "1466362617031659521",
+        "media": "https://t.co/mdmU6hrOzc"
+    },
+    {
+        "full_text": "Went through HSB colour stuff again due to being so tired yesterday :3\n\n94/100 Days of Threejs https://t.co/7ZwWlOJRTZ",
+        "created_at": "Fri Dec 03 10:06:48 +0000 2021",
+        "id": "1466710502227152899",
+        "media": "https://t.co/7ZwWlOJRTZ"
+    },
+    {
+        "full_text": "Ugggh. Brain feels a bit muddled and will have to go through the HSB in polar coordinates section again.\n\n💀💀💀\n\n95/100 Days of Threejs",
+        "created_at": "Sat Dec 04 10:44:47 +0000 2021",
+        "id": "1467082448743780352",
+        "media": false
+    },
+    {
+        "full_text": "Started Shapes.\n\nSend help. 💀\n\n96/100 Days of Threejs https://t.co/4Z4ZYQRjHG",
+        "created_at": "Sun Dec 05 09:47:46 +0000 2021",
+        "id": "1467430487152943104",
+        "media": "https://t.co/4Z4ZYQRjHG"
+    },
+    {
+        "full_text": "ngl the programming is doing my head in a bit. Probably gonna spend the next three days figuring this ish out xD\n\nScreenshot from the Book of Shaders~\n\n97/100 Days of Threejs https://t.co/R6vvAxzAad",
+        "created_at": "Mon Dec 06 08:11:28 +0000 2021",
+        "id": "1467768640929861633",
+        "media": "https://t.co/R6vvAxzAad"
+    },
+    {
+        "full_text": "Learnt to deploy my threejs projects with Vercel.\n\nLiteral minutes wtf xD\n\n98/100 Days of Threejs",
+        "created_at": "Tue Dec 07 11:37:48 +0000 2021",
+        "id": "1468182954476113921",
+        "media": false
+    },
+    {
+        "full_text": "Computing circles using step(),distance(), length(), and sqrt().\n\nOne more damn day to complete the 100 days. We're celebrating in Atlantis tomorrow post-stream for everyone who did their 100 Days of Code or whatever challenges. ^^ \n\n99/100 Days of Threejs https://t.co/WnTr0pzPWh",
+        "created_at": "Wed Dec 08 11:12:27 +0000 2021",
+        "id": "1468538962801086469",
+        "media": "https://t.co/WnTr0pzPWh"
+    },
+    {
+        "full_text": "DAY ONE FUCKING HUNDRED. AYOOOOO. Thanks for celebrating with me on stream ❤️\n\nGrats to everyone completing a third round of 100 Days with us in Atlantis!! \n\nNext up is 100 Days of UX on Jan 1st 2022 😈✨\n\n100 / 100 Days of Threejs https://t.co/9iDSEGcK9T",
+        "created_at": "Thu Dec 09 13:10:00 +0000 2021",
+        "id": "1468930934049153031",
+        "media": "https://t.co/9iDSEGcK9T"
+    }
+]

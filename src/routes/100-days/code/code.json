@@ -1,0 +1,608 @@
+[
+    {
+        "full_text": "Starting #100DaysOfCode in an effort to maintain momentum working on an app I've wanted to see through for years. /scream I feel so exposed tweeting this :'D Wish me luck!~ #100daysofcodechallenge",
+        "created_at": "Thu Dec 31 18:41:20 +0000 2020",
+        "id": "1344715276336545792",
+        "media": false
+    },
+    {
+        "full_text": "Day 1 of #100daysofcode. Learnt to set up a project with Objection.js with the help of the amazing twitch chat (ty Matt &amp; donnY). That took about three hours, give or take 🤣😭🤣😭 #100daysofcodechallenge",
+        "created_at": "Fri Jan 01 13:15:54 +0000 2021",
+        "id": "1344995767593811973",
+        "media": false
+    },
+    {
+        "full_text": "Day 2 of #100DaysOfCode \nDrew up an ERD in VS Code, added the basic Objection.js models to my project, and figured out the Knex migrations. \n\nNext: Convert to TypeScript, then finish models. Excited I even got this far without taking an entire day :'D #100daysofcodechallenge",
+        "created_at": "Sat Jan 02 15:41:24 +0000 2021",
+        "id": "1345394773155217408",
+        "media": false
+    },
+    {
+        "full_text": "Day 3 of #100DaysOfCode  \nConverted to TypeScript, migrations and models completed. I think.\n\nI guess I might be getting the hang of backend stuff. I'll let that thought linger until my next hair-tearing issue... Probs tomorrow. :3\n\n#100daysofcodechallenge",
+        "created_at": "Sun Jan 03 12:44:17 +0000 2021",
+        "id": "1345712587720167425",
+        "media": false
+    },
+    {
+        "full_text": "Day 4 of #100DaysOfCode\nAdded forgotten tables, models, and migrations. Oops. 🙃 2 AM chat with the co-founder was productive. Apparently Argon2 &gt; Bcrypt... So lots of research for me, aiyooo~\n\nWeb sockets and auth for the next few weeks 😅😭🤣 ded.\n\n#100daysofcodechallenge",
+        "created_at": "Mon Jan 04 17:06:22 +0000 2021",
+        "id": "1346140930030542848",
+        "media": false
+    },
+    {
+        "full_text": "Day 5 of #100DaysOfCode\nWanted to do auth but nooo. Thwarted by a src dir as ts root and Logan (rightly) insisting we change knex files to .ts. Like 5 hours on Twitch stream inc. distractions but it's doonnee!~\n\nAuth tomorrow. COMIN' FOR YOU, ARGON2 /yell\n\n#100daysofcodechallenge",
+        "created_at": "Tue Jan 05 15:27:51 +0000 2021",
+        "id": "1346478525155430405",
+        "media": false
+    },
+    {
+        "full_text": "Day 6 of #100DaysOfCode\nWas gonna dig into Argon2 but Logan beat me to it. Set up the chat app stuff instead and learnt about Argon2id, OAuth2, PKCE, and Flutter. Sockets tomorrow!\n\nCode effort level feels basic af but oh well. Action &gt; inaction.\n\n#100daysofcodechallenge",
+        "created_at": "Wed Jan 06 17:10:33 +0000 2021",
+        "id": "1346866760595558400",
+        "media": false
+    },
+    {
+        "full_text": "Day 7 of #100DaysOfCode\nStarted with web sockets. Spent FOREVER on Flutter vs Electron which became flutter vs electron vs ionic vs revelry(?) vs nativescript and then Twitch chat helped me settle on Cordova 🤣. Rest of the night was on chat UIs.\n\n#100daysofcodechallenge",
+        "created_at": "Thu Jan 07 17:41:41 +0000 2021",
+        "id": "1347236979943985153",
+        "media": false
+    },
+    {
+        "full_text": "Day 8 of #100DaysOfCode\nSpent like four hours getting an hour's worth of work done but at least the socket connections are working, I guess 🙃 I'll make more progress tomorrow. I've got South African biscuits and sweets for company 😈🤤🥰\n\n#100daysofcodechallenge",
+        "created_at": "Fri Jan 08 17:50:18 +0000 2021",
+        "id": "1347601538349289473",
+        "media": false
+    },
+    {
+        "full_text": "Day 9 of #100DaysOfCode \nChat messages can be sent from the client in a separate folder... With a profanity filter :3 Oh, the power! \n\nStill trying to figure out scenarios where (web socket) event acknowledgement is useful.\n\n#100daysofcodechallenge https://t.co/9XgIPy9gM6",
+        "created_at": "Sat Jan 09 16:33:07 +0000 2021",
+        "id": "1347944501193502721",
+        "media": "https://t.co/9XgIPy9gM6"
+    },
+    {
+        "full_text": "Day 10 of #100DaysOfCode \nProgressed from yesterday! UI can be disabled temporarily and then updated once the acknowledgement is received and the server's done its thing. Double submission prevented. User confirmations. Etc. :D Woo!~\n\n#100daysofcodechallenge",
+        "created_at": "Sun Jan 10 13:36:10 +0000 2021",
+        "id": "1348262358989168640",
+        "media": false
+    },
+    {
+        "full_text": "Day 11 of #100DaysOfCode\nWe now have chat channels and messages being posted :D And some rough markup until I start working on the frontend. Storage is coming up next and that's gonna be... Fun... Right?...\n\nExpecting tomorrow to be a struggle :')\n\n#100daysofcodechallenge",
+        "created_at": "Mon Jan 11 13:03:49 +0000 2021",
+        "id": "1348616605660418053",
+        "media": false
+    },
+    {
+        "full_text": "Day 12 of #100DaysOfCode\n\nDidn't get much code done (just started on users and storage) but did work on wireframing. I feel like that doesn't count but I rather plan before jumping right in.\n\n#100daysofcodechallenge",
+        "created_at": "Tue Jan 12 15:05:31 +0000 2021",
+        "id": "1349009621302784001",
+        "media": false
+    },
+    {
+        "full_text": "Day 13 of #100DaysOfCode\nManaged to get users chatting in individual channels, a list of active users, and auto-scrolling for the chat window. Probs gonna look up more scrolling methods, and more about sockets. \n\nBiding time until I add Cordova 😅\n\n#100daysofcodechallenge",
+        "created_at": "Wed Jan 13 16:45:56 +0000 2021",
+        "id": "1349397280533594114",
+        "media": false
+    },
+    {
+        "full_text": "Day 14 of #100DaysOfCode \nInstalled Cordova. Finally managed to get browser, Electron *and* Android emulators working!! But now Twitch Chat suggested Capacitor so if anyone's got opinions on Cordova vs Capacitor I'd appreciate them &lt;3\n\n#100daysofcodechallenge",
+        "created_at": "Thu Jan 14 14:22:15 +0000 2021",
+        "id": "1349723506976542720",
+        "media": false
+    },
+    {
+        "full_text": "Day 15 of #100DaysOfCode\nIn true Tabs fashion, I switched from Cordova to Capacitor - all that time configuring during stream for nothing xD Still trying to set up Aurelia PWA w/Capacitor but that's future Tabs' problem\n\nToo bad that's tomorrow's Tabs 🤣\n\n#100daysofcodechallenge",
+        "created_at": "Fri Jan 15 17:16:02 +0000 2021",
+        "id": "1350129631421100032",
+        "media": false
+    },
+    {
+        "full_text": "Day 16 of #100DaysOfCode \nSpent my app time today doing research and starting on Svelte. &gt;_&gt; So far so good! Simple is great. Tomorrow I'll finish the tutorial stuff and get the PWA started... which will be less simple probably... &gt;_&gt;\n\n#100daysofcodechallenge",
+        "created_at": "Sat Jan 16 15:33:28 +0000 2021",
+        "id": "1350466207439224832",
+        "media": false
+    },
+    {
+        "full_text": "Day 17 of #100DaysOfCode\nBusy day. Found it difficult to concentrate this late on little sleep. Managed to get through some more basic Svelte stuff - I want to say it looks easy af but I think the tutorial content is handled exceptionally well. 🥰\n\n#100daysofcodechallenge",
+        "created_at": "Sun Jan 17 14:28:34 +0000 2021",
+        "id": "1350812260915036163",
+        "media": false
+    },
+    {
+        "full_text": "Day 18 of #100DaysOfCode \n\nFinished the rest of the Svelte tutorial! Will do some other tutorials tomorrow and have a look at Sapper. 🙃 I'm still being slow but better than nothing!~\n\n#100daysofcodechallenge",
+        "created_at": "Mon Jan 18 17:31:24 +0000 2021",
+        "id": "1351220661084172289",
+        "media": false
+    },
+    {
+        "full_text": "Day 19 of #100DaysOfCode\nWow, actually starting this on the 19th instead of before I go to bed on the 20th in the early AM :P\n\nSet up the Sapper/Svelte project and slowly learning my way around it. Seems as simple as Aurelia tbh &gt;_&gt;\n\n#100daysofcodechallenge",
+        "created_at": "Tue Jan 19 13:01:17 +0000 2021",
+        "id": "1351515072250535940",
+        "media": false
+    },
+    {
+        "full_text": "Day 20 of #100DaysOfCode\n\nSet up routes in Sapper. Still trying to figure out SSR, page vs server routes, and what I lose (?) by splitting the frontend and backend. Lots of reading to do!\n\n#100daysofcodechallenge",
+        "created_at": "Wed Jan 20 16:06:15 +0000 2021",
+        "id": "1351924008099303426",
+        "media": false
+    },
+    {
+        "full_text": "Day 21 of #100DaysOfCode \n\nGot the basic routes and layout sorted on twitch stream :D Will work on the dynamic routes next. Looking forward to it! AND it's still before midnight 🤣🤣\n\n#100daysofcodechallenge",
+        "created_at": "Thu Jan 21 12:34:26 +0000 2021",
+        "id": "1352233088718262272",
+        "media": false
+    },
+    {
+        "full_text": "Day 22 of #100DaysOfCode\n\nStill stuck on dynamic routes with Svelte/Sapper. 🙃 No idea what's up - my files are almost identical - but it'll take another day probs. *siiiigghhh* This is what I get for working tired af.\n\n#100daysofcodechallenge",
+        "created_at": "Fri Jan 22 21:09:16 +0000 2021",
+        "id": "1352725038605037568",
+        "media": false
+    },
+    {
+        "full_text": "Day 23 of #100DaysOfCode\n\nConditional rendering of components dependent on the route for navigation is dooooneee!\n\nSometimes I'm happier with doing a lot less that day particularly if I've made a tiny but significant dent in something.\n\n#100daysofcodechallenge #svelte https://t.co/UQc1fgyt0s",
+        "created_at": "Sat Jan 23 12:53:47 +0000 2021",
+        "id": "1352962734774575105",
+        "media": "https://t.co/UQc1fgyt0s"
+    },
+    {
+        "full_text": "Day 24 of #100DaysOfCode \n\nDealing with 'TypeError: Cannot read property 'name' of undefined'. Gonna take a while 🙃\n\nAt least I woke up earlier to code and avoid a late night. I am seemingly getting a slight grasp on daylight hours :')\n\n#svelte #100daysofcodechallenge https://t.co/O6RBfXMpkP",
+        "created_at": "Sun Jan 24 01:26:40 +0000 2021",
+        "id": "1353152202320211968",
+        "media": "https://t.co/O6RBfXMpkP"
+    },
+    {
+        "full_text": "Day 25 of #100DaysOfCode \n\nNote to self: stop changing variables manually and just select all + replace. Hot damn, that caused HOURS of me going wtf why is this not working?? \n\nFixed yesterday's error. Dynamically generated menu items done!~\n\n#100daysofcodechallenge #svelte https://t.co/1noZcVZe9F",
+        "created_at": "Mon Jan 25 18:46:16 +0000 2021",
+        "id": "1353776214243069952",
+        "media": "https://t.co/1noZcVZe9F"
+    },
+    {
+        "full_text": "Day 26 of #100DaysOfCode\n\nSpent TWO HOURS on Twitch stream figuring out why the Sapper app wasn't even *loading* and it turns out it couldn't fetch the json 'cause I mistyped a route. Dammit.\n\nThen prepped for splitting FE/BE.\n\n#100daysofcodechallenge #svelte https://t.co/uz60TEzvOI",
+        "created_at": "Tue Jan 26 13:39:10 +0000 2021",
+        "id": "1354061320904052739",
+        "media": "https://t.co/uz60TEzvOI"
+    },
+    {
+        "full_text": "Day 27 of #100DaysOfCode\n\nI had a friend once bemoan 'dependencies' this and  'dependencies' that and basically 'fuck those dependencies'. I just looked at him in amusement.\n\nThat is now me.🙃\n\nKnex and sqlite3 are not playing nice.\n\n#100daysofcodechallenge",
+        "created_at": "Wed Jan 27 15:14:39 +0000 2021",
+        "id": "1354447738742575108",
+        "media": false
+    },
+    {
+        "full_text": "Day 28 of #100DaysOfCode\n\nGoing backwards today :') Finally re-installed node and nvm but now zshwon't play nice and idk what's happening. All of this for some random af error I can't yet figure out how it happened in the first place 🙃🙃🙃\n\nTomorrow.\n\n#100daysofcodechallenge",
+        "created_at": "Thu Jan 28 11:57:32 +0000 2021",
+        "id": "1354760516720234499",
+        "media": false
+    },
+    {
+        "full_text": "Day 29 of #100DaysOfCode \n\nTook a break from Grid today and worked through React - code-splitting, state, context, class fields - basic stuff, but want to hone my understanding of fundamentals. Might slow down Grid a bit for a couple of weeks.\n\n#100daysofcodechallenge",
+        "created_at": "Fri Jan 29 17:05:58 +0000 2021",
+        "id": "1355200524304273411",
+        "media": false
+    },
+    {
+        "full_text": "Day 30 of #100DaysOfCode\n\nI'll admit I spent 100% of my time today on UX+UI stuff and learning more about accessibility in frontend. If I can do the full mockup first I'll spend *a lot* less time styling.\n\n#100daysofcodechallenge https://t.co/mWyV6aAwii",
+        "created_at": "Sat Jan 30 15:59:24 +0000 2021",
+        "id": "1355546162900553737",
+        "media": "https://t.co/mWyV6aAwii"
+    },
+    {
+        "full_text": "Day 31 of #100DaysOfCode \n\nProgress &gt; Perfection.\n\nContinued with my UIs from yesterday. I'll keep iterating on the mockup as I code. It's shitty, but it's something :D\n\nBack to full-on code tomorrow. YAS.\n\n#100daysofcodechallenge https://t.co/BK79yYT405",
+        "created_at": "Sun Jan 31 14:10:50 +0000 2021",
+        "id": "1355881229388632070",
+        "media": "https://t.co/BK79yYT405"
+    },
+    {
+        "full_text": "Day 32 of #100DaysOfCode\n\nI modified an older version of the repo to stop getting that dumb SQL/database not connecting error. All is well.\n\nBut now the routes don't load the results and eternally hang, even when I undo everything in the file. Wat. \n\n#100daysofcodechallenge https://t.co/EDWNBkCqgV",
+        "created_at": "Mon Feb 01 11:23:57 +0000 2021",
+        "id": "1356201618283266052",
+        "media": "https://t.co/EDWNBkCqgV"
+    },
+    {
+        "full_text": "Day 33 of #100DaysOfCode \n\nMade progress with the user routes! Things are slowly moving along. Twitch chat threw 'service layers' at me so I need to read up on architecture now (thanks donnY and rick!) 🤣😭🤣 Worth it.\n\n#100daysofcodechallenge",
+        "created_at": "Tue Feb 02 12:35:36 +0000 2021",
+        "id": "1356582039487619072",
+        "media": false
+    },
+    {
+        "full_text": "34 / #100DaysOfCode\n\nStill wrapping my head around layered (service-oriented) architecture and all the (different??) ways people seem to be implementing it.\n\nThis is gonna take a bit. https://t.co/HjCab3YyDg",
+        "created_at": "Wed Feb 03 11:31:44 +0000 2021",
+        "id": "1356928352297185282",
+        "media": "https://t.co/HjCab3YyDg"
+    },
+    {
+        "full_text": "35 / #100DaysOfCode\n\nI now have an API service layer. Data layer is iffy but heyooo we're getting there. Figured out Express query strings too. Looks like I'm set for a few days! \n\n#100daysofcodechallenge",
+        "created_at": "Thu Feb 04 13:02:30 +0000 2021",
+        "id": "1357313583177109507",
+        "media": false
+    },
+    {
+        "full_text": "36 / #100DaysOfCode \n\nI feel like I did the absolute *minimum*. Added some more backend routes. I need to either get the frontend going or do some interaction design before I figure out the routes I need.\n\nUgh. Duh. Planning and design first.\n\n#100daysofcodechallenge",
+        "created_at": "Fri Feb 05 13:59:26 +0000 2021",
+        "id": "1357690298839695362",
+        "media": false
+    },
+    {
+        "full_text": "37 / #100DaysOfCode \n\nFigured out the frontend routes, and I *think* most of the backend routes. *really* need to do interaction flow. Probs gonna stream Frontend on Monday if I do a birthday stream, otherwise it's Tuesday as usual!\n\n#100daysofcodechallenge",
+        "created_at": "Sat Feb 06 16:13:06 +0000 2021",
+        "id": "1358086323534372869",
+        "media": false
+    },
+    {
+        "full_text": "38 / #100DaysOfCode \n\nSpent my time today doing user flows and listing API functions for each page. I'll markup those pages and build the API as I go, in tandem.\n\nUnsure if there's a better way to do it but this way I'll get less muddled 😜\n\n#100daysofcodechallenge",
+        "created_at": "Sun Feb 07 13:07:35 +0000 2021",
+        "id": "1358402027072593920",
+        "media": false
+    },
+    {
+        "full_text": "39 / #100DaysOfCode \n\nStarted on the signup and login pages. I think I might style them fully tomorrow during stream before I continue with attempting to use the API I've been building. And still need to build. :P\n\n#100daysofcodechallenge",
+        "created_at": "Mon Feb 08 16:49:24 +0000 2021",
+        "id": "1358820235885772812",
+        "media": false
+    },
+    {
+        "full_text": "40 / #100DaysOfCode\n\nBack to #svelte. Signup page drafted and some styling done with a changing CSS gradient bg. Still undecided on CSS gradient bg vs glass. After everything's working I think I'll mockup both and get some feedback.",
+        "created_at": "Tue Feb 09 16:16:45 +0000 2021",
+        "id": "1359174405713141768",
+        "media": false
+    },
+    {
+        "full_text": "41 / #100DaysOfCode\n\nI am keeling over with sleep. Backdrop filter doesn't work in Firefox????????? Why not????????? \n\nPain. Finished the signup UI looking like glass now, but the rest of this is for another day. Specifically: tomorrow.\n\n#100daysofcodechallenge",
+        "created_at": "Wed Feb 10 11:17:09 +0000 2021",
+        "id": "1359461398732959745",
+        "media": false
+    },
+    {
+        "full_text": "42 / #100DaysOfCode \n\nHeck yeah! Made enough progress with the main chat UI that I can build out the API to start pushing data to the client. Figured out globally scoped CSS with #svelte and some flexbox shenanigans. \n\nGood 🤜progress🤛 today. Happy. 😊\n\n#100daysofcodechallenge",
+        "created_at": "Thu Feb 11 13:24:15 +0000 2021",
+        "id": "1359855773581332483",
+        "media": false
+    },
+    {
+        "full_text": "43/ #100DaysOfCode \n\nI did it, I did it, I finally did it! Glass on top of a blurred background without backdrop-filter. \n\nBut then I thought it looked sorta ugly and removed the blur. \n\nw/e, sign up and login drafts are d o n e. Input &gt; Db next!\n\n#100daysofcodechallenge",
+        "created_at": "Fri Feb 12 18:56:02 +0000 2021",
+        "id": "1360301654520700929",
+        "media": false
+    },
+    {
+        "full_text": "44 / #100DaysOfCode \n\nSpent most of today with WordPress and Downton Abbey. \n\nApparently hanging indentation is common enough on the web and far simpler than I thought it was going to be.\n\n#100daysofcodechallenge",
+        "created_at": "Sat Feb 13 17:30:37 +0000 2021",
+        "id": "1360642547777822724",
+        "media": false
+    },
+    {
+        "full_text": "45 / #100DaysOfCode\n\nDesigning and building out a decent default page is taking a fair bit. But I'd like for there to be more than just an empty screen for new users where first steps are just subtly implied. I'll finish this page tomorrow.\n\n#100daysofcodechallenge",
+        "created_at": "Sun Feb 14 18:31:19 +0000 2021",
+        "id": "1361020213097943041",
+        "media": false
+    },
+    {
+        "full_text": "46 / #100DaysOfCode \n\nI was attempting to do things with hiding radio buttons. I'm now looking at article after article about accessibility.\n\nHardly any code - mostly reading today - but that's more important sometimes.\n\n#100daysofcodechallenge",
+        "created_at": "Mon Feb 15 14:22:00 +0000 2021",
+        "id": "1361319854339354628",
+        "media": false
+    },
+    {
+        "full_text": "Day 47 / #100DaysOfCode\n\nStyled with Gatsby. Should've done Grid stuff but Market Day looms. Stupid .htaccess rules! 🤣\n\nI can't wait to build out a proper community onboarding process.\n\n#100daysofcodechallenge",
+        "created_at": "Tue Feb 16 19:09:17 +0000 2021",
+        "id": "1361754539611746306",
+        "media": false
+    },
+    {
+        "full_text": "48 / #100DaysOfCode\n\n#svelte template logic now sorted for the community default page... Mostly. All I really managed for today. It was an embarrassing amount of time before I realised how bind:group worked 🙃\n\n#100daysofcodechallenge",
+        "created_at": "Wed Feb 17 17:36:06 +0000 2021",
+        "id": "1362093478038040576",
+        "media": false
+    },
+    {
+        "full_text": "49 / #100DaysOfCode\n\nScrewed up my UI designs. This is why I should wireframe/mockup enough before doing anything. Anyway, there's enough there for me to get stuff into the database so... Scary part coming next.\n\nBut not the scariest. xD\n\n#100daysofcodechallenge",
+        "created_at": "Thu Feb 18 12:46:11 +0000 2021",
+        "id": "1362382907940032515",
+        "media": false
+    },
+    {
+        "full_text": "50 / #100DaysOfCode \n\nHalfway!! Did more templating with #svelte and Sapper. I should be good to start getting inputs into the database tomorrow, or so I hope! \n\n#100daysofcodechallenge",
+        "created_at": "Fri Feb 19 11:40:40 +0000 2021",
+        "id": "1362728807543676929",
+        "media": false
+    },
+    {
+        "full_text": "51 / #100DaysOfCode \n\nWordPress again. Not a bad break. Built out the rest of the pages. Looks like I'm finishing this one tomorrow. Maybe no more WordPress for a few months? :D *hopeful*\n\n#100daysofcodechallenge",
+        "created_at": "Sat Feb 20 15:45:32 +0000 2021",
+        "id": "1363152816060071936",
+        "media": false
+    },
+    {
+        "full_text": "52 / #100DaysOfCode\n\nWell, WordPress project done to the best of my ability with what I had. Maybe one more day. \n\nBack to Grid soon! :D Hoping to get some API stuff understood so I won't stuff up the stream tomorrow :3\n\n#100daysofcodechallenge",
+        "created_at": "Sun Feb 21 23:26:48 +0000 2021",
+        "id": "1363631286007435264",
+        "media": false
+    },
+    {
+        "full_text": "53 / #100DaysOfCode\n\nOkay I managed to fetch JSON from the backend and shove it into the console so tomorrow I will likely be less scared of handling data :D \n\nI lie. I'm equal parts apprehensive and excited but let's do this 💪\n\n#100daysofcodechallenge",
+        "created_at": "Mon Feb 22 14:35:23 +0000 2021",
+        "id": "1363859940079665152",
+        "media": false
+    },
+    {
+        "full_text": "54 / #100DaysOfCode\n\nThe code KNOWS exactly when to throw some random af error to make things inconvenient.\n\nI planned to do fetch requests today but instead got stuck with Knex errors. Joy.\n\nStream chat was fucking amazing though. Y'all rock!\n\n#100daysofcodechallenge",
+        "created_at": "Tue Feb 23 14:49:45 +0000 2021",
+        "id": "1364225943020052488",
+        "media": false
+    },
+    {
+        "full_text": "55 / #100DaysOfCode\n\nSQLite3 pool issues w/Knex. Took me 3-4 hours to figure this out.\n\nI had to stick 'await' in front of the async function I was importing from another file.\n\nWhat the hell, man. \n\nI wanna go sleep but I'm too miffed 😅\n\n#100daysofcodechallenge",
+        "created_at": "Wed Feb 24 16:49:17 +0000 2021",
+        "id": "1364618412480098304",
+        "media": false
+    },
+    {
+        "full_text": "56 / #100DaysOfCode\n\nUuuugghh. Intended to do Fetch API stuff again but it turns out the sqlite3 pkg doesn't support async/await?? I'm hoping that's the issue and can figure out a simple way to deal with that tomorrow.\n\nTHEN Fetch API! Take 3.\n\n#100daysofcodechallenge",
+        "created_at": "Thu Feb 25 15:12:52 +0000 2021",
+        "id": "1364956537010143234",
+        "media": false
+    },
+    {
+        "full_text": "57 / #100DaysOfCode\n\nI didn't notice it was already today because the light was on. I've been at this for... 5 hours, not counting the afternoon? I was at a loss. Logan was suggesting I create a minimal reproduction to ask for help.\n\nAnd then I figured it out 🤣\n\n1/3",
+        "created_at": "Fri Feb 26 14:20:53 +0000 2021",
+        "id": "1365305841893531651",
+        "media": false
+    },
+    {
+        "full_text": "58 / #100DaysOfCode\n\nExplored Storybook with #svelte during our design system Slackathon. It's a cool tool but all this extra fuss with config makes me like it less. I can't yet get global variables working in both Storybook and Svelte without code duplication.",
+        "created_at": "Sat Feb 27 17:59:18 +0000 2021",
+        "id": "1365723195894943745",
+        "media": false
+    },
+    {
+        "full_text": "59 / #100DaysOfCode \n\nI fucked up the repo trying to get the rootDir tsconfig error to go away. I was careless and didn't commit before I did it.\n\nI'll unfuck it tomorrow. \n\n🥱😴\n\n#100daysofcodechallenge",
+        "created_at": "Sun Feb 28 14:56:10 +0000 2021",
+        "id": "1366039496534282241",
+        "media": false
+    },
+    {
+        "full_text": "60 / #100DaysOfCode\n\nProject has been unfucked. This is probably the first time I am ever happy to say I'm back where I started. I don't know if I should keep the rootDir setting from the tsconfig... I'm unsure if it matters right now.\n\n#100daysofcodechallenge",
+        "created_at": "Mon Mar 01 15:38:01 +0000 2021",
+        "id": "1366412416976789505",
+        "media": false
+    },
+    {
+        "full_text": "61 / #100DaysOfCode \n\nThe stream was awesoooome. I think there are some hot reloading issues with Svelte/Sapper. But hey, I can actually use the Fetch API successfully and modify the database!! Special thanks to Technosterone for debug help. 💜\n\n1/2\n\n#100daysofcodechallenge",
+        "created_at": "Tue Mar 02 17:32:12 +0000 2021",
+        "id": "1366803541117964288",
+        "media": false
+    },
+    {
+        "full_text": "62 / #100DaysOfCode\n\nTried getting all the communities into Svelte and... Nope. I think I'm getting some errors that aren't showing immediately with hot reloading so... That makes it harder to figure out. Shit progress. Ah well. Tomorrow.\n\n#100daysofcodechallenge",
+        "created_at": "Wed Mar 03 19:18:38 +0000 2021",
+        "id": "1367192711502073856",
+        "media": false
+    },
+    {
+        "full_text": "63 / #100DaysOfCode\n\nStill trying to access the API using environment vars. Made a bit more progress with accessing the vars using Sapper middleware but now the functions don't work so... Confused af xD\n\n#100daysofcodechallenge",
+        "created_at": "Thu Mar 04 14:01:27 +0000 2021",
+        "id": "1367475279287910403",
+        "media": false
+    },
+    {
+        "full_text": "64 / #100DaysOfCode\n\nI got one of the two bugs. Ugggghhh. Hopefully I'll get the next one tomorrow.\n\nOn the plus side, learnt about accessing stores through Svelte and Sapper. I'll likely need that when I do authentication things with tokens.\n\n#100daysofcodechallenge",
+        "created_at": "Fri Mar 05 19:16:52 +0000 2021",
+        "id": "1367917044960616452",
+        "media": false
+    },
+    {
+        "full_text": "65 / #100DaysOfCode\n\nTook a break from Grid. Slackathon today, doing Earth stuff with threejs. It's all mindboggling. Did a threejs course already but retained very little. :P Outdated tutorials not helping. 🙃\n\n#100daysofcodechallenge",
+        "created_at": "Sat Mar 06 13:39:23 +0000 2021",
+        "id": "1368194500426862597",
+        "media": false
+    },
+    {
+        "full_text": "66 / #100DaysOfCode \n\nI've proven to myself yet again that coding when I am not tired is MUCH better. 5 minutes to debug the second part of a two-part problem that probably took me at least five hours.\n\nIf I code in the AM, I'll reach alpha sooner.\n\nAiyo.\n\n#100daysofcodechallenge",
+        "created_at": "Sun Mar 07 06:00:00 +0000 2021",
+        "id": "1368441279890288640",
+        "media": false
+    },
+    {
+        "full_text": "67 / #100DaysOfCode\n\nCommunities can be created, and they'll go into the database. F i n a l l y. Those functions have to be completed to generate random IDs but good enough for now. ~8 more steps until I move back to sockets.\n\n#100daysofcodechallenge",
+        "created_at": "Mon Mar 08 18:30:47 +0000 2021",
+        "id": "1368992608433762308",
+        "media": false
+    },
+    {
+        "full_text": "68 / #100DaysOfCode \n\nMeh. Only a tiny bit of progress. Hopefully I can dedicate most of Thursday and Friday to Grid and knock those tasks out of the way. \n\n#100daysofcodechallenge",
+        "created_at": "Tue Mar 09 11:49:42 +0000 2021",
+        "id": "1369254060860338176",
+        "media": false
+    },
+    {
+        "full_text": "69 / #100DaysOfCode\n\nNice.",
+        "created_at": "Wed Mar 10 11:10:25 +0000 2021",
+        "id": "1369606562365370371",
+        "media": false
+    },
+    {
+        "full_text": "70 / #100DaysOfCode \n\nFeeling a big stagnant. Getting this reference error about fetch not being defined, but putting a fetch in an unMount lifecycle function fixes that, but then it can't be called conditionally....\n\nI suppose I'll get there. Eventually.\n\n#100daysofcodechallenge",
+        "created_at": "Thu Mar 11 14:14:07 +0000 2021",
+        "id": "1370015179430260744",
+        "media": false
+    },
+    {
+        "full_text": "71 / #100DaysOfCode\n\nThat took for-fucking-ever, but getting all the communities is done. I've still got to learn how to do searches and whatnot but... Later. Need to focus on getting a full set of interaction flows done functionally first.\n\n#100daysofcodechallenge",
+        "created_at": "Fri Mar 12 18:55:20 +0000 2021",
+        "id": "1370448340681252864",
+        "media": false
+    },
+    {
+        "full_text": "72 / #100DaysOfCode\n\nFor every task I write down, I expect maybe 2-3 parts but there's 2-3 times that instead :'D Managed to get individual community spaces sorted on the API side, now I just need to make sure the client routes are rendering properly.\n\n#100daysofcodechallenge",
+        "created_at": "Sat Mar 13 17:58:47 +0000 2021",
+        "id": "1370796494664593408",
+        "media": false
+    },
+    {
+        "full_text": "73 / #100DaysOfCode\n\nNot much coding today, mostly WordPress stuff that involved styling here and there. Looking forward to the finished project though. Here's hoping it's finished this week.\n\n#100daysofcodechallenge",
+        "created_at": "Sun Mar 14 17:19:13 +0000 2021",
+        "id": "1371148926204612613",
+        "media": false
+    },
+    {
+        "full_text": "74 / #100DaysOfCode \n\nMight be getting sick. All I really managed today was adding uuids and a start on handling client routes. I've yet to properly *understand* how they're programmatically created in #svelte, but I'll get there.\n\n#100DaysOfCodeChallenge",
+        "created_at": "Mon Mar 15 14:49:45 +0000 2021",
+        "id": "1371473700302639104",
+        "media": false
+    },
+    {
+        "full_text": "75 / #100DaysOfCode\n\nJust general styling today. Way too much work to do. Starting to forget what day of the week it is. 🙃 Kinda boring tbh but I think the drudgery is over. :P\n\n25 days left! Starting 100 days of design ~7 April if anyone wants to sync!\n\n#100DaysOfCodeChallenge",
+        "created_at": "Tue Mar 16 18:23:04 +0000 2021",
+        "id": "1371889772575088641",
+        "media": false
+    },
+    {
+        "full_text": "76 / #100DaysOfCode\n\nHm. While I can figure out a way to generate client routes from db data, I can't help but feel there's a better way to do it? Wouldn't I wanna store a list of IDs (FKs?) in a row in a user's table? Else I'd search the whole table every time the app loads...",
+        "created_at": "Wed Mar 17 15:37:35 +0000 2021",
+        "id": "1372210514516865027",
+        "media": false
+    },
+    {
+        "full_text": "77 / #100DaysOfCode\n\nDecided against storing uuids in an array for now; I can always test that later. Still understanding how routes work in #Sapper - dynamic routes, and then page vs server routes 🤯\n\nI'll probably make more headway tomorrow.\n\n#100DaysOfCodeChallenge",
+        "created_at": "Thu Mar 18 13:20:37 +0000 2021",
+        "id": "1372538431184596995",
+        "media": false
+    },
+    {
+        "full_text": "78 / #100DaysOfCode\n\nTurns out the routes *are* half?? generated?? There are links I can click in my sidebar that load routes that won't throw errors, but I have *other* routes from the initial JS object files also generated... waahh.\n\n#100DaysOfCodeChallenge",
+        "created_at": "Fri Mar 19 13:58:57 +0000 2021",
+        "id": "1372910468285669378",
+        "media": false
+    },
+    {
+        "full_text": "79 / #100DaysOfCode\n\nSuper short today because DIY stuff. Managed to extend the profile section of the API to join communities with. I think I've finally managed to get into the swing of things for the backend and db issues are minimal.\n\n#100DaysOfCodeChallenge https://t.co/obqnatnaPt",
+        "created_at": "Sat Mar 20 19:27:42 +0000 2021",
+        "id": "1373355587908464642",
+        "media": "https://t.co/obqnatnaPt"
+    },
+    {
+        "full_text": "80 / #100DaysOfCode\n\nIt's been a looong day and I'm keeling over with sleep. Managed to get some delete and updates routes into the backend without much trouble. I think my mental model has solidified considerably now. \n\n#100DaysOfCodeChallenge",
+        "created_at": "Sun Mar 21 13:47:16 +0000 2021",
+        "id": "1373632300819214336",
+        "media": false
+    },
+    {
+        "full_text": "81 / #100DaysOfCode\n\nListed out the rest of the routes. I think I have everything in Insomnia that I'll need to test the backend with prior to having to starting web sockets. Not that all the routes work yet... :P\n\n#100DaysOfCodeChallenge",
+        "created_at": "Mon Mar 22 22:49:23 +0000 2021",
+        "id": "1374131116785889280",
+        "media": false
+    },
+    {
+        "full_text": "82 / #100DaysOfCode\n\nNearly there! Made a tiny bit of progress today with Svelte and I'm getting the hang of understanding data flow. I should be able to finish this long step tomorrow and progress onto UI styling. :D Sockets by next week!\n\n#100daysofcodechallenge",
+        "created_at": "Tue Mar 23 13:08:05 +0000 2021",
+        "id": "1374347217159393281",
+        "media": false
+    },
+    {
+        "full_text": "83 / #100DaysOfCode\n\nManaged to get a whole sequence down from creating a community to generating that data on a community page. Once I figure out preloading (generating?) before navigating, I'm set. Looking forward to moving to Svelte Kit from Sapper 🥳\n\n#100DaysOfCodeChallenge",
+        "created_at": "Wed Mar 24 19:14:00 +0000 2021",
+        "id": "1374801690516357123",
+        "media": false
+    },
+    {
+        "full_text": "84 / #100DaysOfCode\n\nKicked yesterday's problem in the butt on stream. I was so dumb. I mistyped the route name 🤣 And then spent another three+ hours talking about random shit :D Love y'all who drop by, thanks for making my evening so enjoyable!\n\n#100DaysOfCodeChallenge",
+        "created_at": "Thu Mar 25 18:43:56 +0000 2021",
+        "id": "1375156513447153667",
+        "media": false
+    },
+    {
+        "full_text": "85 / #100DaysOfCode \n\nI built the channels section of the API faster than I was expecting. It's a bit weird for things to be clicking and I'm solving issues... Faster?? I guess when it's not Sapper I have fewer hurdles.\n\n#100DaysOfCodeChallenge",
+        "created_at": "Fri Mar 26 18:39:25 +0000 2021",
+        "id": "1375517762735333379",
+        "media": false
+    },
+    {
+        "full_text": "86 / #100DaysOfCode\n\nLearnt how to seed the database. So useful! Ready to go all-out with the UI now. And I did it all by 9 PM 😇\n\nWaheyyyy, bedtime before midnight today~\n\n#100DaysOfCodeChallenge https://t.co/4jxHtgnj19",
+        "created_at": "Sat Mar 27 10:31:31 +0000 2021",
+        "id": "1375757367636152322",
+        "media": "https://t.co/4jxHtgnj19"
+    },
+    {
+        "full_text": "87 / #100DaysOfCode\n\nA decent UI makes things look a lot more finished 🙃 Should be able to finish a rough draft in a few days! Keen to get past it and into web sockets by the end of the week. \n\n#100DaysOfCodeChallenge",
+        "created_at": "Sun Mar 28 10:58:46 +0000 2021",
+        "id": "1376126615168577545",
+        "media": false
+    },
+    {
+        "full_text": "88 / #100DaysOfCode\n\nDidn't get around to all too much, but w/e. Took me a while to figure out how to pass data to components that don't have a route with Sapper. Conflicting sources of information all over doesn't help &gt;_&gt;\n\n#100DaysOfCodeChallenge",
+        "created_at": "Mon Mar 29 11:29:30 +0000 2021",
+        "id": "1376496736110137346",
+        "media": false
+    },
+    {
+        "full_text": "89 / #100DaysOfCode\n\nActually figured out Sapper's routing system properly today and I managed to get the routes I wanted; now I just have to research structuring components and layouts before passing data into them. \n\n#100DaysOfCodeChallenge https://t.co/B0PJBp7IvH",
+        "created_at": "Tue Mar 30 11:35:22 +0000 2021",
+        "id": "1376860600853168136",
+        "media": "https://t.co/B0PJBp7IvH"
+    },
+    {
+        "full_text": "90 / #100DaysOfCode\n\nI thought maybe researching component best practices would help me but looking at component composition and how slots work in Svelte seems better for my understanding.\n\n#100DaysOfCodeChallenge",
+        "created_at": "Wed Mar 31 11:16:17 +0000 2021",
+        "id": "1377218184822935552",
+        "media": false
+    },
+    {
+        "full_text": "91 / #100DaysOfCode\n\nAHAHA hardly did any code during stream but there was great discussion on layouts and navigation - like when it should be inside &lt;main&gt; tags or not. Y'all really helped me think through shit from last stream, thank you!\n\n#100DaysofCodeChallenge #livecode",
+        "created_at": "Thu Apr 01 11:26:03 +0000 2021",
+        "id": "1377583029313445890",
+        "media": false
+    },
+    {
+        "full_text": "92 / #100DaysOfCode \n\nI've been keeling over with sleep sitting any time I sat at the computer today, but managed to get through it. Basically just worked on Sapper routing and some markup for the pages.\n\n#100DaysOfCodeChallege",
+        "created_at": "Fri Apr 02 09:33:26 +0000 2021",
+        "id": "1377917076904415233",
+        "media": false
+    },
+    {
+        "full_text": "93 / #100DaysOfCode\n\nSorting out some routing issues with the communities and channels. Figured out how to structure the files for routing, but still need to work on passing data down to and up from slots so I can pass parameters. \n\n#100DaysOfCodeChallenge",
+        "created_at": "Sat Apr 03 09:42:56 +0000 2021",
+        "id": "1378281855783366656",
+        "media": false
+    },
+    {
+        "full_text": "94 / #100DaysOfCode\n\nI really do do (hehe) my best work first thing in the morning😆 All the links render correctly using the communityId in the secondary nav (or should I call it &lt;DinkyNav&gt;, eh, Chat?). 3 steps left, then sockets!\n\n#100DaysOfCodeChallenge",
+        "created_at": "Sun Apr 04 11:13:22 +0000 2021",
+        "id": "1378667003360108544",
+        "media": false
+    },
+    {
+        "full_text": "95 / #100DaysOfCode\n\nChannels are fetched from the database and pushed to individual communities. :D :D :D\n\nDidn't think I'd be able to get that done while so exhausted but there ya go. /patontheback. Still needs a fix though.\n\n5 days left 😱\n\n#100DaysOfCodeChallenge",
+        "created_at": "Mon Apr 05 11:24:03 +0000 2021",
+        "id": "1379032078252081157",
+        "media": false
+    },
+    {
+        "full_text": "96 / #100DaysOfCode\n\nThat was one hell of an unproductive two hours on stream :') Thanks for hanging around. Got further with my understanding but too tired to figure out the appropriate fix. Tomorrow morning!!\n\n#100DaysOfCodeChallenge",
+        "created_at": "Tue Apr 06 11:49:40 +0000 2021",
+        "id": "1379400912397946884",
+        "media": false
+    },
+    {
+        "full_text": "97 / #100DaysOfCode \n\nStarted styling the chat messages. No luck figuring out component events and passing data back and forth - yet. \n\n#100DaysOfCodeChallenge",
+        "created_at": "Wed Apr 07 11:00:37 +0000 2021",
+        "id": "1379750959522357248",
+        "media": false
+    },
+    {
+        "full_text": "98 / #100DaysOfCode\n\nThink I figured out *how* to get the id to update - with stores - but will implement tomorrow. Started crashing on stream an hour in 😴\n\n#100DaysOfDesign starting soon on the 12th, feel free to join us at https://t.co/Sf3YtPuhq9\n\n#100DaysOfCodeChallenge",
+        "created_at": "Thu Apr 08 11:14:07 +0000 2021",
+        "id": "1380116742471491587",
+        "media": false
+    },
+    {
+        "full_text": "99 / #100DaysOfCode \n\nManaged to figure out how to use custom stores - so now the menus for channels all work ✨\n\nSome of my issues stem from not recognising common patterns across frontend frameworks used to accomplish certain behaviours. I'm getting it.\n\n#100DaysOfCodeChallenge",
+        "created_at": "Fri Apr 09 12:08:24 +0000 2021",
+        "id": "1380492792439341058",
+        "media": false
+    },
+    {
+        "full_text": "100 / #100DaysOfCode\n\n100!! No days skipped since Jan 1st :D\n\nSpent all my time today figuring out config with https://t.co/YnGz2y5mPn and Svelte. Far from done. ✨This is the life✨, eh?\n\nLessons learnt from 100 Days of Code coming up soon!\n\n#100DaysOfCodeChallenge",
+        "created_at": "Sat Apr 10 10:52:48 +0000 2021",
+        "id": "1380836156057690116",
+        "media": false
+    }
+]
