@@ -10,12 +10,13 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<div class="wrapper">
+<main class="container">
 	<h1>A bit about me</h1>
 
 	<p>
-		I'm a developer and designer currently based in Canberra, Australia. I love gaming,
-		travelling, learning to play guitar, and building communities. If you're curious about my tech profile, you can view that <a href="https://ladyofcode.com/about">on my other site</a>.
+		I'm a developer and designer currently based in Canberra, Australia. I love gaming, travelling,
+		learning to play guitar, and building communities. If you're curious about my tech profile, you
+		can view that <a href="https://ladyofcode.com/about">on my other site</a>.
 	</p>
 
 	<h2>Find me here</h2>
@@ -41,7 +42,7 @@
 	<ul>
 		<li>
 			Australia is my fifth country of residence! I'm from South Africa, and lived in Saudi Arabia,
-			Bahrain, and Malaysia. 
+			Bahrain, and Malaysia.
 		</li>
 		<li>
 			My earliest computer memory is using MS Paint for the first time. I was three years old. I
@@ -51,14 +52,25 @@
 		</li>
 		<li>I've been leading a video gaming guild for ~15 years. They're my fam 💖.</li>
 	</ul>
-</div>
+</main>
 
 <style>
-	.wrapper {
-		height: 100%;
-		width: 100%;
-		max-width: var(--width-content);
+	main {
+		margin: var(--space-xl) 0;
+		background-color: var(--clr-paper-light);
+		margin: var(--space-xxxl) auto;
+		font-family: 'Domine', serif;
+		padding: var(--space-xxxl);
+		box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.4), -2px 2px 2px rgba(0, 0, 0, 0.2);
+	}
+
+	main > * {
+		max-width: (--width-content);
 		margin: 0 auto;
+	}
+	
+	h2 {
+		margin-top: var(--space-lg);
 	}
 
 	#links {
