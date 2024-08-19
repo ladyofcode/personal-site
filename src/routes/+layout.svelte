@@ -9,9 +9,8 @@
 	import { ScrollSmoother } from 'gsap/dist/ScrollSmoother';
 	import { SplitText } from 'gsap/dist/SplitText';
 
-	gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, ScrollSmoother, SplitText);
-
 	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, ScrollSmoother, SplitText);
 		ScrollSmoother.create({
 			smooth: 1,
 			effects: true,
