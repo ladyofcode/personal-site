@@ -8,6 +8,11 @@
 	import { DrawSVGPlugin } from 'gsap/dist/DrawSVGPlugin';
 	import { ScrollSmoother } from 'gsap/dist/ScrollSmoother';
 	import { SplitText } from 'gsap/dist/SplitText';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, ScrollSmoother, SplitText);
@@ -23,7 +28,7 @@
 
 <div id="smooth-wrapper">
 	<div id="smooth-content">
-		<slot />
+		{@render children?.()}
 		<Footer />
 	</div>
 </div>

@@ -1,5 +1,5 @@
-<script>
-    export let title, date;
+<script lang="ts">
+    let { title, date } = $props();
 </script>
 
 <li>

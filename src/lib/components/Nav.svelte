@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	const navItems = [
 		{ label: 'Log', path: '/' },
@@ -14,7 +14,7 @@
 <nav>
 	<ul>
 		{#each navItems as item}
-			<li class:active={$page.url.pathname === `${item.path}`}>
+			<li class:active={page.url.pathname === `${item.path}`}>
 				<a data-sveltekit-preload-data="hover" href={item.path}>{item.label}</a>
 			</li>
 		{/each}

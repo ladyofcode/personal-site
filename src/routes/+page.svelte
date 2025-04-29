@@ -7,7 +7,7 @@
 
 	import { Memory } from '$lib';
 
-	let mapElement: any;
+	let mapElement: any = $state();
 	let map: any;
 	let worldLayer: any;
 
@@ -76,9 +76,8 @@
 					// noWrap: true
 				})
 				.addTo(map);
-
 			worldLayer = leaflet
-				.geoJson(geojson, {
+				.geoJSON(geojson as GeoJSON.GeoJsonObject, {
 					style,
 					onEachFeature: onEachFeature
 				})
@@ -103,7 +102,7 @@
 <main class="container">
 	<section>
 		<h1>Log</h1>
-		<div class="leaflet" bind:this={mapElement} />
+		<div class="leaflet" bind:this={mapElement}></div>
 	</section>
 
 	<section class="content">
@@ -126,7 +125,9 @@
 </main>
 
 <style>
-	@import 'leaflet/dist/leaflet.css';
+	:global {
+		@import 'leaflet/dist/leaflet.css';
+	}
 
 	main {
 		margin: var(--space-xl) 0;

@@ -1,12 +1,12 @@
-<script>
-    export let data, title;
+<script lang="ts">
 
     import { onMount } from "svelte";
     import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	let { data, title } = $props();
 	
 	
-	let boxes = [];
+	let boxes = $state<HTMLDivElement[]>([]);
 	
     onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);

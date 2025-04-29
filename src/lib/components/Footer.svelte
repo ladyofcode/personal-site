@@ -17,9 +17,9 @@
 
 <footer>
 	<div class="content">
-		<div class="tag-top" />
+		<div class="tag-top"></div>
 		<div class="tag">
-			<div class="hole" />
+			<div class="hole"></div>
 			<h3>Find me online</h3>
 			<div class="columns">
 				<ul>
@@ -150,7 +150,7 @@
 			flex-direction: row;
 		}
 
-		ul:last-of-type() {
+		ul:last-of-type {
 			margin-top: 0;
 		}
 
