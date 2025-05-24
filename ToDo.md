@@ -1,16 +1,17 @@
 # To Do
 
-[] Update About page
 [] Update the country geojson
 [] Create some entry data for the Log; same file gets used for map + Memories list
 [] Generate the Memories list (chronological order)
-[] Add the panel popup to the Leaflet map
-[] Colour only countries with content
-[] Limit zooming to countries with content
-[] Remove hoverable cursor on countries without content
-[] Only zoom in once; on mobile country should in the middle, on desktop country should be on the right
 [] Add pins to countries (some are too small to hover over)
+[] Colour only countries with content
+[] Remove hoverable cursor on countries without content
+[] Limit zooming to countries with content
+[] Only zoom in once; on mobile country should be in the middle, on desktop country should be on the right
+[] Add the panel popup to the Leaflet map
+[] Update About page
 [] Add the journal embellishments (stickers, tape, and text)
+[] Escape room reviews (markdown?)
 
 - Stamen.Watercolor, Stamen.TonerLabels - https://leaflet-extras.github.io/leaflet-providers/preview/
 - GeoJSON - https://d3-graph-gallery.com/backgroundmap.html
