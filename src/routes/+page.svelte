@@ -4,12 +4,27 @@
 	import { onDestroy, onMount } from 'svelte';
 	// import { company } from '$lib/test.yaml';
 	import data from '../content/memories.json';
+	import pin1 from '../content/pins/pin1.svg';
+	import pin2 from '../content/pins/pin2.svg';
+	import pin3 from '../content/pins/pin3.svg';
+	import pin4 from '../content/pins/pin4.svg';
+	import pin5 from '../content/pins/pin5.svg';
+	import pin6 from '../content/pins/pin6.svg';
 
 	import { Memory } from '$lib';
 
 	let mapElement: any = $state();
 	let map: any;
 	let worldLayer: any;
+	let customIcon: any;
+	let L: any; // Declare L as a module-level variable
+
+	const pins = [pin1, pin2, pin3, pin4, pin5, pin6];
+
+	function getRandomPin() {
+		const randomIndex = Math.floor(Math.random() * pins.length);
+		return pins[randomIndex];
+	}
 
 	function getColor(state: boolean) {
 		return state ? '#ffffff' : '#000000';
@@ -47,6 +62,15 @@
 		map.fitBounds(e.target.getBounds());
 	}
 
+	function createCustomIcon(leaflet: any, pinUrl: string) {
+		return leaflet.icon({
+			iconUrl: pinUrl,
+			iconSize: [32, 32],
+			iconAnchor: [16, 32],
+			popupAnchor: [0, -32]
+		});
+	}
+
 	function onEachFeature(feature: any, layer: any) {
 		if (feature.properties.visited === true) {
 			layer.on({
@@ -54,12 +78,27 @@
 				mouseout: resetHighlight,
 				click: zoomToFeature
 			});
+
+			// Add marker for visited countries with random pin
+			const coordinates = layer.getBounds().getCenter();
+			const randomPinIcon = createCustomIcon(L, getRandomPin());
+			const marker = L.marker([coordinates.lat, coordinates.lng], { icon: randomPinIcon })
+				.addTo(map)
+				.bindPopup(feature.properties.name || 'Visited Country');
+
+			// Connect marker events to country interactions
+			marker.on({
+				mouseover: () => highlightFeature({ target: layer }),
+				mouseout: () => resetHighlight({ target: layer }),
+				click: () => zoomToFeature({ target: layer })
+			});
 		}
 	}
 
 	onMount(async () => {
 		if (browser) {
 			const leaflet = await import('leaflet');
+			L = leaflet; // Assign the imported leaflet module to our L variable
 
 			map = leaflet
 				.map(mapElement, {
@@ -82,12 +121,6 @@
 					onEachFeature: onEachFeature
 				})
 				.addTo(map);
-
-			// leaflet
-			// 	.marker([51.5, -0.09])
-			// 	.addTo(map)
-			// 	.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-			// 	.openPopup();
 		}
 	});
 
@@ -114,13 +147,16 @@
 		
 		<p>... But not too soon. I've got to find some acceptable country boundaries because in this map BAHRAIN and some other countries are MISSING. Inconceivable!</p>
 
-		<p>Memories to add: Australia, Bahrain, Canada, Cambodia, Egypt, Fiji, France, Guam, Hong Kong, Jordan, India, Indonesia, Malaysia, Maldives, Mauritius, Netherlands, Oman, Saudi, Singapore, South Africa, Sri Lanka, Tanzania, Thailand, Turkey, UAE, USA (CA, FL, HI), UK (Engliand, Scotland), Zambia</p>
+		<p>Memories to add: Australia, Bahrain, Canada, Cambodia, Egypt, Fiji, France, Guam, Hong Kong, Jordan, India, Indonesia, Malaysia, Maldives, Mauritius, Netherlands, Oman, Saudi, Singapore, South Africa, Sri Lanka, Tanzania, Thailand, Turkey, UAE, USA (CA, FL, HI), UK (England, Scotland), Zambia</p>
 		
-		<!-- <ul>
+		<ul class="memories">
 			{#each data.memories as { title, date }}
-				<Memory {title} date={new Date(date)} />
+				<li>
+					<time datetime={date}>{new Date(date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</time>
+					<span class="title">{title}</span>
+				</li>
 			{/each}
-		</ul> -->
+		</ul>
 	</section>
 </main>
 
@@ -170,4 +206,36 @@
 		font-family: 'Pridi', serif;
 		font-weight: 200;
 	} */
+
+	.memories {
+		list-style: none;
+		padding: 0;
+		margin: var(--space-lg) 0;
+	}
+
+	.memories li {
+		display: flex;
+		align-items: baseline;
+		gap: var(--space-md);
+		margin-bottom: var(--space-sm);
+		font-family: "Domine", serif;
+		padding: var(--space-xs) var(--space-sm);
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+	}
+
+	.memories li:hover {
+		background-color: var(--clr-paper-dark);
+	}
+
+	.memories time {
+		font-variant-numeric: tabular-nums;
+		color: var(--clr-text-muted);
+		min-width: 100px;
+	}
+
+	.memories .title {
+		font-weight: 500;
+	}
 </style>

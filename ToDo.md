@@ -1,7 +1,7 @@
 # To Do
 
-[xD] Update the country geojson
-[] Create some entry data for the Log; same file gets used for map + Memories list
+[x] Update the country geojson
+[x] Create some entry data for the Log; same file gets used for map + Memories list
 [] Generate the Memories list (chronological order)
 [] Add pins to countries (some are too small to hover over)
 [] Colour only countries with content
