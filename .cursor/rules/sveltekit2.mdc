@@ -1,0 +1,194 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# SvelteKit 2 Migration Guide
+
+## Error and Redirect Handling
+
+### Error Handling
+```typescript
+// SvelteKit 1
+import { error } from '@sveltejs/kit';
+
+export function load() {
+    throw error(500, 'something went wrong');
+}
+
+// SvelteKit 2
+import { error } from '@sveltejs/kit';
+
+export function load() {
+    error(500, 'something went wrong');
+}
+```
+
+### Error Type Checking
+```typescript
+import { isHttpError, isRedirect } from '@sveltejs/kit';
+
+try {
+    // some code
+} catch (err) {
+    if (isHttpError(err) || isRedirect(err)) {
+        // handle known errors
+    }
+}
+```
+
+## Cookie Handling
+
+### Cookie Path Requirement
+```typescript
+// SvelteKit 1
+export function load({ cookies }) {
+    cookies.set(name, value);
+    return { response };
+}
+
+// SvelteKit 2
+export function load({ cookies }) {
+    cookies.set(name, value, { path: '/' });
+    return { response };
+}
+```
+
+## Promise Handling
+
+### Single Promise
+```typescript
+// SvelteKit 1
+export function load({ fetch }) {
+    return {
+        response: fetch(...).then(r => r.json())
+    };
+}
+
+// SvelteKit 2
+export async function load({ fetch }) {
+    const response = await fetch(...).then(r => r.json());
+    return { response };
+}
+```
+
+### Multiple Promises
+```typescript
+// SvelteKit 1
+export function load({ fetch }) {
+    return {
+        a: fetch(...).then(r => r.json()),
+        b: fetch(...).then(r => r.json())
+    };
+}
+
+// SvelteKit 2
+export async function load({ fetch }) {
+    const [a, b] = await Promise.all([
+        fetch(...).then(r => r.json()),
+        fetch(...).then(r => r.json())
+    ]);
+    return { a, b };
+}
+```
+
+## Navigation
+
+### External URLs
+```typescript
+// SvelteKit 1
+import { goto } from '$app/navigation';
+goto('https://example.com');
+
+// SvelteKit 2
+window.location.href = 'https://example.com';
+```
+
+### Path Resolution
+```typescript
+// SvelteKit 1
+import { resolvePath } from '$app/paths';
+
+// SvelteKit 2
+import { resolveRoute } from '$app/paths';
+const path = resolveRoute('/blog/[slug]', { slug: 'hello' });
+```
+
+## Form Handling
+
+### File Inputs
+```svelte
+<form 
+    method="POST" 
+    enctype="multipart/form-data"
+    use:enhance={({ formElement, formData }) => {
+        // form handling logic
+    }}
+>
+    <input type="file" name="file" />
+</form>
+```
+
+### Enhance Callback Changes
+```typescript
+// SvelteKit 1
+use:enhance={({ form, data }) => {
+    // form handling
+}}
+
+// SvelteKit 2
+use:enhance={({ formElement, formData }) => {
+    // form handling
+}}
+```
+
+## Environment Variables
+
+### Dynamic Variables
+- Dynamic environment variables cannot be used during prerendering
+- Use static modules instead
+- Define environment variables in `.env` files
+
+## Best Practices
+
+### Error Handling
+1. Use `error()` without throwing
+2. Check error types with `isHttpError` and `isRedirect`
+3. Handle errors at appropriate levels
+4. Provide meaningful error messages
+5. Use try/catch for async operations
+
+### Cookie Management
+1. Always specify cookie paths
+2. Use secure cookie options
+3. Set appropriate cookie attributes
+4. Handle cookie serialization properly
+5. Clean up cookies when needed
+
+### Promise Handling
+1. Use async/await syntax
+2. Handle multiple promises with Promise.all
+3. Properly type promise results
+4. Handle promise rejections
+5. Clean up resources in finally blocks
+
+### Form Management
+1. Use `enctype="multipart/form-data"` for file uploads
+2. Use `formElement` and `formData` in enhance callbacks
+3. Validate form data
+4. Handle form submission states
+5. Provide user feedback
+
+### Navigation
+1. Use `window.location.href` for external URLs
+2. Use relative paths by default
+3. Use `resolveRoute` for path resolution
+4. Handle navigation errors
+5. Implement proper loading states
+
+### Environment Configuration
+1. Use static environment variables
+2. Define variables in `.env` files
+3. Type environment variables
+4. Validate environment configuration
+5. Document required variables

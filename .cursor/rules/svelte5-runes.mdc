@@ -1,0 +1,147 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Svelte 5 Runes Guide
+
+## State Management Runes
+
+### $state
+- **Purpose:** Declare reactive state
+- **Usage:**
+```svelte
+<script>
+    let count = $state(0);
+    
+    // Class fields
+    class Todo {
+        done = $state(false);
+        text = $state();
+        constructor(text) {
+            this.text = text;
+        }
+    }
+</script>
+```
+- **Note:** Only plain objects and arrays become deeply reactive
+
+### $state.raw
+- **Purpose:** Declare state that cannot be mutated, only reassigned
+- **Usage:**
+```svelte
+<script>
+    let numbers = $state.raw([1, 2, 3]);
+</script>
+```
+- **Note:** Improves performance with large arrays and objects
+
+### $state.snapshot
+- **Purpose:** Take a static snapshot of $state
+- **Usage:**
+```svelte
+<script>
+    let counter = $state({ count: 0 });
+    
+    function onClick() {
+        console.log($state.snapshot(counter));
+    }
+</script>
+```
+
+### $derived
+- **Purpose:** Declare derived state
+- **Usage:**
+```svelte
+<script>
+    let count = $state(0);
+    let doubled = $derived(count * 2);
+</script>
+```
+
+### $derived.by
+- **Purpose:** Create complex derivations with a function
+- **Usage:**
+```svelte
+<script>
+    let numbers = $state([1, 2, 3]);
+    let total = $derived.by(() => numbers.reduce((a, b) => a + b, 0));
+</script>
+```
+
+### $effect
+- **Purpose:** Run side-effects when values change
+- **Usage:**
+```svelte
+<script>
+    let size = $state(50);
+    let color = $state('#ff3e00');
+    
+    $effect(() => {
+        const context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = color;
+        context.fillRect(0, 0, size, size);
+    });
+</script>
+```
+
+### $effect.pre
+- **Purpose:** Run code before DOM updates
+- **Usage:**
+```svelte
+<script>
+    $effect.pre(() => {
+        // logic here
+    });
+</script>
+```
+
+### $effect.tracking
+- **Purpose:** Check if code is running inside a tracking context
+- **Usage:**
+```svelte
+<script>
+    console.log('tracking:', $effect.tracking());
+</script>
+```
+
+### $props
+- **Purpose:** Declare component props
+- **Usage:**
+```svelte
+<script>
+    let { prop1, prop2 } = $props();
+</script>
+```
+
+### $bindable
+- **Purpose:** Declare bindable props
+- **Usage:**
+```svelte
+<script>
+    let { bindableProp = $bindable('fallback') } = $props();
+</script>
+```
+
+### $inspect
+- **Purpose:** Re-run logging when argument changes
+- **Usage:**
+```svelte
+<script>
+    let count = $state(0);
+    $inspect(count);
+</script>
+```
+
+### $host
+- **Purpose:** Get custom element reference
+- **Usage:**
+```svelte
+<script>
+    function greet(greeting) {
+        $host().dispatchEvent(new CustomEvent('greeting', { detail: greeting }));
+    }
+</script>
+```
+- **Note:** Only available in custom elements on client-side

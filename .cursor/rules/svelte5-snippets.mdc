@@ -1,0 +1,179 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Svelte 5 Snippets Guide
+
+## Basic Snippet Usage
+
+### Definition and Invocation
+```svelte
+{#snippet figure(image)}
+    <figure>
+        <img src={image.src} alt={image.caption} width={image.width} height={image.height} />
+        <figcaption>{image.caption}</figcaption>
+    </figure>
+{/snippet}
+
+{@render figure(image)}
+```
+
+### Destructuring Parameters
+```svelte
+{#snippet figure({ src, caption, width, height })}
+    <figure>
+        <img alt={caption} {src} {width} {height} />
+        <figcaption>{caption}</figcaption>
+    </figure>
+{/snippet}
+```
+
+## Snippet Scope Rules
+
+### Lexical Scoping
+```svelte
+<div>
+    {#snippet x()}
+        {#snippet y()}
+            <!-- y snippet content -->
+        {/snippet}
+        
+        <!-- Valid usage -->
+        {@render y()}
+    {/snippet}
+    
+    <!-- Invalid usage -->
+    {@render y()}
+</div>
+
+<!-- Invalid usage -->
+{@render x()}
+```
+
+### Recursive References
+```svelte
+{#snippet blastoff()}
+    <span>🚀</span>
+{/snippet}
+
+{#snippet countdown(n)}
+    {#if n > 0}
+        <span>{n}...</span>
+        {@render countdown(n - 1)}
+    {:else}
+        {@render blastoff()}
+    {/if}
+{/snippet}
+
+{@render countdown(10)}
+```
+
+## Component Integration
+
+### Passing Snippets as Props
+```svelte
+<script>
+    import Table from './Table.svelte';
+    const fruits = [{ name: 'apples', qty: 5, price: 2 }];
+</script>
+
+{#snippet header()}
+    <th>fruit</th>
+    <th>qty</th>
+    <th>price</th>
+    <th>total</th>
+{/snippet}
+
+{#snippet row(fruit)}
+    <td>{fruit.name}</td>
+    <td>{fruit.qty}</td>
+    <td>{fruit.price}</td>
+    <td>{fruit.qty * fruit.price}</td>
+{/snippet}
+
+<Table data={fruits} {header} {row} />
+```
+
+### Implicit Binding
+```svelte
+<table data={fruits}>
+    {#snippet header()}
+        <th>fruit</th>
+        <th>qty</th>
+        <th>price</th>
+        <th>total</th>
+    {/snippet}
+    
+    {#snippet row(fruit)}
+        <td>{fruit.name}</td>
+        <td>{fruit.qty}</td>
+        <td>{fruit.price}</td>
+        <td>{fruit.qty * fruit.price}</td>
+    {/snippet}
+</table>
+```
+
+### Children Snippet
+```svelte
+<!-- Consumer -->
+<table data={fruits}>
+    <th>fruit</th>
+    <th>qty</th>
+    <th>price</th>
+    <th>total</th>
+</table>
+
+<!-- Provider (Table.svelte) -->
+<script>
+    let { data, children, row } = $props();
+</script>
+
+<table>
+    <thead>
+        <tr>
+            {@render children()}
+        </tr>
+    </thead>
+    <!-- table body -->
+</table>
+```
+
+## TypeScript Integration
+
+### Basic Typing
+```typescript
+<script lang="ts">
+    import type { Snippet } from 'svelte';
+    
+    let { data, children, row }: {
+        data: any[];
+        children: Snippet;
+        row: Snippet<[any]>;
+    } = $props();
+</script>
+```
+
+### Generic Typing
+```typescript
+<script lang="ts" generics="T">
+    import type { Snippet } from 'svelte';
+    
+    let { data, children, row }: {
+        data: T[];
+        children: Snippet;
+        row: Snippet<[T]>;
+    } = $props();
+</script>
+```
+
+## Best Practices
+
+1. Use snippets for reusable markup
+2. Follow lexical scoping rules
+3. Type snippets with TypeScript when possible
+4. Avoid prop name conflicts with `children`
+5. Use destructuring for cleaner parameter handling
+6. Keep snippets focused and single-purpose
+7. Use recursive snippets carefully
+8. Document complex snippet behavior

@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Structure Guide
+
+This personal site is organized with the following structure:
+
+## Content
+- Content files are stored in [src/content/](mdc:src/content)
+- The main memories content is defined in [memories.json](mdc:src/content/memories.json)
+- Each memory entry should have a title and ISO 8601 formatted date
+
+## Best Practices
+1. Keep JSON content files clean and well-formatted
+2. Use ISO 8601 dates (YYYY-MM-DDTHH:mm:ssZ) for all timestamps
+3. Maintain consistent indentation (4 spaces) in JSON files
+4. Avoid comments in JSON files
+5. Keep memory titles concise and descriptive
+
+## File Organization
+- All source code should be in the `src/` directory
+- Content files should be in `src/content/`
+- Build artifacts should be in `dist/` or `build/`
+- Configuration files should be in the root directory
+
+## Security Guidelines
+1. Never commit sensitive information to JSON files
+2. Keep API keys and credentials in environment variables
+3. Validate all user input before processing
+4. Use secure headers and HTTPS for all requests

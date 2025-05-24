@@ -1,0 +1,222 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Svelte 5 & SvelteKit 2 Development Guidelines
+
+## Svelte 5 Runes
+
+### State Management
+- Use `$state` for reactive state declarations
+- Use `$derived` for computed values
+- Use `$effect` for side effects
+- Use `$props` for component props
+
+```svelte
+<script>
+    // State
+    let count = $state(0);
+    
+    // Derived values
+    let doubled = $derived(count * 2);
+    
+    // Effects
+    $effect(() => {
+        if (count > 10) console.log('Count is high!');
+    });
+    
+    // Props
+    let { title = 'Default' } = $props();
+</script>
+```
+
+### Event Handling
+- Use property-based event handlers instead of `on:` directives
+- Combine multiple handlers into a single function
+- Use wrapper functions for event modifiers
+
+```svelte
+<script>
+    function handleClick(e) {
+        e.preventDefault();
+        // handler logic
+    }
+</script>
+
+<button onclick={handleClick}>Click me</button>
+```
+
+### Snippets
+- Use `#snippet` for reusable markup
+- Render snippets with `@render`
+- Follow lexical scoping rules
+- Type snippets with TypeScript when needed
+
+```svelte
+{#snippet header(title)}
+    <h1>{title}</h1>
+{/snippet}
+
+{@render header('My Title')}
+```
+
+## SvelteKit 2 Guidelines
+
+### Error and Redirect Handling
+- Use `error()` and `redirect()` without throwing
+- Use `isHttpError` and `isRedirect` for error type checking
+- Always specify cookie paths
+
+```typescript
+import { error, redirect, isHttpError } from '@sveltejs/kit';
+
+// Error handling
+export function load() {
+    error(500, 'Server error');
+}
+
+// Cookie handling
+cookies.set('name', 'value', { path: '/' });
+```
+
+### Load Functions
+- Use async/await for promises
+- Handle multiple promises with Promise.all
+- No automatic promise awaiting
+
+```typescript
+export async function load({ fetch }) {
+    const [data1, data2] = await Promise.all([
+        fetch('/api/1').then(r => r.json()),
+        fetch('/api/2').then(r => r.json())
+    ]);
+    return { data1, data2 };
+}
+```
+
+### Navigation
+- Use `window.location.href` for external URLs
+- Use relative paths by default
+- Use `resolveRoute` for path resolution
+
+```typescript
+import { resolveRoute } from '$app/paths';
+
+const path = resolveRoute('/blog/[slug]', { slug: 'post' });
+```
+
+### Form Handling
+- Use `enctype="multipart/form-data"` for file inputs
+- Use `formElement` and `formData` in enhance callbacks
+- Handle form submissions asynchronously
+
+```svelte
+<form 
+    method="POST" 
+    enctype="multipart/form-data"
+    use:enhance={({ formElement, formData }) => {
+        // form handling logic
+    }}
+>
+    <input type="file" name="file" />
+</form>
+```
+
+## Best Practices
+
+### State Management
+1. Use `$state` for component state
+2. Use `$derived` for computed values
+3. Keep effects focused and minimal
+4. Use `$state.raw` for large arrays/objects
+5. Use `$state.snapshot` for static copies
+
+### Component Structure
+1. Keep components small and focused
+2. Use snippets for reusable markup
+3. Type props and snippets with TypeScript
+4. Follow consistent naming conventions
+5. Document complex logic
+
+### Error Handling
+1. Use appropriate error types
+2. Handle errors at the appropriate level
+3. Provide meaningful error messages
+4. Use try/catch for async operations
+5. Validate input data
+
+### Performance
+1. Use `$state.raw` for large datasets
+2. Minimize effect dependencies
+3. Use appropriate loading strategies
+4. Implement proper error boundaries
+5. Optimize form submissions
+
+## Common Patterns
+
+### Component Props
+```svelte
+<script>
+    let { 
+        title = 'Default',
+        class: className,
+        ...rest 
+    } = $props();
+</script>
+
+<div class={className} {...rest}>
+    {title}
+</div>
+```
+
+### Event Forwarding
+```svelte
+<script>
+    let { ...props } = $props();
+</script>
+
+<button {...props}>Click me</button>
+```
+
+### Form Handling
+```svelte
+<script>
+    let formData = $state({});
+    
+    async function handleSubmit(event) {
+        event.preventDefault();
+        // Handle form submission
+    }
+</script>
+
+<form onsubmit={handleSubmit}>
+    <!-- form fields -->
+</form>
+```
+
+### Dynamic Routes
+```typescript
+// +page.ts
+export async function load({ params }) {
+    const { slug } = params;
+    // Load data based on slug
+    return { slug };
+}
+```
+
+## Migration Notes
+
+### From Svelte 4
+1. Replace `let` declarations with `$state`
+2. Replace `$:` with `$derived` or `$effect`
+3. Update event handlers to use properties
+4. Convert slots to snippets where appropriate
+5. Update component props syntax
+
+### From SvelteKit 1
+1. Remove `throw` from `error()` and `redirect()`
+2. Add paths to cookie operations
+3. Use async/await in load functions
+4. Update form handling
+5. Use `resolveRoute` instead of `resolvePath`

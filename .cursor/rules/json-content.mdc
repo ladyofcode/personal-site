@@ -1,0 +1,39 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# JSON Content Guidelines
+
+## Memory Entry Format
+Each memory entry in [memories.json](mdc:src/content/memories.json) must follow this structure:
+```json
+{
+    "title": "string",
+    "date": "YYYY-MM-DDTHH:mm:ssZ"
+}
+```
+
+## Validation Rules
+1. Title must be a non-empty string
+2. Date must be a valid ISO 8601 timestamp
+3. No additional properties are allowed
+4. No comments in JSON files
+5. Use 4-space indentation
+6. Use double quotes for strings
+7. No trailing commas in JSON
+
+## Common Issues to Avoid
+1. Invalid date formats
+2. Missing required fields
+3. Extra whitespace or formatting inconsistencies
+4. Using single quotes instead of double quotes
+5. Adding comments (use external documentation instead)
+
+## Example Valid Entry
+```json
+{
+    "title": "Team Building Event",
+    "date": "2024-03-20T14:30:00Z"
+}
+```

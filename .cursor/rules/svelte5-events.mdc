@@ -1,0 +1,232 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Svelte 5 Event Handling Guide
+
+## Basic Event Handlers
+
+### Property-Based Handlers
+```svelte
+<script>
+    let count = $state(0);
+</script>
+
+<button onclick={() => count++}>
+    clicks: {count}
+</button>
+```
+
+### Shorthand Syntax
+```svelte
+<script>
+    let count = $state(0);
+    
+    function handleClick() {
+        count++;
+    }
+</script>
+
+<button {handleClick}>
+    clicks: {count}
+</button>
+```
+
+## Component Events
+
+### Callback Props
+```svelte
+<script>
+    import Pump from './Pump.svelte';
+    
+    let size = $state(15);
+    let burst = $state(false);
+    
+    function reset() {
+        size = 15;
+        burst = false;
+    }
+</script>
+
+<Pump
+    inflate={(power) => {
+        size += power;
+        if (size > 75) burst = true;
+    }}
+    deflate={(power) => {
+        if (size > 0) size -= power;
+    }}
+/>
+
+{#if burst}
+    <button onclick={reset}>new balloon</button>
+    <span class="boom">💥</span>
+{:else}
+    <span class="balloon" style="scale: {0.01 * size}"> 🎈 </span>
+{/if}
+```
+
+## Event Forwarding
+
+### Basic Forwarding
+```svelte
+<script>
+    let { onclick, children } = $props();
+</script>
+
+<button {onclick}>
+    {@render children()}
+</button>
+```
+
+### Props Spreading
+```svelte
+<script>
+    let { children, ...props } = $props();
+</script>
+
+<button {...props}>
+    {@render children()}
+</button>
+```
+
+## Event Modifiers
+
+### Wrapper Functions
+```svelte
+<script>
+    function once(fn) {
+        return function (event) {
+            if (fn) fn.call(this, event);
+            fn = null;
+        };
+    }
+    
+    function preventDefault(fn) {
+        return function (event) {
+            event.preventDefault();
+            fn.call(this, event);
+        };
+    }
+</script>
+
+<button onclick={once(preventDefault(handler))}>
+    Click once
+</button>
+```
+
+### Capture Modifier
+```svelte
+<button onclickcapture={handler}>
+    Capture event
+</button>
+```
+
+## Multiple Event Handlers
+
+### Combined Handlers
+```svelte
+<button
+    onclick={(e) => {
+        handlerOne(e);
+        handlerTwo(e);
+    }}
+>
+    Multiple handlers
+</button>
+```
+
+## Migration Examples
+
+### Counter Component
+```svelte
+<!-- Svelte 4 -->
+<script>
+    let count = 0;
+    $: double = count * 2;
+    $: {
+        if (count > 10) alert('Too high!');
+    }
+</script>
+
+<button on:click={() => count++}>
+    {count} / {double}
+</button>
+
+<!-- Svelte 5 -->
+<script>
+    let count = $state(0);
+    let double = $derived(count * 2);
+    $effect(() => {
+        if (count > 10) alert('Too high!');
+    });
+</script>
+
+<button onclick={() => count++}>
+    {count} / {double}
+</button>
+```
+
+### Dependency Tracking
+```svelte
+<!-- Svelte 4 -->
+<script>
+    let a = 0;
+    let b = 0;
+    $: sum = add(a, b);
+    
+    function add(x, y) {
+        return x + y;
+    }
+</script>
+
+<!-- Svelte 5 -->
+<script>
+    let a = $state(0);
+    let b = $state(0);
+    let sum = $derived(add());
+    
+    function add() {
+        return a + b;
+    }
+</script>
+```
+
+### Untracking Dependencies
+```svelte
+<!-- Svelte 4 -->
+<script>
+    let a = 0;
+    let b = 0;
+    $: sum = a + noTrack(b);
+    
+    function noTrack(value) {
+        return value;
+    }
+</script>
+
+<!-- Svelte 5 -->
+<script>
+    import { untrack } from 'svelte';
+    
+    let a = $state(0);
+    let b = $state(0);
+    let sum = $derived(add());
+    
+    function add() {
+        return a + untrack(() => b);
+    }
+</script>
+```
+
+## Best Practices
+
+1. Use property-based event handlers
+2. Combine multiple handlers into single functions
+3. Use wrapper functions for event modifiers
+4. Type event handlers with TypeScript
+5. Handle events at the appropriate level
+6. Use proper event delegation
+7. Clean up event listeners in effects
+8. Document complex event handling logic
