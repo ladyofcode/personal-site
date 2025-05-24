@@ -1,12 +1,92 @@
 {
     "memories": [
         {
-            "title": "Atlantis meetup",
-            "date": "2023-04-15T12:34:56Z"
+            "title": "Madrid Adventure",
+            "city": "Madrid",
+            "country": "Spain",
+            "date": "1992-02-15T00:00:00Z",
+            "images": [
+                "/content/img/madrid-1.jpg",
+                "/content/img/madrid-2.jpg"
+            ],
+            "description": "The concert was amazing; the gallery was beautiful. Bought way too much nougat from Vicens. Drove around with Ana and Pablo."
         },
         {
-            "title": "Atlantis meetup 2",
-            "date": "2023-04-15T12:34:56Z"
+            "title": "Tokyo Exploration",
+            "city": "Tokyo",
+            "country": "Japan",
+            "date": "2019-03-20T00:00:00Z",
+            "images": [
+                "/content/img/tokyo-1.jpg",
+                "/content/img/tokyo-2.jpg"
+            ],
+            "description": "First time in Japan! Explored the bustling streets of Shibuya, visited the Meiji Shrine, and tried authentic ramen in a tiny local shop. The cherry blossoms were just starting to bloom."
+        },
+        {
+            "title": "Nara Deer Park",
+            "city": "Nara",
+            "country": "Japan",
+            "date": "2019-03-22T00:00:00Z",
+            "images": [
+                "/content/img/nara-1.jpg",
+                "/content/img/nara-2.jpg"
+            ],
+            "description": "Spent the day with the friendly deer at Nara Park. Visited the Todai-ji temple and saw the Great Buddha. The deer were surprisingly polite when bowing for crackers!"
+        },
+        {
+            "title": "Edinburgh Castle",
+            "city": "Edinburgh",
+            "country": "United Kingdom",
+            "date": "2018-08-10T00:00:00Z",
+            "images": [
+                "/content/img/edinburgh-1.jpg",
+                "/content/img/edinburgh-2.jpg"
+            ],
+            "description": "Explored the historic Edinburgh Castle during the Fringe Festival. The Royal Mile was alive with street performers, and the castle offered stunning views of the city."
+        },
+        {
+            "title": "Bali Paradise",
+            "city": "Bali",
+            "country": "Indonesia",
+            "date": "2020-01-05T00:00:00Z",
+            "images": [
+                "/content/img/bali-1.jpg",
+                "/content/img/bali-2.jpg"
+            ],
+            "description": "Woke up to the sound of waves in Ubud. Visited the Sacred Monkey Forest and watched the sunset at Tanah Lot temple. The local cuisine was incredible!"
+        },
+        {
+            "title": "Cape Town Views",
+            "city": "Cape Town",
+            "country": "South Africa",
+            "date": "2017-11-15T00:00:00Z",
+            "images": [
+                "/content/img/capetown-1.jpg",
+                "/content/img/capetown-2.jpg"
+            ],
+            "description": "Hiked up Table Mountain for breathtaking views of the city. Visited the penguins at Boulders Beach and enjoyed the vibrant V&A Waterfront."
+        },
+        {
+            "title": "Paris in Spring",
+            "city": "Paris",
+            "country": "France",
+            "date": "2016-04-20T00:00:00Z",
+            "images": [
+                "/content/img/paris-1.jpg",
+                "/content/img/paris-2.jpg"
+            ],
+            "description": "Spring in Paris is magical! Spent days wandering through Montmartre, visited the Louvre, and enjoyed countless café au laits at local bistros."
+        },
+        {
+            "title": "LA Adventure",
+            "city": "Los Angeles",
+            "country": "United States of America",
+            "date": "2015-07-10T00:00:00Z",
+            "images": [
+                "/content/img/la-1.jpg",
+                "/content/img/la-2.jpg"
+            ],
+            "description": "Drove along the Pacific Coast Highway, hiked to the Hollywood sign, and spent an evening at the Griffith Observatory watching the city lights."
         }
     ]
 }

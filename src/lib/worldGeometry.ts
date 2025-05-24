@@ -17170,7 +17170,7 @@ export let geojson = {
         },
         properties: {
           name: "United Kingdom",
-          visited: false
+          visited: true
         }
       },
       {
@@ -26500,7 +26500,7 @@ export let geojson = {
         },
         properties: {
           name: "United States of America",
-          visited: false
+          visited: true
         }
       },
       {
@@ -30392,7 +30392,7 @@ export let geojson = {
         },
         properties: {
           name: "Canada",
-          visited: false
+          visited: true
         }
       },
       {
@@ -38286,7 +38286,7 @@ export let geojson = {
         },
         properties: {
           name: "Japan",
-          visited: false
+          visited: true
         }
       },
       {
@@ -40006,7 +40006,7 @@ export let geojson = {
         },
         properties: {
           name: "Maldives",
-          visited: false
+          visited: true
         }
       },
       {
@@ -40324,7 +40324,7 @@ export let geojson = {
         },
         properties: {
           name: "Guam",
-          visited: false
+          visited: true
         }
       },
       {
@@ -40384,7 +40384,7 @@ export let geojson = {
         },
         properties: {
           name: "Bahrain",
-          visited: false
+          visited: true
         }
       },
       {
