@@ -339,10 +339,6 @@
 		text-transform: uppercase;
 	}
 
-	h1 {
-		font-size: 6rem;
-	}
-
 	.content {
 		padding: var(--space-lg);
 		width: 100%;
@@ -441,7 +437,6 @@
 		background: none;
 		border: none;
 		font-size: 2rem;
-		line-height: 1;
 		padding: 0;
 		width: 32px;
 		height: 32px;

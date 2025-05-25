@@ -1,0 +1,129 @@
+{
+  "escapeRooms": [
+    {
+      "id": "madrid-mystery",
+      "name": "The Spanish Inquisition Mystery",
+      "location": {
+        "city": "Madrid",
+        "country": "Spain",
+        "venue": "Escape Hunt Madrid"
+      },
+      "overallRating": 4.8,
+      "hostDifficulty": "Hard",
+      "ourDifficulty": "Medium-Hard",
+      "gmRating": 4.9,
+      "themeRating": 4.7,
+      "teamSize": 4,
+      "review": "An immersive historical experience that takes you back to 15th century Spain. The puzzles are challenging but fair, and the atmosphere is incredibly authentic. The staff's attention to detail in the set design is remarkable. Our game master was excellent, providing just the right amount of hints without breaking immersion.",
+      "highlights": [
+        "Historical theme",
+        "Authentic props",
+        "Bilingual staff",
+        "Central location",
+        "Great GM interaction",
+        "Logical puzzle flow"
+      ],
+      "visitedDate": "2023-11-15"
+    },
+    {
+      "id": "cyber-heist",
+      "name": "Cyber Heist 2.0",
+      "location": {
+        "city": "London",
+        "country": "UK",
+        "venue": "Escape Reality"
+      },
+      "overallRating": 4.6,
+      "hostDifficulty": "Medium",
+      "ourDifficulty": "Medium",
+      "gmRating": 4.5,
+      "themeRating": 4.8,
+      "teamSize": 3,
+      "review": "A modern tech-themed escape room with impressive digital puzzles. The room features state-of-the-art technology and a compelling storyline about hacking into a secure system. The game master was knowledgeable about tech and provided good hints when needed. The theme was executed perfectly with high-tech props and lighting effects.",
+      "highlights": [
+        "Tech-focused puzzles",
+        "Great lighting effects",
+        "Logical progression",
+        "Friendly staff",
+        "Modern technology",
+        "Immersive atmosphere"
+      ],
+      "visitedDate": "2023-12-20"
+    },
+    {
+      "id": "haunted-mansion",
+      "name": "The Haunted Mansion",
+      "location": {
+        "city": "New York",
+        "country": "USA",
+        "venue": "Escape the Room NYC"
+      },
+      "overallRating": 4.9,
+      "hostDifficulty": "Medium-Hard",
+      "ourDifficulty": "Hard",
+      "gmRating": 5.0,
+      "themeRating": 5.0,
+      "teamSize": 6,
+      "review": "One of the most atmospheric escape rooms I've experienced. The attention to detail in the haunted mansion theme is incredible, with perfect lighting and sound effects that really set the mood. Our game master was exceptional, staying in character throughout and providing an immersive experience. The puzzles were challenging but satisfying to solve.",
+      "highlights": [
+        "Spooky atmosphere",
+        "Great for groups",
+        "Multiple rooms",
+        "Professional actors",
+        "Perfect theming",
+        "Excellent GM"
+      ],
+      "visitedDate": "2023-10-05"
+    },
+    {
+      "id": "space-odyssey",
+      "name": "Space Odyssey: Mission to Mars",
+      "location": {
+        "city": "Tokyo",
+        "country": "Japan",
+        "venue": "SCRAP Entertainment"
+      },
+      "overallRating": 4.7,
+      "hostDifficulty": "Hard",
+      "ourDifficulty": "Hard",
+      "gmRating": 4.6,
+      "themeRating": 4.9,
+      "teamSize": 5,
+      "review": "An epic space-themed adventure that feels like you're actually on a mission to Mars. The puzzles are innovative and the room design is out of this world. The zero-gravity effects are particularly impressive. The game master was helpful and spoke good English, making the experience accessible for international visitors.",
+      "highlights": [
+        "Space theme",
+        "Unique puzzles",
+        "High-tech props",
+        "English support",
+        "Zero-gravity effects",
+        "International friendly"
+      ],
+      "visitedDate": "2023-09-12"
+    },
+    {
+      "id": "bank-heist",
+      "name": "The Perfect Heist",
+      "location": {
+        "city": "Berlin",
+        "country": "Germany",
+        "venue": "The Room"
+      },
+      "overallRating": 4.5,
+      "hostDifficulty": "Medium",
+      "ourDifficulty": "Medium",
+      "gmRating": 4.3,
+      "themeRating": 4.6,
+      "teamSize": 4,
+      "review": "A well-executed bank heist theme with clever puzzles that make you feel like a real thief. The room has multiple areas to explore and the time pressure adds to the excitement. The game master was good at providing hints without breaking the immersion. The theme was well-executed with realistic bank props and security systems.",
+      "highlights": [
+        "Realistic props",
+        "Team coordination",
+        "Multiple areas",
+        "English available",
+        "Good flow",
+        "Time pressure"
+      ],
+      "visitedDate": "2023-11-28"
+    }
+  ]
+} 
