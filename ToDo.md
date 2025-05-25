@@ -1,8 +1,9 @@
 # To Do
 
-[] Add the journal embellishments (stickers, tape, and text)
+[] Update the homepage SVGs
+[] Split the about pages into different sections (or decorate them like a journal)
 [] Add washi tape to the map (top and bottom)
-[] Split the about pages into different sections
+[] Add the journal embellishments (stickers, tape, and text)
 [] Add some 'stickers'
 [] Update the map colours
 [] Ensure the borders/spacing on everything align (100D tag, titles on homepage, modal content, pane content)

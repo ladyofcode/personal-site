@@ -357,21 +357,23 @@
 		
 		<ul class="memories">
 			{#each data.memories as memory}
-				<li onclick={(e) => handleMemoryClick(memory, e)}>
-					<time datetime={memory.date}>{new Date(memory.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</time>
-					<span class="title">{memory.title}</span>
-					<div class="memory-icons">
-						{#if memory.images && memory.images.length > 0}
-							<svg class="icon gallery-icon" viewBox="0 0 24 24" width="20" height="20">
-								<path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-							</svg>
-						{/if}
-						{#if memory.isEscapeRoom}
-							<svg class="icon escape-icon" viewBox="0 0 24 24" width="20" height="20">
-								<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-							</svg>
-						{/if}
-					</div>
+				<li>
+					<a href="#open-modal" onclick={(e) => { e.preventDefault(); handleMemoryClick(memory, e); }}>
+						<time datetime={memory.date}>{new Date(memory.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</time>
+						<span class="title">{memory.title}</span>
+						<div class="memory-icons">
+							{#if memory.images && memory.images.length > 0}
+								<svg class="icon gallery-icon" viewBox="0 0 24 24" width="20" height="20">
+									<path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+								</svg>
+							{/if}
+							{#if memory.isEscapeRoom}
+								<svg class="icon escape-icon" viewBox="0 0 24 24" width="20" height="20">
+									<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+								</svg>
+							{/if}
+						</div>
+					</a>
 				</li>
 			{/each}
 		</ul>
@@ -444,11 +446,29 @@
 		font-weight: 1000;
 	}
 
+	.memories a {
+		display: flex;
+		align-items: center;
+		gap: var(--space-md);
+		padding: var(--space-xs) var(--space-sm);
+		text-decoration: none;
+		color: inherit;
+		transition: inherit;
+		width: 100%;
+	}
+
+	.memories li:hover a {
+		background-color: var(--clr-aged-paper);
+		font-weight: 1000;
+	}
+
 	.memory-icons {
 		display: flex;
 		gap: 8px;
 		margin-left: auto;
 		align-items: center;
+		min-width: 48px;
+		justify-content: flex-end;
 	}
 
 	.icon {

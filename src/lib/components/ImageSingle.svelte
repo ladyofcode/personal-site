@@ -92,7 +92,6 @@
 		object-fit: contain;
 		border-radius: var(--radius-corner);
 	}
-	a.scroller,
 	img.scroller {
 		max-width: 100%;
 		max-height: 34vw;
