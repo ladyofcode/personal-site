@@ -5,6 +5,11 @@
 [] Split the about pages into different sections
 [] Add some 'stickers'
 [] Update the map colours
+[] Ensure the borders/spacing on everything align (100D tag, titles on homepage, modal content, pane content)
+[] Make the background darker so the sticker borders show up better as white
+[] Add some torn collage text to the background
+[] Add some drawn borders to the images
+[] Add some 'hand-written' quotes to the page
 [] Automate 100D posting
 
 - Stamen.Watercolor, Stamen.TonerLabels - https://leaflet-extras.github.io/leaflet-providers/preview/
