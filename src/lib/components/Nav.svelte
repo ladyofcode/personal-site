@@ -73,7 +73,7 @@
 			<button onclick={toggleDropdown} class="dropdown-button">
 				More
 				<svg class="dropdown-arrow" viewBox="0 0 24 24" class:open={isDropdownOpen}>
-					<path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
+					<path d="M7 10l5 5 5-5" fill="none" stroke="#cfc09f " stroke-width="2"/>
 				</svg>
 			</button>
 			{#if isDropdownOpen || !isMobile}
@@ -93,7 +93,7 @@
 	nav {
 		position: fixed;
 		top: 0;
-		z-index: 999;
+		z-index: 600;
 		width: 100%;
 		height: var(--height-main-menu);
 		background-color: var(--clr-leather-dark);

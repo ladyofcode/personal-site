@@ -15,6 +15,7 @@
 
 	import { Memory } from '$lib';
 	import ImageSingle from '$lib/components/ImageSingle.svelte';
+	import { modalStore } from '$lib/stores/modal';
 
 	let mapElement: any = $state();
 	let map: any;
@@ -22,9 +23,13 @@
 	let customIcon: any;
 	let L: any; // Declare L as a module-level variable
 	let selectedCountry = $state<{ name: string } | null>(null);
+	let selectedMemory = $state<typeof data.memories[0] | null>(null);
+	let clickedElement = $state<HTMLElement | null>(null);
 	let infoPanel = $state<HTMLElement | null>(null);
 	let initialView = $state<{ center: [number, number]; zoom: number } | null>(null);
 	let handleResize: (() => void) | null = null;
+	let isMobile = $state(false);
+	let isPanelOpen = $state(false); // Replace store with state variable
 
 	const pins = [pin1, pin2, pin3, pin4, pin5, pin6];
 
@@ -91,11 +96,20 @@
 		
 		if (activeLayers.length > 0) {
 			const featureGroup = L.featureGroup(activeLayers);
-			const panelWidth = infoPanel?.offsetWidth || 0;
 			
-			map.fitBounds(featureGroup.getBounds(), {
-				paddingTopLeft: [panelWidth + 10, 10]
-			});
+			if (isMobile) {
+				// On mobile, use paddingTopLeft to position at top
+				map.fitBounds(featureGroup.getBounds(), {
+					paddingTopLeft: [map.getSize().y * 0.2 - 100, -500],
+					maxZoom: 4
+				});
+			} else {
+				// On desktop, use paddingTopLeft for panel
+				const panelWidth = infoPanel?.offsetWidth || 0;
+				map.fitBounds(featureGroup.getBounds(), {
+					paddingTopLeft: [panelWidth + 10, 10]
+				});
+			}
 		}
 	}
 
@@ -103,12 +117,22 @@
 		const countryName = e.target.feature.properties.name;
 		selectedCountry = { name: countryName };
 		
+		// Check if mobile and set panel state with delay
+		if (isMobile) {
+			setTimeout(() => {
+				isPanelOpen = true;
+			}, 1000);
+		} else {
+			isPanelOpen = true;
+		}
+		
 		// Use requestAnimationFrame to ensure panel is rendered before adjusting bounds
 		requestAnimationFrame(fitBoundsWithPanel);
 	}
 
 	function closePanel() {
 		selectedCountry = null;
+		isPanelOpen = false;
 		if (map && initialView) {
 			map.setView(initialView.center, initialView.zoom);
 		}
@@ -195,10 +219,34 @@
 		};
 	}
 
+	function handleMemoryClick(memory: typeof data.memories[0], event: MouseEvent) {
+		const processedMemory = {
+			...memory,
+			featuredImage: memory.featuredImage ? getImageData(memory.featuredImage) : undefined
+		};
+		modalStore.set({
+			selectedMemory: processedMemory,
+			clickedElement: event.currentTarget as HTMLElement
+		});
+		document.body.style.overflow = 'hidden';
+	}
+
+	function checkMobile() {
+		if (browser) {
+			isMobile = window.innerWidth <= 768;
+		}
+	}
+
 	onMount(async () => {
 		if (browser) {
+			// Check if mobile on mount
+			checkMobile();
+			
+			// Add resize handler for mobile check
+			window.addEventListener('resize', checkMobile);
+
 			const leaflet = await import('leaflet');
-			L = leaflet; // Assign the imported leaflet module to our L variable
+			L = leaflet;
 
 			// Add resize handler
 			handleResize = () => {
@@ -223,7 +271,9 @@
 			};
 
 			// Add zoom control to top right
-			leaflet.control.zoom({ position: 'topright' }).addTo(map);
+			leaflet.control.zoom({ 
+				position: 'topright'
+			}).addTo(map);
 
 			leaflet
 				.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', {
@@ -246,6 +296,9 @@
 		if (handleResize) {
 			window.removeEventListener('resize', handleResize);
 		}
+		if (browser) {
+			window.removeEventListener('resize', checkMobile);
+		}
 		if (map) {
 			console.log('Unloading Leaflet map.');
 			map.remove();
@@ -259,7 +312,7 @@
 		<div class="map-wrapper">
 			<div class="leaflet" bind:this={mapElement}></div>
 			{#if selectedCountry}
-				<div class="info-panel" bind:this={infoPanel}>
+				<div class="info-panel" class:mobile={isMobile} class:open={isPanelOpen} bind:this={infoPanel}>
 					<div class="panel-header">
 						<h2>{selectedCountry.name}</h2>
 						<button class="close-button" onclick={closePanel}>×</button>
@@ -303,10 +356,10 @@
 		<h2>Memories</h2>
 		
 		<ul class="memories">
-			{#each data.memories as { title, date }}
-				<li>
-					<time datetime={date}>{new Date(date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</time>
-					<span class="title">{title}</span>
+			{#each data.memories as memory}
+				<li onclick={(e) => handleMemoryClick(memory, e)}>
+					<time datetime={memory.date}>{new Date(memory.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</time>
+					<span class="title">{memory.title}</span>
 				</li>
 			{/each}
 		</ul>
@@ -391,12 +444,13 @@
 	.map-container {
 		position: relative;
 		width: 100%;
+		height: 100%;
 	}
 
 	.map-wrapper {
 		position: relative;
 		width: 100%;
-		height: 700px;
+		height: 700px; /* Desktop height */
 	}
 
 	.leaflet {
@@ -418,6 +472,22 @@
 		border-radius: 5px;
 		box-shadow: 0 0 10px 10px rgba(0, 140, 255, 0.2);
 		overflow-y: auto;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.info-panel.mobile {
+		width: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: auto;
+		height: 80vh;
+		border-radius: 20px 20px 0 0;
+		transform: translateY(100%);
+	}
+
+	.info-panel.mobile.open {
+		transform: translateY(0);
 	}
 
 	.panel-header {
@@ -536,5 +606,29 @@
 	.featured-image a {
 		display: block;
 		cursor: zoom-in;
+	}
+
+	@media (max-width: 768px) {
+		.map-wrapper {
+			height: 100vh; /* Using vh as it's better, despite Chrome mobile bug */
+		}
+
+		.leaflet {
+			height: 100%;
+			border: none;
+			box-shadow: none;
+		}
+
+		/* Adjust zoom controls for mobile */
+		:global(.leaflet-control-zoom) {
+			margin: 10px !important;
+		}
+
+		:global(.leaflet-control-zoom a) {
+			width: 34px !important;
+			height: 34px !important;
+			line-height: 34px !important;
+			font-size: 22px !important;
+		}
 	}
 </style>
