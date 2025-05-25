@@ -1,92 +1,179 @@
 {
-    "memories": [
-        {
-            "title": "Madrid Adventure",
-            "city": "Madrid",
-            "country": "Spain",
-            "date": "1992-02-15T00:00:00Z",
-            "images": [
-                "/content/img/madrid-1.jpg",
-                "/content/img/madrid-2.jpg"
-            ],
-            "description": "The concert was amazing; the gallery was beautiful. Bought way too much nougat from Vicens. Drove around with Ana and Pablo."
-        },
-        {
-            "title": "Tokyo Exploration",
-            "city": "Tokyo",
-            "country": "Japan",
-            "date": "2019-03-20T00:00:00Z",
-            "images": [
-                "/content/img/tokyo-1.jpg",
-                "/content/img/tokyo-2.jpg"
-            ],
-            "description": "First time in Japan! Explored the bustling streets of Shibuya, visited the Meiji Shrine, and tried authentic ramen in a tiny local shop. The cherry blossoms were just starting to bloom."
-        },
-        {
-            "title": "Nara Deer Park",
-            "city": "Nara",
-            "country": "Japan",
-            "date": "2019-03-22T00:00:00Z",
-            "images": [
-                "/content/img/nara-1.jpg",
-                "/content/img/nara-2.jpg"
-            ],
-            "description": "Spent the day with the friendly deer at Nara Park. Visited the Todai-ji temple and saw the Great Buddha. The deer were surprisingly polite when bowing for crackers!"
-        },
-        {
-            "title": "Edinburgh Castle",
-            "city": "Edinburgh",
-            "country": "United Kingdom",
-            "date": "2018-08-10T00:00:00Z",
-            "images": [
-                "/content/img/edinburgh-1.jpg",
-                "/content/img/edinburgh-2.jpg"
-            ],
-            "description": "Explored the historic Edinburgh Castle during the Fringe Festival. The Royal Mile was alive with street performers, and the castle offered stunning views of the city."
-        },
-        {
-            "title": "Bali Paradise",
-            "city": "Bali",
-            "country": "Indonesia",
-            "date": "2020-01-05T00:00:00Z",
-            "images": [
-                "/content/img/bali-1.jpg",
-                "/content/img/bali-2.jpg"
-            ],
-            "description": "Woke up to the sound of waves in Ubud. Visited the Sacred Monkey Forest and watched the sunset at Tanah Lot temple. The local cuisine was incredible!"
-        },
-        {
-            "title": "Cape Town Views",
-            "city": "Cape Town",
-            "country": "South Africa",
-            "date": "2017-11-15T00:00:00Z",
-            "images": [
-                "/content/img/capetown-1.jpg",
-                "/content/img/capetown-2.jpg"
-            ],
-            "description": "Hiked up Table Mountain for breathtaking views of the city. Visited the penguins at Boulders Beach and enjoyed the vibrant V&A Waterfront."
-        },
-        {
-            "title": "Paris in Spring",
-            "city": "Paris",
-            "country": "France",
-            "date": "2016-04-20T00:00:00Z",
-            "images": [
-                "/content/img/paris-1.jpg",
-                "/content/img/paris-2.jpg"
-            ],
-            "description": "Spring in Paris is magical! Spent days wandering through Montmartre, visited the Louvre, and enjoyed countless café au laits at local bistros."
-        },
-        {
-            "title": "LA Adventure",
-            "city": "Los Angeles",
-            "country": "United States of America",
-            "date": "2015-07-10T00:00:00Z",
-            "images": [
-                "/content/img/la-1.jpg",
-                "/content/img/la-2.jpg"
-            ],
-            "description": "Drove along the Pacific Coast Highway, hiked to the Hollywood sign, and spent an evening at the Griffith Observatory watching the city lights."
-        }
-    ]
+  "memories": [
+    {
+      "title": "Madrid Adventure",
+      "city": "Madrid",
+      "country": "Spain",
+      "date": "1992-02-15T00:00:00Z",
+      "featuredImage": {
+        "path": "spain/test3.jpg",
+        "width": 1400,
+        "height": 350
+      },
+      "images": [
+        "/content/img/test3.jpg",
+        "/content/img/test2.jpg"
+      ],
+      "description": "The concert was amazing; the gallery was beautiful. Bought way too much nougat from Vicens. Drove around with Ana and Pablo."
+    },
+    {
+      "title": "Tokyo Exploration",
+      "city": "Tokyo",
+      "country": "Japan",
+      "date": "2019-03-20T00:00:00Z",
+      "images": [
+        "/content/img/tokyo-1.jpg",
+        "/content/img/tokyo-2.jpg"
+      ],
+      "description": "First time in Japan! Explored the bustling streets of Shibuya, visited the Meiji Shrine, and tried authentic ramen in a tiny local shop. The cherry blossoms were just starting to bloom."
+    },
+    {
+      "title": "Nara Deer Park",
+      "city": "Nara",
+      "country": "Japan",
+      "date": "2019-03-22T00:00:00Z",
+      "images": [
+        "/content/img/nara-1.jpg",
+        "/content/img/nara-2.jpg"
+      ],
+      "description": "Spent the day with the friendly deer at Nara Park. Visited the Todai-ji temple and saw the Great Buddha. The deer were surprisingly polite when bowing for crackers!"
+    },
+    {
+      "title": "Edinburgh Castle",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "date": "2018-08-10T00:00:00Z",
+      "images": [
+        "/content/img/edinburgh-1.jpg",
+        "/content/img/edinburgh-2.jpg"
+      ],
+      "description": "Explored the historic Edinburgh Castle during the Fringe Festival. The Royal Mile was alive with street performers, and the castle offered stunning views of the city."
+    },
+    {
+      "title": "Bali Paradise",
+      "city": "Bali",
+      "country": "Indonesia",
+      "date": "2020-01-05T00:00:00Z",
+      "images": [
+        "/content/img/bali-1.jpg",
+        "/content/img/bali-2.jpg"
+      ],
+      "description": "Woke up to the sound of waves in Ubud. Visited the Sacred Monkey Forest and watched the sunset at Tanah Lot temple. The local cuisine was incredible!"
+    },
+    {
+      "title": "Cape Town Views",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "date": "2017-11-15T00:00:00Z",
+      "images": [
+        "/content/img/capetown-1.jpg",
+        "/content/img/capetown-2.jpg"
+      ],
+      "description": "Hiked up Table Mountain for breathtaking views of the city. Visited the penguins at Boulders Beach and enjoyed the vibrant V&A Waterfront."
+    },
+    {
+      "title": "Paris in Spring",
+      "city": "Paris",
+      "country": "France",
+      "date": "2016-04-20T00:00:00Z",
+      "images": [
+        "/content/img/paris-1.jpg",
+        "/content/img/paris-2.jpg"
+      ],
+      "description": "Spring in Paris is magical! Spent days wandering through Montmartre, visited the Louvre, and enjoyed countless café au laits at local bistros."
+    },
+    {
+      "title": "LA Adventure",
+      "city": "Los Angeles",
+      "country": "United States of America",
+      "date": "2015-07-10T00:00:00Z",
+      "featuredImage": {
+        "path": "test3.jpg",
+        "width": 1400,
+        "height": 350
+      },
+      "images": [
+        "/content/img/la-1.jpg",
+        "/content/img/la-2.jpg"
+      ],
+      "description": "Drove along the Pacific Coast Highway, hiked to the Hollywood sign, and spent an evening at the Griffith Observatory watching the city lights."
+    },
+    {
+      "title": "Sydney Opera House Sunset",
+      "city": "Sydney",
+      "country": "Australia",
+      "date": "2021-02-15T00:00:00Z",
+      "images": [
+        "/content/img/sydney-1.jpg",
+        "/content/img/sydney-2.jpg"
+      ],
+      "description": "Watched the sunset paint the Opera House in golden hues. The harbor was alive with ferries crisscrossing the water."
+    },
+    {
+      "title": "Bondi Beach Morning",
+      "city": "Sydney",
+      "country": "Australia",
+      "date": "2021-02-18T00:00:00Z",
+      "images": [
+        "/content/img/sydney-3.jpg",
+        "/content/img/sydney-4.jpg"
+      ],
+      "description": "Early morning swim at Bondi Beach, followed by breakfast at a local café. The surf was perfect that day."
+    },
+    {
+      "title": "Parliament House Visit",
+      "city": "Canberra",
+      "country": "Australia",
+      "date": "2021-03-01T00:00:00Z",
+      "images": [
+        "/content/img/canberra-1.jpg",
+        "/content/img/canberra-2.jpg"
+      ],
+      "description": "Explored the impressive architecture of Parliament House and learned about Australia's political history."
+    },
+    {
+      "title": "Melbourne Laneways",
+      "city": "Melbourne",
+      "country": "Australia",
+      "date": "2021-03-10T00:00:00Z",
+      "images": [
+        "/content/img/melbourne-1.jpg",
+        "/content/img/melbourne-2.jpg"
+      ],
+      "description": "Wandered through the famous laneways, discovering street art and hidden cafés around every corner."
+    },
+    {
+      "title": "Great Ocean Road Trip",
+      "city": "Melbourne",
+      "country": "Australia",
+      "date": "2021-03-15T00:00:00Z",
+      "images": [
+        "/content/img/melbourne-3.jpg",
+        "/content/img/melbourne-4.jpg"
+      ],
+      "description": "Drove along the stunning Great Ocean Road, stopping at the Twelve Apostles and watching surfers at Bells Beach."
+    },
+    {
+      "title": "Queen Victoria Market",
+      "city": "Melbourne",
+      "country": "Australia",
+      "date": "2021-03-20T00:00:00Z",
+      "images": [
+        "/content/img/melbourne-5.jpg",
+        "/content/img/melbourne-6.jpg"
+      ],
+      "description": "Spent the morning exploring the historic Queen Victoria Market, sampling local produce and artisanal foods."
+    },
+    {
+      "title": "Fitzroy Street Art",
+      "city": "Melbourne",
+      "country": "Australia",
+      "date": "2021-03-25T00:00:00Z",
+      "images": [
+        "/content/img/melbourne-7.jpg",
+        "/content/img/melbourne-8.jpg"
+      ],
+      "description": "Explored the vibrant street art scene in Fitzroy, followed by craft beer tasting at local breweries."
+    }
+  ]
 }
