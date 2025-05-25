@@ -1,6 +1,10 @@
 # To Do
 
 [] Add the journal embellishments (stickers, tape, and text)
+[] Add washi tape to the map (top and bottom)
+[] Split the about pages into different sections
+[] Add some 'stickers'
+[] Update the map colours
 [] Automate 100D posting
 
 - Stamen.Watercolor, Stamen.TonerLabels - https://leaflet-extras.github.io/leaflet-providers/preview/

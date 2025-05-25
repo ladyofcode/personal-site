@@ -14,7 +14,25 @@
         "/content/img/test3.jpg",
         "/content/img/test2.jpg"
       ],
-      "description": "The concert was amazing; the gallery was beautiful. Bought way too much nougat from Vicens. Drove around with Ana and Pablo."
+      "description": "The concert was amazing; the gallery was beautiful. Bought way too much nougat from Vicens. Drove around with Ana and Pablo.",
+      "isEscapeRoom": false
+    },
+    {
+      "title": "The Spanish Inquisition Mystery",
+      "city": "Madrid",
+      "country": "Spain",
+      "date": "2023-11-15T00:00:00Z",
+      "featuredImage": {
+        "path": "spain/escape-room.jpg",
+        "width": 1400,
+        "height": 350
+      },
+      "images": [
+        "/content/img/escape-room-1.jpg",
+        "/content/img/escape-room-2.jpg"
+      ],
+      "description": "An immersive historical experience that takes you back to 15th century Spain. The puzzles are challenging but fair, and the atmosphere is incredibly authentic.",
+      "isEscapeRoom": true
     },
     {
       "title": "Tokyo Exploration",
@@ -25,7 +43,25 @@
         "/content/img/tokyo-1.jpg",
         "/content/img/tokyo-2.jpg"
       ],
-      "description": "First time in Japan! Explored the bustling streets of Shibuya, visited the Meiji Shrine, and tried authentic ramen in a tiny local shop. The cherry blossoms were just starting to bloom."
+      "description": "First time in Japan! Explored the bustling streets of Shibuya, visited the Meiji Shrine, and tried authentic ramen in a tiny local shop. The cherry blossoms were just starting to bloom.",
+      "isEscapeRoom": false
+    },
+    {
+      "title": "Space Odyssey: Mission to Mars",
+      "city": "Tokyo",
+      "country": "Japan",
+      "date": "2023-09-12T00:00:00Z",
+      "featuredImage": {
+        "path": "japan/space-escape.jpg",
+        "width": 1400,
+        "height": 350
+      },
+      "images": [
+        "/content/img/space-escape-1.jpg",
+        "/content/img/space-escape-2.jpg"
+      ],
+      "description": "An epic space-themed adventure that feels like you're actually on a mission to Mars. The puzzles are innovative and the room design is out of this world.",
+      "isEscapeRoom": true
     },
     {
       "title": "Nara Deer Park",

@@ -360,6 +360,18 @@
 				<li onclick={(e) => handleMemoryClick(memory, e)}>
 					<time datetime={memory.date}>{new Date(memory.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</time>
 					<span class="title">{memory.title}</span>
+					<div class="memory-icons">
+						{#if memory.images && memory.images.length > 0}
+							<svg class="icon gallery-icon" viewBox="0 0 24 24" width="20" height="20">
+								<path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+							</svg>
+						{/if}
+						{#if memory.isEscapeRoom}
+							<svg class="icon escape-icon" viewBox="0 0 24 24" width="20" height="20">
+								<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+							</svg>
+						{/if}
+					</div>
 				</li>
 			{/each}
 		</ul>
@@ -417,28 +429,43 @@
 
 	.memories li {
 		display: flex;
-		align-items: baseline;
+		align-items: center;
 		gap: var(--space-md);
 		margin-bottom: var(--space-sm);
 		font-family: "Domine", serif;
 		padding: var(--space-xs) var(--space-sm);
 		border-radius: 4px;
 		cursor: pointer;
-		transition: background-color 0.2s ease;
+		transition: all 0.5s ease;
 	}
 
 	.memories li:hover {
-		background-color: var(--clr-paper-dark);
+		background-color: var(--clr-aged-paper);
+		font-weight: 1000;
+	}
+
+	.memory-icons {
+		display: flex;
+		gap: 8px;
+		margin-left: auto;
+		align-items: center;
+	}
+
+	.icon {
+		fill: currentColor;
+		transition: inherit;
 	}
 
 	.memories time {
 		font-variant-numeric: tabular-nums;
-		color: var(--clr-text-muted);
 		min-width: 100px;
+		flex-shrink: 0;
+		transition: inherit;
 	}
 
 	.memories .title {
-		font-weight: 500;
+		flex: 1;
+		transition: inherit;
 	}
 
 	.map-container {
@@ -514,7 +541,6 @@
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		color: var(--clr-text-muted);
 		border-radius: 50%;
 		transition: all 0.2s ease;
 	}
@@ -528,7 +554,6 @@
 		font-family: "Domine", serif;
 		font-size: 1.2rem;
 		margin: var(--space-md) 0 var(--space-sm);
-		color: var(--clr-text-muted);
 	}
 
 	.city-group {
@@ -568,12 +593,6 @@
 		flex-shrink: 0;
 	}
 
-	.memory-header .title-wrapper {
-		font-family: "Domine", serif;
-		font-weight: 500;
-		flex: 1;
-	}
-
 	.memory-item .description {
 		font-family: "Domine", serif;
 		color: var(--clr-text-muted);
@@ -585,7 +604,6 @@
 
 	.no-memories {
 		font-family: "Domine", serif;
-		color: var(--clr-text-muted);
 		font-style: italic;
 		margin: var(--space-lg) 0;
 	}
@@ -596,21 +614,9 @@
 		overflow: hidden;
 	}
 
-	.featured-image img {
-		width: 100%;
-		height: 200px;
-		object-fit: cover;
-		display: block;
-	}
-
-	.featured-image a {
-		display: block;
-		cursor: zoom-in;
-	}
-
 	@media (max-width: 768px) {
 		.map-wrapper {
-			height: 100vh; /* Using vh as it's better, despite Chrome mobile bug */
+			height: fit-content
 		}
 
 		.leaflet {
