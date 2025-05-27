@@ -240,7 +240,7 @@ p a, li a {
 	background: rgba(255, 253, 208, 0.6);
 	transform: rotate(-3deg);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	top: -8px;
+	top: -12px;
 	left: 40%;
 	z-index: 1;
 }
@@ -249,7 +249,7 @@ p a, li a {
 	.taped-image::before {
 		width: 100px;
 		height: 30px;
-		top: -14px;
+		top: -18px;
 	}
 }
 
@@ -257,7 +257,7 @@ p a, li a {
 	.taped-image::before {
 		width: 120px;
 		height: 35px;
-		top: 10px;
+		top: -20px;
 	}
 }
 

@@ -3,6 +3,7 @@
 	import { base } from '$app/paths';
 	import { geojson } from '$lib/worldGeometry';
 	import { onDestroy, onMount } from 'svelte';
+	import { gsap } from 'gsap';
 	// import { company } from '$lib/test.yaml';
 	import data from '../content/memories.json';
 	import pin1 from '../content/pins/pin1.svg';
@@ -31,6 +32,7 @@
 	let handleResize: (() => void) | null = null;
 	let isMobile = $state(false);
 	let isPanelOpen = $state(false); // Replace store with state variable
+	let mainContainer: HTMLElement;
 
 	const pins = [pin1, pin2, pin3, pin4, pin5, pin6];
 
@@ -244,6 +246,17 @@
 
 	onMount(async () => {
 		if (browser) {
+			// Initial opacity 0 for all direct children
+			gsap.set(mainContainer.children, { autoAlpha: 0 });
+
+			// Fade in animation for all direct children
+			gsap.to(mainContainer.children, {
+				autoAlpha: 1,
+				duration: 0.2,
+				ease: 'power2.out',
+				stagger: 0.05 // Optional: stagger the fade-in of each child
+			});
+
 			// Check if mobile on mount
 			checkMobile();
 
@@ -318,7 +331,7 @@
 	});
 </script>
 
-<main class="container">
+<main class="container" bind:this={mainContainer}>
 	<section class="map-container">
 		<div class="content">
 			<div class="container-title">
@@ -473,7 +486,6 @@
 			background-color: var(--clr-light-parchment);
 		}
 
-		/* Add background color to Leaflet pane */
 		.leaflet-pane {
 			background-color: var(--clr-light-parchment);
 		}
@@ -485,6 +497,12 @@
 		background-color: var(--clr-light-parchment);
 		margin: var(--space-xxxl) auto;
 		padding: var(--space-xl);
+	}
+
+	main > * {
+		position: relative;
+		z-index: 2;
+		opacity: 0; /* Initial opacity for direct children */
 	}
 
 	.container-title {
@@ -630,10 +648,7 @@
 		filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.2));
 	}
 
-	main > * {
-		position: relative;
-		z-index: 2;
-	}
+
 
 	main .leaflet {
 		height: 700px;
