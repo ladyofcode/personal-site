@@ -5,13 +5,14 @@
 	export let scroller = false;
 	export let shadow = false;
 
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import PhotoSwipeLightbox from 'photoswipe/lightbox';
 	import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin';
 	import 'photoswipe/style.css';
 	import 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css';
 
 	let item = [];
+	let lightbox;
 
 	onMount(() => {
 		const options = {
@@ -19,13 +20,19 @@
 			children: item,
 			pswpModule: () => import('photoswipe')
 		};
-		const lightbox = new PhotoSwipeLightbox(options);
+		lightbox = new PhotoSwipeLightbox(options);
 
 		const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
 			type: 'auto'
 		});
 
 		lightbox.init();
+	});
+
+	onDestroy(() => {
+		if (lightbox) {
+			lightbox.destroy();
+		}
 	});
 </script>
 
@@ -117,12 +124,6 @@
 			width: 100%;
 			height: 100%;
 			max-height: calc(var(--height-viewable) - 20vh);
-		}
-	}
-
-	@media (min-width: 900px) {
-		div {
-			padding: var(--space-lg);
 		}
 	}
 </style>

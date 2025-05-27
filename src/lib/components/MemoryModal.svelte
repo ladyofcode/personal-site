@@ -3,7 +3,7 @@
 	import ImageSingle from '$lib/components/ImageSingle.svelte';
 
 	function closeMemoryModal() {
-		modalStore.set({ selectedMemory: null, clickedElement: null });
+		modalStore.set({ selectedMemory: null, clickedElement: null, memoryIndex: null });
 		document.body.style.overflow = '';
 	}
 
@@ -28,7 +28,7 @@
 				{#if $modalStore.selectedMemory.featuredImage}
 					<div class="featured-image taped-image">
 						<ImageSingle 
-							galleryID={`memory-modal-${$modalStore.selectedMemory.title}-${new Date($modalStore.selectedMemory.date).getMonth() + 1}`}
+							galleryID={`memory-${$modalStore.selectedMemory.country}-${$modalStore.selectedMemory.city}-${$modalStore.memoryIndex}`}
 							images={[$modalStore.selectedMemory.featuredImage]}
 						/>
 					</div>
@@ -71,6 +71,10 @@
 		z-index: 1001;
 		position: relative;
 	}
+	.modal-body {
+		background-color: var(--clr-light-parchment);
+		padding: var(--space-lg);
+	}
 	.modal-close {
 		position: absolute;
 		top: var(--space-md);
@@ -93,10 +97,6 @@
 	.modal-close:hover {
 		background: var(--clr-paper-dark);
 		color: var(--clr-text);
-	}
-
-	.modal-body {
-		margin-top: var(--space-md);
 	}
 
 	.modal-body .featured-image {

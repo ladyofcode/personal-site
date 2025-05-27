@@ -160,8 +160,14 @@
 
 			// Connect marker events to country interactions
 			marker.on({
-				mouseover: () => highlightFeature({ target: layer }),
-				mouseout: () => resetHighlight({ target: layer }),
+				mouseover: (e: L.LeafletMouseEvent) => {
+					highlightFeature({ target: layer });
+					e.target.openPopup();
+				},
+				mouseout: (e: L.LeafletMouseEvent) => {
+					resetHighlight({ target: layer });
+					e.target.closePopup();
+				},
 				click: () => handleCountryClick({ target: layer })
 			});
 		} else {
@@ -217,14 +223,15 @@
 		};
 	}
 
-	function handleMemoryClick(memory: (typeof data.memories)[0], event: MouseEvent) {
+	function handleMemoryClick(memory: (typeof data.memories)[0], event: MouseEvent, i: number) {
 		const processedMemory = {
 			...memory,
 			featuredImage: memory.featuredImage ? getImageData(memory.featuredImage) : undefined
 		};
 		modalStore.set({
 			selectedMemory: processedMemory,
-			clickedElement: event.currentTarget as HTMLElement
+			clickedElement: event.currentTarget as HTMLElement,
+			memoryIndex: i
 		});
 		document.body.style.overflow = 'hidden';
 	}
@@ -258,9 +265,14 @@
 			map = leaflet
 				.map(mapElement, {
 					scrollWheelZoom: false,
-					zoomControl: false
+					zoomControl: false,
+					maxBounds: [
+						[-90, -180],
+						[90, 180]
+					],
+					maxBoundsViscosity: 1.0
 				})
-				.setView([43, -0], 2);
+				.setView([43, 0], 2);
 
 			// Store initial view
 			initialView = {
@@ -310,7 +322,7 @@
 	<section class="map-container">
 		<div class="content">
 			<div class="container-title">
-				<h1>Travel log</h1>
+				<h1>The Log</h1>
 				<div class="title-lines"></div>
 			</div>
 		</div>
@@ -370,14 +382,16 @@
 	<section class="content">
 		<h2>Memories</h2>
 
+		<p><em>Please bear in mind that the list of memories is still being compiled, and I'm certainly going to be taking a while.</em></p>
+
 		<ul class="memories">
-			{#each data.memories as memory}
+			{#each data.memories as memory, i}
 				<li>
 					<a
 						href="#open-modal"
 						onclick={(e) => {
 							e.preventDefault();
-							handleMemoryClick(memory, e);
+							handleMemoryClick(memory, e, i);
 						}}
 					>
 						<time datetime={memory.date}
@@ -432,7 +446,7 @@
 				"Afoot and light-hearted I take to the open road,
 				Healthy, free, the world before me..."
 			</p>
-			<p>— Walt Whitman, <emphasis>Song of the Open Road</emphasis></p>
+			<p>— Walt Whitman, <em>Song of the Open Road</em></p>
 		</div>
 	</div>
 </main>
@@ -440,6 +454,29 @@
 <style>
 	:global {
 		@import 'leaflet/dist/leaflet.css';
+
+		.leaflet-popup-content-wrapper {
+			background-color: var(--clr-light-parchment);
+			border-radius: 4px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		}
+
+		.leaflet-popup-content {
+			font-family: 'Special Elite', system-ui, serif;
+			margin: 8px 12px;
+			font-size: 1.1rem;
+			color: var(--clr-text);
+			padding-top: var(--space-sm);
+		}
+
+		.leaflet-popup-tip {
+			background-color: var(--clr-light-parchment);
+		}
+
+		/* Add background color to Leaflet pane */
+		.leaflet-pane {
+			background-color: var(--clr-light-parchment);
+		}
 	}
 
 	main {
@@ -452,6 +489,10 @@
 
 	.container-title {
 		margin-top: var(--space-xxl);
+	}
+
+	.title-lines {
+		margin-bottom: var(--space-xxxxl);
 	}
 
 	.bg-decorations {
@@ -781,7 +822,7 @@
 		left: 10px;
 		bottom: 10px;
 		width: 30%;
-		background: #fff;
+		background: var(--clr-light-parchment);
 		padding: 20px;
 		border-radius: 5px;
 		box-shadow: 0 0 10px 10px rgba(0, 140, 255, 0.2);
@@ -879,7 +920,6 @@
 	}
 
 	.memory-item .description {
-		color: var(--clr-text-muted);
 		font-size: 0.9em;
 		margin: 0;
 		padding-left: 0;

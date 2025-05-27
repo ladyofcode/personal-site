@@ -19,7 +19,9 @@ interface MemoryWithImage {
 export const modalStore = writable<{
 	selectedMemory: MemoryWithImage | null;
 	clickedElement: HTMLElement | null;
+	memoryIndex: number | null;
 }>({
 	selectedMemory: null,
-	clickedElement: null
+	clickedElement: null,
+	memoryIndex: null
 }); 

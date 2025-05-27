@@ -131,6 +131,10 @@ p {
 	margin-bottom: 1rem;
 }
 
+p a, li a {
+	color: #079992;
+}
+
 
 
 .container {
@@ -262,7 +266,6 @@ p {
 	position: relative;
 	height: 12px;
 	margin: -8px 0 var(--space-lg) 0;
-	margin-bottom: var(--space-xxxxl);
 }
 
 .title-lines::before,

@@ -5,7 +5,8 @@
 
 	interface Location {
 		city: string;
-		country: string;
+		nation: string;
+		country?: string;
 		venue: string;
 	}
 
@@ -30,28 +31,28 @@
 
 	let searchQuery = $state('');
 	let filteredRooms = $state<EscapeRoom[]>((escapeRoomsData as EscapeRoomsData).escapeRooms);
-	let selectedCountry = $state('');
+	let selectedNation = $state('');
 	let sortOrder = $state<'newest' | 'oldest'>('newest');
 	let searchTimeout: ReturnType<typeof setTimeout>;
 
-	const countries = [
+	const nations = [
 		...new Set(
 			(escapeRoomsData as EscapeRoomsData).escapeRooms.map(
-				(room: EscapeRoom) => room.location.country
+				(room: EscapeRoom) => room.location.nation
 			)
 		)
 	].sort();
 
-	const countryCodes: Record<string, string> = {
+	const nationCodes: Record<string, string> = {
 		Germany: 'DE',
 		Japan: 'JP',
 		Spain: 'ES',
-		UK: 'GB',
+		'United Kingdom': 'GB',
 		USA: 'US'
 	};
 
-	function getCountryFlag(country: string): string {
-		const code = countryCodes[country];
+	function getNationFlag(nation: string): string {
+		const code = nationCodes[nation];
 		if (!code) return '';
 
 		const codePoints = code
@@ -75,14 +76,15 @@
 		const searchTerms = query.split(/\s+/).filter((term) => term.length > 0);
 
 		const filtered = (escapeRoomsData as EscapeRoomsData).escapeRooms.filter((room: EscapeRoom) => {
-			const matchesCountry = selectedCountry === '' || room.location.country === selectedCountry;
-			if (!matchesCountry) return false;
+			const matchesNation = selectedNation === '' || room.location.nation === selectedNation;
+			if (!matchesNation) return false;
 
 			if (searchTerms.length === 0) return true;
 
 			const searchableText = [
 				room.name,
 				room.location.city,
+				room.location.nation,
 				room.location.country,
 				room.location.venue,
 				room.review,
@@ -113,7 +115,7 @@
 
 	function resetFilters() {
 		searchQuery = '';
-		selectedCountry = '';
+		selectedNation = '';
 		sortOrder = 'newest';
 		handleSearch();
 	}
@@ -129,109 +131,124 @@
 
 <main class="container">
 	<section>
-		<h1>Escape Rooms</h1>
+		<div class="content">
+			<div class="container-title">
+				<h1>Escape Rooms</h1>
+				<div class="title-lines"></div>
+			</div>
 
-		<p>
-			The content on this page is a work in progress, and honestly completely arbitrary. 🤣 I (and
-			friends) rate the rooms based on how much fun we had, and on the overall experience. Some
-			notes:
-		</p>
+			<p><em>Please bear in mind that the list is still being compiled, and I'm certainly going to be taking a while.</em></p>
 
-		<ul>
-			<li>Host's difficulty: The company's difficulty rating on their website.</li>
-			<li>Our difficulty rating: Our own rating based on how difficult we found the room.</li>
-			<li>GM: How well the GM interacted with us.</li>
-			<li>Theme: How well the theme was executed.</li>
-			<li>Team size: The number of people in our group.</li>
-		</ul>
+			<p>
+				The content on this page is a work in progress, and honestly completely arbitrary. 🤣 I (and
+				friends) rate the rooms based on how much fun we had, and on the overall experience. Some
+				notes:
+			</p>
+
+			<ul>
+				<li>Host's difficulty: The company's difficulty rating on their website.</li>
+				<li>Our difficulty rating: Our own rating based on how difficult we found the room.</li>
+				<li>GM: How well the GM interacted with us.</li>
+				<li>Theme: How well the theme was executed.</li>
+				<li>Team size: The number of people in our group.</li>
+			</ul>
+		</div>
 	</section>
 
 	<section>
-		<div class="search-container">
-			<div class="search-wrapper">
-				<input
-					type="text"
-					bind:value={searchQuery}
-					oninput={handleSearch}
-					placeholder="Search by name, city, country, venue, or keywords..."
-					class="search-input"
-					aria-label="Search escape rooms"
-				/>
-				{#if searchQuery}
-					<button class="clear-search" onclick={clearSearch} aria-label="Clear search"> × </button>
-				{/if}
-			</div>
-			<div class="filters">
-				<select
-					bind:value={selectedCountry}
-					onchange={handleSearch}
-					class="country-select"
-					aria-label="Filter by country"
-				>
-					<option value="">All Countries</option>
-					{#each countries as country}
-						<option value={country}>
-							{getCountryFlag(country)}
-							{country}
-						</option>
-					{/each}
-				</select>
-				<select
-					bind:value={sortOrder}
-					onchange={handleSortChange}
-					class="sort-select"
-					aria-label="Sort by date"
-				>
-					<option value="newest">Newest First</option>
-					<option value="oldest">Oldest First</option>
-				</select>
-			</div>
-		</div>
-
-		{#if filteredRooms.length === 0}
-			<div class="no-results">
-				<p>No escape rooms found matching your search criteria.</p>
-				<button class="reset-filters" onclick={resetFilters}> Reset Filters </button>
-			</div>
-		{/if}
-
-		<div class="rooms-list">
-			{#each filteredRooms as room (room.id)}
-				<article class="room-entry">
-					<header class="room-header">
-						<div class="room-title">
-							<h2>{room.name}</h2>
-							<time datetime={room.visitedDate} class="visited-date">
-								{new Date(room.visitedDate).toLocaleDateString()}
-							</time>
-						</div>
-						<div class="room-location">
-							{room.location.venue} - {room.location.city}, {room.location.country}
-						</div>
-						<div class="room-meta">
-							<div class="ratings">
-								<span class="overall-rating">Overall: ⭐ {room.overallRating}/5</span>
-								<span class="gm-rating">GM: ⭐ {room.gmRating}/5</span>
-								<span class="theme-rating">Theme: ⭐ {room.themeRating}/5</span>
-							</div>
-						</div>
-					</header>
-
-					<p class="review">{room.review}</p>
-
-					<div class="room-details">
-						<span class="host-difficulty">Host Difficulty: {room.hostDifficulty}</span>
-						<span class="our-difficulty">Our Difficulty: {room.ourDifficulty}</span>
-						<span class="team-size">Team Size: {room.teamSize} people</span>
-					</div>
-
-					<div class="highlights">
-						{#each room.highlights as highlight}
-							<span class="highlight-tag">{highlight}</span>
+		<div class="content">
+			<div class="search-container">
+				<div class="search-wrapper">
+					<input
+						type="text"
+						bind:value={searchQuery}
+						oninput={handleSearch}
+						placeholder="Search by name, city, country, venue, or keywords..."
+						class="search-input"
+						aria-label="Search escape rooms"
+					/>
+					{#if searchQuery}
+						<button class="clear-search" onclick={clearSearch} aria-label="Clear search">
+							×
+						</button>
+					{/if}
+				</div>
+				<div class="filters">
+					<select
+						bind:value={selectedNation}
+						onchange={handleSearch}
+						class="country-select"
+						aria-label="Filter by nation"
+					>
+						<option value="">All countries</option>
+						{#each nations as nation}
+							<option value={nation}>
+								{getNationFlag(nation)}
+								{nation}
+							</option>
 						{/each}
-					</div>
-				</article>
-			{/each}
+					</select>
+					<select
+						bind:value={sortOrder}
+						onchange={handleSortChange}
+						class="sort-select"
+						aria-label="Sort by date"
+					>
+						<option value="newest">Newest First</option>
+						<option value="oldest">Oldest First</option>
+					</select>
+				</div>
+			</div>
+
+			{#if filteredRooms.length === 0}
+				<div class="no-results">
+					<p>No escape rooms found matching your search criteria.</p>
+					<button class="reset-filters" onclick={resetFilters}> Reset Filters </button>
+				</div>
+			{/if}
+
+			<div class="rooms-list">
+				{#each filteredRooms as room (room.id)}
+					<article class="room-entry">
+						<header class="room-header">
+							<div class="room-title">
+								<h2>{room.name}</h2>
+								<time datetime={room.visitedDate} class="visited-date">
+									{new Date(room.visitedDate).toLocaleDateString()}
+								</time>
+							</div>
+							<div class="room-location">
+								{room.location.venue} - {room.location.city}
+								{#if room.location.country}
+									, {room.location.country}
+								{/if}
+								, {room.location.nation}
+							</div>
+							<div class="room-meta">
+								<div class="ratings">
+									<span class="overall-rating">Overall: ⭐ {room.overallRating}/5</span>
+									<span class="gm-rating">GM: ⭐ {room.gmRating}/5</span>
+									<span class="theme-rating">Theme: ⭐ {room.themeRating}/5</span>
+								</div>
+							</div>
+						</header>
+
+						<p class="review">{room.review}</p>
+
+						<div class="room-details">
+							<span class="host-difficulty">Host Difficulty: {room.hostDifficulty}</span>
+							<span class="our-difficulty">Our Difficulty: {room.ourDifficulty}</span>
+							<span class="team-size">Team Size: {room.teamSize} people</span>
+						</div>
+
+						<div class="highlights">
+							{#each room.highlights as highlight}
+								<span class="highlight-tag">{highlight}</span>
+							{/each}
+						</div>
+					</article>
+				{/each}
+			</div>
 		</div>
 	</section>
 </main>
@@ -239,12 +256,20 @@
 <style>
 	section {
 		margin: var(--space-xl) 0;
-		background-color: var(--clr-paper-light);
+		background-color: var(--clr-light-parchment);
 		margin: var(--space-xxxl) auto;
 		padding: var(--space-xxxl);
 		box-shadow:
 			-4px 4px 4px rgba(0, 0, 0, 0.4),
 			-2px 2px 2px rgba(0, 0, 0, 0.2);
+	}
+
+	.container-title {
+		margin-top: var(--space-lg);
+	}
+
+	.title-lines {
+		margin-bottom: var(--space-xxl);
 	}
 
 	.search-container {
@@ -398,6 +423,10 @@
 		padding: var(--space-xs) var(--space-sm);
 		border-radius: var(--radius-full);
 		font-size: 0.85rem;
+	}
+
+	.highlight-tag:first-child {
+		padding-left: 0;
 	}
 
 	.clear-search {

@@ -3,10 +3,43 @@
     import { onMount } from "svelte";
     import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import ImageSingle from '$lib/components/ImageSingle.svelte';
 	let { data, title } = $props();
 	
 	
 	let boxes = $state<HTMLDivElement[]>([]);
+	
+	const images = import.meta.glob<{ default: string }>('../../routes/100-days/japanese/img/*.{jpg,jpeg,png,webp}', {
+		eager: true
+	});
+
+	function getImageData(media: string | { path: string; width: number; height: number }) {
+		const imagePath = typeof media === 'string' ? media : media.path;
+		const imageKey = `../../routes/100-days/japanese/img/${imagePath}`;
+		const image = images[imageKey];
+
+		if (!image) {
+			console.error(`Image not found: ${imageKey}`);
+			return null;
+		}
+
+		const metadata = typeof media === 'string' ? { width: undefined, height: undefined } : {
+			width: media.width,
+			height: media.height
+		};
+
+		return {
+			thumbnailURL: image.default,
+			largeURL: image.default,
+			...metadata
+		};
+	}
+
+	function isLocalImage(media: string | false | { path: string; width: number; height: number }): boolean {
+		if (!media) return false;
+		if (typeof media === 'string') return !media.startsWith('http');
+		return true; // If it's an object with path, it's a local image
+	}
 	
     onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -43,6 +76,23 @@
 			>
 				<p>Day {index === 69 ? index + ' nice' : index}</p>
 				<p>{@html item.full_text.replace(/\n/g, '<br />')}</p>
+				{#if item.media}
+					{#if isLocalImage(item.media)}
+						{#if getImageData(item.media)}
+							<div class="media-container">
+								<ImageSingle 
+									galleryID={`challenge-${index}`}
+									images={[getImageData(item.media)]}
+									shadow={true}
+								/>
+							</div>
+						{/if}
+					{:else}
+						<div class="media-container">
+							<img src={item.media} alt="" class="media-image" />
+						</div>
+					{/if}
+				{/if}
 			</div>
 		{/each}
 	</section>
@@ -112,5 +162,17 @@
 		.odc-days .right {
 			margin-left: auto;
 		}
+	}
+
+	.media-container {
+		margin-top: var(--space-md);
+		width: 100%;
+	}
+
+	.media-image {
+		width: 100%;
+		height: auto;
+		border-radius: var(--radius-sm);
+		box-shadow: var(--box-shadow);
 	}
 </style>
