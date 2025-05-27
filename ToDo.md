@@ -1,5 +1,6 @@
 # To Do
 
+[] Fade the homepage in
 [] Update 100D posts with the images
 [] Automate 100D posting
 
