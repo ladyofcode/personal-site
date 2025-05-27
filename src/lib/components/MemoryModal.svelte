@@ -28,7 +28,7 @@
 				{#if $modalStore.selectedMemory.featuredImage}
 					<div class="featured-image taped-image">
 						<ImageSingle 
-							galleryID={`memory-modal-${$modalStore.selectedMemory.date}`}
+							galleryID={`memory-modal-${$modalStore.selectedMemory.title}-${new Date($modalStore.selectedMemory.date).getMonth() + 1}`}
 							images={[$modalStore.selectedMemory.featuredImage]}
 						/>
 					</div>

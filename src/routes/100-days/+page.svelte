@@ -44,25 +44,35 @@
 
 <style>
 	.description {
-        height: fit-content;
+		height: fit-content;
 		width: fit-content;
-        filter: drop-shadow(-6px 6px 6px rgba(0, 0, 0, 0.1))
+		filter: drop-shadow(-6px 6px 6px rgba(0, 0, 0, 0.1))
 			drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.4));
 	}
 
+	.title-paper {
+		padding-right: 2rem;
+	}
+
+	h1 {
+		background-color: var(--clr-paper-light);
+	}
+
 	p {
-        width: 100%;
-        max-width: 700px;
+		width: 100%;
+		max-width: 700px;
 		background-color: var(--clr-paper-light);
 		padding: 1rem 2rem;
 		clip-path: polygon(5px 4.75%, 95.65% 2px, 95.8% 96.75%, 0.1% 99.75%);
-        font-weight: 200;
-        margin-bottom: 4rem;
+		font-weight: 200;
+		margin-bottom: 4rem;
 	}
 
-    p, li > a {
-        font-family: 'Special Elite', system-ui;
-    }
+	p,
+	li,
+	a {
+		font-family: 'Special Elite', system-ui, serif;
+	}
 
 	ul {
 		height: 100%;
@@ -88,7 +98,6 @@
 		padding: 1rem 2rem;
 		display: block;
 		width: fit-content;
-		font-family: 'Special Elite', system-ui;
 		font-size: 2rem;
 	}
 
@@ -123,7 +132,6 @@
 	}
 
 	@media (min-width: 1200px) {
-
 		ul {
 			grid-template-columns: repeat(4, 1fr); /* 2 columns on smaller screens */
 		}

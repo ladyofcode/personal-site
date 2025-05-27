@@ -136,7 +136,6 @@
 	}
 
 	li {
-		font-family: 'Domine', serif;
 		text-transform: uppercase;
 		color: #fff;
 		background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%); 

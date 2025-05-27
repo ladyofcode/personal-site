@@ -49,6 +49,11 @@
 </main>
 
 <style>
+	.title-paper {
+		background-color: var(--clr-paper-light);
+		margin-bottom: var(--space-xxxxl);
+	}
+
 	.desk {
 		height: 100%;
 		background: url('/images/desk_bg.jpg') repeat;

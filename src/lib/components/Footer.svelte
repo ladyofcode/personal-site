@@ -58,6 +58,10 @@
 		font-size: 2rem;
 	}
 
+	a {
+		font-family: 'Special Elite', system-ui, serif;
+	}
+
 	.content {
 		padding: var(--space-lg);
 		width: 100%;

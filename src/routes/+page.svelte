@@ -11,6 +11,7 @@
 	import pin4 from '../content/pins/pin4.svg';
 	import pin5 from '../content/pins/pin5.svg';
 	import pin6 from '../content/pins/pin6.svg';
+	import book1 from '$lib/img/book_tear1.png';
 	import visitedCountries from '$lib/visited-countries.json';
 
 	import { Memory } from '$lib';
@@ -23,7 +24,7 @@
 	let customIcon: any;
 	let L: any; // Declare L as a module-level variable
 	let selectedCountry = $state<{ name: string } | null>(null);
-	let selectedMemory = $state<typeof data.memories[0] | null>(null);
+	let selectedMemory = $state<(typeof data.memories)[0] | null>(null);
 	let clickedElement = $state<HTMLElement | null>(null);
 	let infoPanel = $state<HTMLElement | null>(null);
 	let initialView = $state<{ center: [number, number]; zoom: number } | null>(null);
@@ -34,7 +35,9 @@
 	const pins = [pin1, pin2, pin3, pin4, pin5, pin6];
 
 	// Import all images using Vite's glob import
-	const images = import.meta.glob<{ default: string }>('../content/img/**/*.{jpg,jpeg,png,webp}', { eager: true });
+	const images = import.meta.glob<{ default: string }>('../content/img/**/*.{jpg,jpeg,png,webp}', {
+		eager: true
+	});
 
 	function getRandomPin() {
 		const randomIndex = Math.floor(Math.random() * pins.length);
@@ -42,7 +45,7 @@
 	}
 
 	function getColor(state: boolean) {
-		return state ? '#ffffff' : '#000000';
+		return state ? '#f0dcaf' : '#000000';
 	}
 
 	function style(feature: any) {
@@ -52,7 +55,7 @@
 			opacity: 1,
 			color: 'white',
 			dashArray: '3',
-			fillOpacity: 0.6,
+			fillOpacity: 0.4,
 			fillColor: getColor(isVisited)
 		};
 	}
@@ -62,7 +65,7 @@
 
 		layer.setStyle({
 			weight: 5,
-			color: '#666',
+			color: '#696255',
 			dash: '',
 			fillOpacity: 0.7
 		});
@@ -89,14 +92,14 @@
 
 	function fitBoundsWithPanel() {
 		if (!map || !worldLayer || !selectedCountry) return;
-		
-		const activeLayers = worldLayer.getLayers().filter((layer: any) => 
-			layer.feature.properties.name === selectedCountry?.name
-		);
-		
+
+		const activeLayers = worldLayer
+			.getLayers()
+			.filter((layer: any) => layer.feature.properties.name === selectedCountry?.name);
+
 		if (activeLayers.length > 0) {
 			const featureGroup = L.featureGroup(activeLayers);
-			
+
 			if (isMobile) {
 				// On mobile, use paddingTopLeft to position at top
 				map.fitBounds(featureGroup.getBounds(), {
@@ -116,7 +119,7 @@
 	function handleCountryClick(e: any) {
 		const countryName = e.target.feature.properties.name;
 		selectedCountry = { name: countryName };
-		
+
 		// Check if mobile and set panel state with delay
 		if (isMobile) {
 			setTimeout(() => {
@@ -125,7 +128,7 @@
 		} else {
 			isPanelOpen = true;
 		}
-		
+
 		// Use requestAnimationFrame to ensure panel is rendered before adjusting bounds
 		requestAnimationFrame(fitBoundsWithPanel);
 	}
@@ -140,7 +143,7 @@
 
 	function onEachFeature(feature: any, layer: any) {
 		const isVisited = visitedCountries.countries.includes(feature.properties.name);
-		
+
 		if (isVisited) {
 			layer.on({
 				mouseover: highlightFeature,
@@ -168,7 +171,7 @@
 	}
 
 	function getMemoriesForCountry(countryName: string) {
-		const countryMemories = data.memories.filter(memory => memory.country === countryName);
+		const countryMemories = data.memories.filter((memory) => memory.country === countryName);
 		if (countryMemories.length === 0) return null;
 
 		// Group by city
@@ -180,7 +183,7 @@
 		}, {});
 
 		// Sort memories within each city by date
-		Object.keys(cityGroups).forEach(city => {
+		Object.keys(cityGroups).forEach((city) => {
 			cityGroups[city].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 		});
 
@@ -191,16 +194,11 @@
 		return new Date(dateString).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
 	}
 
-	function sanitizeGalleryId(date: string) {
-		// Replace invalid CSS selector characters with hyphens
-		return `memory-${date.replace(/[^a-zA-Z0-9-]/g, '-')}`;
-	}
-
 	function getImageData(imagePath: string | { path: string; width: number; height: number }) {
 		const path = typeof imagePath === 'string' ? imagePath : imagePath.path;
 		const imageKey = `../content/img/${path}`;
 		const image = images[imageKey];
-		
+
 		if (!image) {
 			console.error(`Image not found: ${imageKey}`);
 			return {
@@ -219,7 +217,7 @@
 		};
 	}
 
-	function handleMemoryClick(memory: typeof data.memories[0], event: MouseEvent) {
+	function handleMemoryClick(memory: (typeof data.memories)[0], event: MouseEvent) {
 		const processedMemory = {
 			...memory,
 			featuredImage: memory.featuredImage ? getImageData(memory.featuredImage) : undefined
@@ -241,7 +239,7 @@
 		if (browser) {
 			// Check if mobile on mount
 			checkMobile();
-			
+
 			// Add resize handler for mobile check
 			window.addEventListener('resize', checkMobile);
 
@@ -262,7 +260,7 @@
 					scrollWheelZoom: false,
 					zoomControl: false
 				})
-				.setView([51, -0], 2);
+				.setView([43, -0], 2);
 
 			// Store initial view
 			initialView = {
@@ -271,9 +269,11 @@
 			};
 
 			// Add zoom control to top right
-			leaflet.control.zoom({ 
-				position: 'topright'
-			}).addTo(map);
+			leaflet.control
+				.zoom({
+					position: 'topright'
+				})
+				.addTo(map);
 
 			leaflet
 				.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', {
@@ -308,11 +308,25 @@
 
 <main class="container">
 	<section class="map-container">
-		<h1>Log</h1>
+		<div class="content">
+			<div class="container-title">
+				<h1>Travel log</h1>
+				<div class="title-lines"></div>
+			</div>
+		</div>
 		<div class="map-wrapper">
+			<div class="washi-tape washi-tape-top"></div>
+			<div class="watercolour-stroke watercolour-stroke-top"></div>
+			<div class="washi-tape washi-tape-bottom"></div>
+			<div class="watercolour-stroke watercolour-stroke-bottom"></div>
 			<div class="leaflet" bind:this={mapElement}></div>
 			{#if selectedCountry}
-				<div class="info-panel" class:mobile={isMobile} class:open={isPanelOpen} bind:this={infoPanel}>
+				<div
+					class="info-panel"
+					class:mobile={isMobile}
+					class:open={isPanelOpen}
+					bind:this={infoPanel}
+				>
 					<div class="panel-header">
 						<h2>{selectedCountry.name}</h2>
 						<button class="close-button" onclick={closePanel}>×</button>
@@ -326,7 +340,7 @@
 										<li class="memory-item">
 											{#if memory.featuredImage}
 												<div class="featured-image">
-													<ImageSingle 
+													<ImageSingle
 														galleryID={`memory-${selectedCountry.name}-${city}-${i}`}
 														images={[getImageData(memory.featuredImage)]}
 													/>
@@ -334,7 +348,7 @@
 											{/if}
 											<div class="memory-header">
 												<div class="title-wrapper">
-													<time datetime={memory.date}>{formatDate(memory.date)}</time> - 
+													<time datetime={memory.date}>{formatDate(memory.date)}</time> -
 													{memory.title}
 												</div>
 											</div>
@@ -350,27 +364,58 @@
 				</div>
 			{/if}
 		</div>
+		<div class="camera-sticker"></div>
 	</section>
 
 	<section class="content">
 		<h2>Memories</h2>
-		
+
 		<ul class="memories">
 			{#each data.memories as memory}
 				<li>
-					<a href="#open-modal" onclick={(e) => { e.preventDefault(); handleMemoryClick(memory, e); }}>
-						<time datetime={memory.date}>{new Date(memory.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</time>
+					<a
+						href="#open-modal"
+						onclick={(e) => {
+							e.preventDefault();
+							handleMemoryClick(memory, e);
+						}}
+					>
+						<time datetime={memory.date}
+							>{new Date(memory.date).toLocaleDateString('en-GB', {
+								month: 'short',
+								year: 'numeric'
+							})}</time
+						>
 						<span class="title">{memory.title}</span>
 						<div class="memory-icons">
 							{#if memory.images && memory.images.length > 0}
-								<svg class="icon gallery-icon" viewBox="0 0 24 24" width="20" height="20">
-									<path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-								</svg>
+								<svg
+									class="icon gallery-icon"
+									height="20px"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 122.88 98.27"
+									><title>photos</title><path
+										d="M4.84,27.31H90.76a4.77,4.77,0,0,1,3.4,1.41,4.84,4.84,0,0,1,1.41,3.4V93.47a4.75,4.75,0,0,1-1.41,3.39,1.36,1.36,0,0,1-.25.22,4.67,4.67,0,0,1-3.18,1.19H4.81A4.81,4.81,0,0,1,0,93.47V32.12a4.77,4.77,0,0,1,1.41-3.4,4.83,4.83,0,0,1,3.4-1.41ZM32.15,0h85.92a4.77,4.77,0,0,1,3.4,1.41,4.84,4.84,0,0,1,1.41,3.4V66.16a4.75,4.75,0,0,1-1.41,3.39,1.09,1.09,0,0,1-.25.22A4.67,4.67,0,0,1,118,71h-5.38V65.22h4.51V5.71H33.06v4.2H27.31V4.81a4.77,4.77,0,0,1,1.41-3.4A4.84,4.84,0,0,1,32.12,0ZM18.5,13.66h85.92a4.75,4.75,0,0,1,3.39,1.41,4.8,4.8,0,0,1,1.41,3.39V79.81a4.77,4.77,0,0,1-1.41,3.4,1.4,1.4,0,0,1-.25.22,4.67,4.67,0,0,1-3.18,1.19H99V78.88h4.51V19.37H19.4v4.2H13.65V18.46a4.81,4.81,0,0,1,4.81-4.8ZM24.68,44a6.9,6.9,0,1,1-6.89,6.89A6.89,6.89,0,0,1,24.68,44Zm29,29.59L67.49,49.71,82.14,86.77H13.77V82.18l5.74-.29,5.75-14.08,2.87,10.06h8.62l7.47-19.25L53.7,73.56ZM89.86,33H5.75V92.53H89.86V33Z"
+									/></svg
+								>
 							{/if}
 							{#if memory.isEscapeRoom}
-								<svg class="icon escape-icon" viewBox="0 0 24 24" width="20" height="20">
-									<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-								</svg>
+								<svg
+									class="icon escape-icon"
+									height="20px"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 108.01 122.88"
+									><defs
+										><style>
+											.cls-1 {
+												fill-rule: evenodd;
+											}
+										</style></defs
+									><title>emergency-exit</title><path
+										class="cls-1"
+										d="M.5,0H15a.51.51,0,0,1,.5.5V83.38L35.16,82h.22l.24,0c2.07-.14,3.65-.26,4.73-1.23l1.86-2.17a1.12,1.12,0,0,1,1.49-.18l9.35,6.28a1.15,1.15,0,0,1,.49,1c0,.55-.19.7-.61,1.08A11.28,11.28,0,0,0,51.78,88a27.27,27.27,0,0,1-3,3.1,15.84,15.84,0,0,1-3.68,2.45c-2.8,1.36-5.45,1.54-8.59,1.76l-.24,0-.21,0L15.5,96.77v25.61a.52.52,0,0,1-.5.5H.5a.51.51,0,0,1-.5-.5V.5A.5.5,0,0,1,.5,0ZM46,59.91l9-19.12-.89-.25a12.43,12.43,0,0,0-4.77-.82c-1.9.28-3.68,1.42-5.67,2.7-.83.53-1.69,1.09-2.62,1.63-.7.33-1.51.86-2.19,1.25l-8.7,5a1.11,1.11,0,0,1-1.51-.42l-5.48-9.64a1.1,1.1,0,0,1,.42-1.51c3.43-2,7.42-4,10.75-6.14,4-2.49,7.27-4.48,11.06-5.42s8-.8,13.89,1c2.12.59,4.55,1.48,6.55,2.2,1,.35,1.8.66,2.44.87,9.86,3.29,13.19,9.66,15.78,14.6,1.12,2.13,2.09,4,3.34,5,.51.42,1.67.27,3,.09a21.62,21.62,0,0,1,2.64-.23c4.32-.41,8.66-.66,13-1a1.1,1.1,0,0,1,1.18,1L108,61.86A1.11,1.11,0,0,1,107,63L95,63.9c-5.33.38-9.19.66-15-2.47l-.12-.07a23.23,23.23,0,0,1-7.21-8.5l0,0L65.73,68.4a63.9,63.9,0,0,0,5.85,5.32c6,5,11,9.21,9.38,20.43a23.89,23.89,0,0,1-.65,2.93c-.27,1-.56,1.9-.87,2.84-2.29,6.54-4.22,13.5-6.29,20.13a1.1,1.1,0,0,1-1,.81l-11.66.78a1,1,0,0,1-.39,0,1.12,1.12,0,0,1-.75-1.38c2.45-8.12,5-16.25,7.39-24.38a29,29,0,0,0,.87-3,7,7,0,0,0,.08-2.65l0-.24a4.16,4.16,0,0,0-.73-2.22,53.23,53.23,0,0,0-8.76-5.57c-3.75-2.07-7.41-4.08-10.25-7a12.15,12.15,0,0,1-3.59-7.36A14.76,14.76,0,0,1,46,59.91ZM80.07,6.13a12.29,12.29,0,0,1,13.1,11.39v0a12.29,12.29,0,0,1-24.52,1.72v0A12.3,12.3,0,0,1,80,6.13ZM3.34,35H6.69V51.09H3.34V35Z"
+									/></svg
+								>
 							{/if}
 						</div>
 					</a>
@@ -378,6 +423,18 @@
 			{/each}
 		</ul>
 	</section>
+	<div class="bg-decorations">
+		<div class="watercolour-bg"></div>
+		<div class="washi-tape-bg washi-tape-green"></div>
+		<div class="washi-tape-bg washi-tape-black"></div>
+		<div class="quote-box">
+			<p>
+				"Afoot and light-hearted I take to the open road,
+				Healthy, free, the world before me..."
+			</p>
+			<p>— Walt Whitman, <emphasis>Song of the Open Road</emphasis></p>
+		</div>
+	</div>
 </main>
 
 <style>
@@ -386,9 +443,155 @@
 	}
 
 	main {
+		position: relative;
 		margin: var(--space-xl) 0;
-		background-color: var(--clr-paper-light);
+		background-color: var(--clr-light-parchment);
 		margin: var(--space-xxxl) auto;
+		padding: var(--space-xl);
+	}
+
+	.container-title {
+		margin-top: var(--space-xxl);
+	}
+
+	.bg-decorations {
+		position: relative;
+		inset: 0;
+		height: 200px;
+		pointer-events: none;
+		z-index: 2;
+		overflow: visible;
+	}
+
+	.watercolour-bg {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		max-width: 800px;
+		height: 400px;
+		background-image: url('$lib/img/watercolour_stroke1.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom left;
+		opacity: 0.6;
+		mix-blend-mode: multiply;
+		transform: rotate(180deg);
+		z-index: 1;
+	}
+
+	.washi-tape-bg {
+		position: absolute;
+		top: 0;
+		width: 300px;
+		height: 80px;
+		opacity: 0.9;
+		pointer-events: none;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		z-index: 2;
+	}
+
+	.washi-tape-green {
+		top: 0px;
+		width: 80%;
+		max-width: 400px;
+		left: 60px;
+		background-color: #2c4a1d;
+		transform: rotate(-1deg);
+	}
+
+	.washi-tape-black {
+		top: 40px;
+		left: 80px;
+		width: 80%;
+		max-width: 480px;
+		background-color: #000;
+	}
+
+	.washi-tape-black::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+		background-size: 8px 8px;
+		opacity: 0.3;
+	}
+
+	.washi-tape-green::after,
+	.washi-tape-black::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.1) 0%,
+			rgba(255, 255, 255, 0.2) 50%,
+			rgba(255, 255, 255, 0.1) 100%
+		);
+		pointer-events: none;
+	}
+
+	.quote-box {
+		position: absolute;
+		top: 60px;
+		left: 100px;
+		width: fit-content;
+		max-width: 400px;
+		background-color: var(--clr-paper-light);
+		padding: 2rem 2rem;
+		clip-path: polygon(2px 11%, 95.65% 2px, 95.8% 96.75%, 0.1% 99.75%);
+		z-index: 3;
+		filter: drop-shadow(-6px 6px 6px rgba(0, 0, 0, 0.1))
+			drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.4));
+	}
+
+	.quote-box p {
+		margin: 0;
+		font-style: italic;
+		font-size: 1.2rem;
+		line-height: 1.4;
+		color: var(--clr-text);
+		font-family: 'Special Elite', system-ui, serif;
+	}
+
+	main::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: -1rem;
+		width: 600px;
+		height: 36%;
+		opacity: 0.7;
+		background-image: url('$lib/img/book_tear1.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		pointer-events: none;
+		overflow: hidden;
+		z-index: 1;
+	}
+
+	.leaflet {
+		z-index: 100;
+	}
+
+	.camera-sticker {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		margin: -100px 0 0 -50px;
+		background-image: url('$lib/img/sticker_camera.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: left center;
+		pointer-events: none;
+		transform: rotate(-15deg);
+		z-index: 1000;
+		filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.2));
+	}
+
+	main > * {
+		position: relative;
+		z-index: 2;
 	}
 
 	main .leaflet {
@@ -397,36 +600,16 @@
 		max-width: var(--width-site);
 		margin: 0 auto;
 		border: 8px solid #fff;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.2);
+		box-shadow:
+			0px 4px 4px rgba(0, 0, 0, 0.2),
+			0px 2px 2px rgba(0, 0, 0, 0.2);
 	}
-
-	h1,
-	h2 {
-		font-family: 'Fredericka the Great', cursive;
-		text-transform: uppercase;
-	}
-
-	.content {
-		padding: var(--space-lg);
-		width: 100%;
-		max-width: var(--width-content);
-		margin: 0 auto;
-	}
-
-	p {
-		margin-top: 1rem;
-		font-family: "Domine", serif;
-	}
-
-	/* p {
-		font-family: 'Pridi', serif;
-		font-weight: 200;
-	} */
 
 	.memories {
 		list-style: none;
 		padding: 0;
 		margin: var(--space-lg) 0;
+		margin-bottom: 12rem;
 	}
 
 	.memories li {
@@ -434,11 +617,13 @@
 		align-items: center;
 		gap: var(--space-md);
 		margin-bottom: var(--space-sm);
-		font-family: "Domine", serif;
 		padding: var(--space-xs) var(--space-sm);
 		border-radius: 4px;
 		cursor: pointer;
 		transition: all 0.5s ease;
+		background-color: var(--clr-light-parchment);
+		position: relative;
+		z-index: 2;
 	}
 
 	.memories li:hover {
@@ -469,6 +654,8 @@
 		align-items: center;
 		min-width: 48px;
 		justify-content: flex-end;
+		position: relative;
+		z-index: 1;
 	}
 
 	.icon {
@@ -500,11 +687,91 @@
 		height: 700px; /* Desktop height */
 	}
 
+	.washi-tape {
+		position: absolute;
+		width: 60%;
+		height: 40px;
+		background-color: #5c2e0e; /* Darker base brown */
+		opacity: 0.9; /* Slightly more opaque */
+		z-index: 4; /* Ensure tape is above watercolour */
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+	}
+
+	.washi-tape-top {
+		top: -32px;
+		left: 20px;
+		transform: rotate(-1deg);
+	}
+
+	.washi-tape-bottom {
+		bottom: -32px;
+		right: 20px;
+		transform: rotate(1deg);
+	}
+
+	.watercolour-stroke {
+		position: absolute;
+		width: 100%;
+		height: 100px;
+		background-image: url('$lib/img/watercolour_stroke1.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		opacity: 0.8;
+		pointer-events: none;
+		z-index: 1;
+		mix-blend-mode: multiply;
+	}
+
+	.watercolour-stroke-top {
+		background-position: left;
+		top: -60px;
+		left: 20%;
+	}
+
+	.watercolour-stroke-bottom {
+		bottom: -60px;
+		background-position: right;
+		right: 20%;
+	}
+
+	.washi-tape::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image:
+			linear-gradient(45deg, transparent 45%, #8b4513 45%, #8b4513 55%, transparent 55%),
+			linear-gradient(-45deg, transparent 45%, #8b4513 45%, #8b4513 55%, transparent 55%);
+		background-size: 15px 15px; /* Slightly smaller pattern for more detail */
+		opacity: 0.5; /* More visible pattern */
+	}
+
+	.washi-tape::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.05) 0%,
+			rgba(255, 255, 255, 0.15) 50%,
+			rgba(255, 255, 255, 0.05) 100%
+		);
+		pointer-events: none;
+		z-index: 0;
+	}
+
 	.leaflet {
 		height: 100%;
 		width: 100%;
 		border: 8px solid #fff;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.2);
+		box-shadow:
+			0px 4px 4px rgba(0, 0, 0, 0.2),
+			0px 2px 2px rgba(0, 0, 0, 0.2);
 	}
 
 	.info-panel {
@@ -571,7 +838,6 @@
 	}
 
 	.info-panel h3 {
-		font-family: "Domine", serif;
 		font-size: 1.2rem;
 		margin: var(--space-md) 0 var(--space-sm);
 	}
@@ -605,7 +871,6 @@
 	}
 
 	.memory-header time {
-		font-family: "Domine", serif;
 		font-variant-numeric: tabular-nums;
 		color: var(--clr-text);
 		min-width: 100px;
@@ -614,7 +879,6 @@
 	}
 
 	.memory-item .description {
-		font-family: "Domine", serif;
 		color: var(--clr-text-muted);
 		font-size: 0.9em;
 		margin: 0;
@@ -623,7 +887,6 @@
 	}
 
 	.no-memories {
-		font-family: "Domine", serif;
 		font-style: italic;
 		margin: var(--space-lg) 0;
 	}
@@ -636,7 +899,7 @@
 
 	@media (max-width: 768px) {
 		.map-wrapper {
-			height: fit-content
+			height: fit-content;
 		}
 
 		.leaflet {

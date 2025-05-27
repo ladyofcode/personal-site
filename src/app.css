@@ -53,9 +53,11 @@ h6 {
 :root {
 	--clr-paper-light: #f5f3ed;
 	--clr-aged-paper: rgb(246, 238, 229);
+	--clr-light-parchment: #efe9d7;
 	--clr-dark-aged-paper: rgb(197, 190, 182);
 	--clr-charcoal-paper: #141414;
 	--clr-ink-black: #000;
+	--clr-ink-brown: #29180a;
 	--clr-leather-dark: #613105;
 	--clr-text-muted: var(--clr-dark-aged-paper);
 
@@ -100,24 +102,35 @@ body {
 	height: 100%;
 }
 
+body {
+	font-family: "Domine", serif;
+}
+
 html {
 	background: var(--clr-bg-main);
 }
 
 h1 {
-	font-size: 4rem;
-	margin-bottom: var(--space-xxl);
-}
-
-h1,
-h2 {
+	font-size: 2.4rem;
 	font-family: 'Fredericka the Great', cursive;
 	text-transform: uppercase;
+	color: var(--clr-ink-brown);
 }
+
+h2, h3, h4 {
+	font-family: 'Special Elite', system-ui;
+}
+
+p, li, a {
+	font-family: "Domine", serif;
+}
+
 
 p {
 	margin-bottom: var(--space-md);
+	margin-bottom: 1rem;
 }
+
 
 
 .container {
@@ -128,6 +141,15 @@ p {
 	padding: 4rem 2rem;
 }
 
+.container-title {
+	width: fit-content;
+}
+
+.content {
+	width: 100%;
+	max-width: var(--width-content);
+	margin: 0 auto;
+}
 
 /* 100 Days sections */
 
@@ -140,16 +162,27 @@ p {
 	height: fit-content;
 	width: fit-content;
 	filter: drop-shadow(-6px 6px 6px rgba(0, 0, 0, 0.1)) drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.4));
+	margin-bottom: var(--space-xxl);
 }
 
 .title-paper>h1 {
 	clip-path: polygon(2px 11%, 95.65% 2px, 95.8% 96.75%, 0.1% 99.75%);
-	background-color: var(--clr-paper-light);
-	padding: 1rem 2rem;
+	padding: 0;
 	height: 100%;
-	width: fit-content;
-	margin-bottom: 2rem;
-	font-family: 'Fredericka the Great', serif;
+	padding: 0;
+	padding-right: var(--space-xl);
+	padding-left: var(--space-lg);
+}
+
+@media (min-width: 650px) {
+	h1 {
+		font-size: 4rem;
+	}
+
+	.title-paper>h1 {
+		padding: 1rem 2rem;
+		padding-right: 3.2rem;
+	}
 }
 
 @media (min-width: 1024px) {
@@ -222,4 +255,32 @@ p {
 		height: 35px;
 		top: 10px;
 	}
+}
+
+/* Title decorative lines */
+.title-lines {
+	position: relative;
+	height: 12px;
+	margin: -8px 0 var(--space-lg) 0;
+	margin-bottom: var(--space-xxxxl);
+}
+
+.title-lines::before,
+.title-lines::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: rgba(67, 35, 13, 0.76);
+}
+
+.title-lines::before {
+	top: 0;
+	height: 3px;
+}
+
+.title-lines::after {
+	top: 8px;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.4);
 }
