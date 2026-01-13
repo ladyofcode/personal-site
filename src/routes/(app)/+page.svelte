@@ -5,13 +5,13 @@
 	import { onDestroy, onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	// import { company } from '$lib/test.yaml';
-	import data from '../content/memories.json';
-	import pin1 from '../content/pins/pin1.svg';
-	import pin2 from '../content/pins/pin2.svg';
-	import pin3 from '../content/pins/pin3.svg';
-	import pin4 from '../content/pins/pin4.svg';
-	import pin5 from '../content/pins/pin5.svg';
-	import pin6 from '../content/pins/pin6.svg';
+	import data from '../../content/memories.json';
+	import pin1 from '../../content/pins/pin1.svg';
+	import pin2 from '../../content/pins/pin2.svg';
+	import pin3 from '../../content/pins/pin3.svg';
+	import pin4 from '../../content/pins/pin4.svg';
+	import pin5 from '../../content/pins/pin5.svg';
+	import pin6 from '../../content/pins/pin6.svg';
 	import book1 from '$lib/img/book_tear1.png';
 	import visitedCountries from '$lib/visited-countries.json';
 
@@ -37,7 +37,7 @@
 	const pins = [pin1, pin2, pin3, pin4, pin5, pin6];
 
 	// Import all images using Vite's glob import
-	const images = import.meta.glob<{ default: string }>('../content/img/**/*.{jpg,jpeg,png,webp}', {
+	const images = import.meta.glob<{ default: string }>('../../content/img/**/*.{jpg,jpeg,png,webp}', {
 		eager: true
 	});
 
@@ -204,7 +204,7 @@
 
 	function getImageData(imagePath: string | { path: string; width: number; height: number }) {
 		const path = typeof imagePath === 'string' ? imagePath : imagePath.path;
-		const imageKey = `../content/img/${path}`;
+		const imageKey = `../../content/img/${path}`;
 		const image = images[imageKey];
 
 		if (!image) {
