@@ -9,7 +9,7 @@ const VALID_GUESTS: Record<string, { name: string; responded: boolean; response:
     'miles-rd37ppti': { name: 'Miles', responded: false, response: null },
     'avery-s2mskruv': { name: 'Avery', responded: false, response: null },
     'darcy-3rd0dsw4': { name: 'Darcy', responded: false, response: null },
-    'sahil-kh5c4d4f': { name: 'Leuca', responded: false, response: null },
+    'sahil-kh5c4d4f': { name: 'Sahil', responded: false, response: null },
     'sam-tfcfk10j': { name: 'Sam', responded: false, response: null },
     'emma-aiqm19vo': { name: 'Emma', responded: false, response: null },
     'zainab-20jkg2sm': { name: 'Zainab', responded: false, response: null },
