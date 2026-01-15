@@ -1,4 +1,4 @@
-# Multi-stage build for SvelteKit static site
+# Multi-stage build for SvelteKit with adapter-node
 FROM node:24-slim AS base
 
 # Install dependencies only when needed
@@ -7,13 +7,13 @@ WORKDIR /app
 
 # Copy package files
 COPY package.json package-lock.json* ./
-RUN npm install --omit=dev
+RUN npm ci --omit=dev
 
 # Build stage
 FROM base AS builder
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN npm install
+RUN npm ci
 
 # Copy source code
 COPY . .
@@ -24,15 +24,24 @@ RUN npx svelte-kit sync
 # Build the application
 RUN npm run build
 
-# Production stage
-FROM nginx:alpine AS runner
-WORKDIR /usr/share/nginx/html
+# Production stage - Node.js server
+FROM base AS runner
+WORKDIR /app
 
-# Copy built files from builder stage
-COPY --from=builder /app/build .
+# Create non-root user for security
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 sveltekit
+USER sveltekit
 
-# Copy nginx config for SPA routing
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy built application from builder
+COPY --from=builder --chown=sveltekit:nodejs /app/build ./build
+COPY --from=builder --chown=sveltekit:nodejs /app/package.json ./
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Copy production dependencies
+COPY --from=deps --chown=sveltekit:nodejs /app/node_modules ./node_modules
+
+ENV NODE_ENV=production
+ENV PORT=3000
+
+EXPOSE 3000
+CMD ["node", "build"]
