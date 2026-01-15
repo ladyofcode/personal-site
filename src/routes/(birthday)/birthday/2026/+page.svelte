@@ -147,7 +147,7 @@
 				This a 'mingle' style mystery instead of a sit-down dinner, where guests can move around and
 				chat while the food is being served.
 			</p>
-			<p><strong>Date:</strong> Saturday, 8th February, 2026</p>
+			<p><strong>Date:</strong> Saturday, 7th February, 2026</p>
 			<p><strong>Time:</strong> 18:00, murder mystery at 18:30</p>
 			<p><strong>Location:</strong> Tabs' House</p>
 			<p><strong>Dress code:</strong> 1950s evening wear</p>
