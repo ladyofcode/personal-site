@@ -1,3 +1,85 @@
+<script lang="ts">
+	import { fade } from 'svelte/transition';
+
+	let { data } = $props();
+
+	let isValidGuest = $derived(data.isValidGuest);
+	let guestName = $derived(data.guestName);
+	let guestCode = $derived(data.guestCode);
+
+	let submitted = $state(false);
+	let submitting = $state(false);
+	let showGenderSelect = $state(false);
+	let selectedGender = $state<'man' | 'woman' | null>(null);
+	let responseType = $state<'yes' | 'no' | ''>('');
+
+	const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxBEsRVQwnVC3KgfuQBaFo9RiRcjqgxoZluNRxGG4R9eQ9n-XZGDSUGwjUAd70WW_2O/exec';
+
+	async function handleRsvp(response: 'yes' | 'no') {
+		responseType = response;
+
+		// Invalid guests: show demo message for both buttons
+		if (!isValidGuest) {
+			submitting = true;
+			await new Promise(resolve => setTimeout(resolve, 500));
+			submitted = true;
+			submitting = false;
+			return;
+		}
+
+		// Valid guest declining
+		if (response === 'no') {
+			submitting = true;
+			try {
+				await fetch(GOOGLE_SCRIPT_URL, {
+					method: 'POST',
+					mode: 'no-cors',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						guestCode,
+						guestName,
+						response: 'no'
+					})
+				});
+				submitted = true;
+			} catch (err) {
+				console.error('Failed to submit RSVP:', err);
+				alert('Something went wrong. Please try again or message Tabs directly!');
+			} finally {
+				submitting = false;
+			}
+			return;
+		}
+
+		// Valid guest accepting: show gender selection
+		showGenderSelect = true;
+	}
+
+	async function submitGenderPreference() {
+		if (!selectedGender) return;
+
+		submitting = true;
+		try {
+			await fetch(GOOGLE_SCRIPT_URL, {
+				method: 'POST',
+				mode: 'no-cors',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					guestCode,
+					guestName,
+					response: selectedGender // 'man' or 'woman' implies attending
+				})
+			});
+			submitted = true;
+		} catch (err) {
+			console.error('Failed to submit RSVP:', err);
+			alert('Something went wrong. Please try again or message Tabs directly!');
+		} finally {
+			submitting = false;
+		}
+	}
+</script>
+
 <svelte:head>
 	<title>You're invited...</title>
 	<meta charset="UTF-8" />
@@ -13,7 +95,11 @@
 <div class="page">
 	<div class="invitation">
 		<div class="intro">
-			<h2 class="guest-name">Dearest GuestName</h2>
+			{#if isValidGuest}
+				<h2 class="guest-name">Dearest {guestName}</h2>
+			{:else}
+				<h2 class="guest-name">Dearest, use your special URL to RSVP</h2>
+			{/if}
 			<p class="preamble">
 				You are invited for a casual, non-murderous (<em>rather murderous, actually</em>) birthday
 				evening for a...
@@ -86,10 +172,71 @@
 				I'd love to see you there! I'd appreciate RSVPs by the 24th of January in order for me to
 				allocate characters and allow guests enough time to prepare any outfits.
 			</p>
-			<div class="buttons">
-				<button class="btn btn-no">I regret</button>
-				<button class="btn btn-yes">I Accept</button>
-			</div>
+			{#if submitted}
+				<p class="confirmation" in:fade={{ duration: 400, delay: 300 }}>
+					{#if isValidGuest}
+						{#if responseType === 'yes'}
+							Yay! See you there :D 💖
+						{:else}
+							Aw, not joining? You'll be missed ❤️
+						{/if}
+					{:else}
+						Please use your personal URL to RSVP
+					{/if}
+				</p>
+			{:else if showGenderSelect}
+				<div class="gender-select" in:fade={{ duration: 400, delay: 300 }}>
+					<p class="gender-prompt">
+						The roles for these mysteries are pre-made with characters in two genders. Please pick your preference bearing in mind potential co:
+					</p>
+					<div class="gender-options">
+						<label class="gender-option">
+							<input 
+								type="radio" 
+								name="gender" 
+								value="woman" 
+								checked={selectedGender === 'woman'}
+								onchange={() => selectedGender = 'woman'}
+							/>
+							<span>Woman</span>
+						</label>
+						<label class="gender-option">
+							<input 
+								type="radio" 
+								name="gender" 
+								value="man" 
+								checked={selectedGender === 'man'}
+								onchange={() => selectedGender = 'man'}
+							/>
+							<span>Man</span>
+						</label>
+					</div>
+					<button 
+						class="btn btn-yes" 
+						onclick={submitGenderPreference}
+						disabled={submitting || !selectedGender}
+					>
+						{submitting ? 'Sending...' : 'Submit preference'}
+					</button>
+				</div>
+			{:else}
+				<div class="buttons" out:fade={{ duration: 300 }}>
+					<button 
+						class="btn btn-no" 
+						onclick={() => handleRsvp('no')}
+						disabled={submitting}
+					>
+						{submitting && responseType === 'no' ? 'Sending...' : 'I regret'}
+					</button>
+					<button 
+						class="btn btn-yes" 
+						onclick={() => handleRsvp('yes')}
+						disabled={submitting}
+					>
+						{submitting && responseType === 'yes' ? 'Sending...' : 'I Accept'}
+					</button>
+				</div>
+			{/if}
 		</div>
 	</div>
 </div>
@@ -242,8 +389,8 @@
 
 	.guest-name {
 		font-family: 'Josefin Sans', sans-serif;
-		padding: 1rem 0 0 0;
 		font-size: 1.4rem;
+		padding: 1rem 4rem 0 4rem;
 	}
 
 	.preamble {
@@ -321,5 +468,46 @@
 	.btn-no:hover {
 		background: #f1e6e6;
 		color: #880c0c;
+	}
+
+	.btn:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+	.confirmation {
+		text-align: center;
+		font-size: 1.1rem;
+		margin-top: 1rem;
+	}
+
+	.gender-select {
+		text-align: center;
+	}
+
+	.gender-prompt {
+		margin-bottom: 1.5rem;
+	}
+
+	.gender-options {
+		display: flex;
+		gap: 2rem;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.gender-option {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		cursor: pointer;
+		font-size: 1.1rem;
+	}
+
+	.gender-option input[type="radio"] {
+		width: 1.2rem;
+		height: 1.2rem;
+		accent-color: rgb(45, 9, 9);
+		cursor: pointer;
 	}
 </style>
