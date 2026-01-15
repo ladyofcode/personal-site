@@ -11,6 +11,7 @@ const VALID_GUESTS: Record<string, { name: string; responded: boolean; response:
     'darcey-3rd0dsw4': { name: 'Darcey', responded: false, response: null },
     'sahil-kh5c4d4f': { name: 'Sahil', responded: false, response: null },
     'sam-tfcfk10j': { name: 'Sam', responded: false, response: null },
+    'ray-terfk10j': { name: 'Ray', responded: false, response: null },
     'emma-aiqm19vo': { name: 'Emma', responded: false, response: null },
     'zainab-20jkg2sm': { name: 'Zainab', responded: false, response: null },
     'mom-8w9cvs14': { name: 'Mom', responded: false, response: null }
