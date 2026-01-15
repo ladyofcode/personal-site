@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import escapeRoomsData from '../../content/escape-rooms.json';
+	import escapeRoomsData from '../../../content/escape-rooms.json';
 	import { debounce } from '$lib/utils';
 
 	interface Location {

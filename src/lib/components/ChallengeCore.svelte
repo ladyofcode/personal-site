@@ -9,13 +9,13 @@
 	
 	let boxes = $state<HTMLDivElement[]>([]);
 	
-	const images = import.meta.glob<{ default: string }>('../../routes/100-days/japanese/img/*.{jpg,jpeg,png,webp}', {
+	const images = import.meta.glob<{ default: string }>('../../routes/(app)/100-days/japanese/img/*.{jpg,jpeg,png,webp}', {
 		eager: true
 	});
 
 	function getImageData(media: string | { path: string; width: number; height: number }) {
 		const imagePath = typeof media === 'string' ? media : media.path;
-		const imageKey = `../../routes/100-days/japanese/img/${imagePath}`;
+		const imageKey = `../../routes/(app)/100-days/japanese/img/${imagePath}`;
 		const image = images[imageKey];
 
 		if (!image) {
