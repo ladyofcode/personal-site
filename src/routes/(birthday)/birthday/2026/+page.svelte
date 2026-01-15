@@ -10,7 +10,7 @@
 	let submitted = $state(false);
 	let submitting = $state(false);
 	let showGenderSelect = $state(false);
-	let selectedGender = $state<'man' | 'woman' | null>(null);
+	let selectedGender = $state<'man' | 'woman' | 'any' | null>(null);
 	let responseType = $state<'yes' | 'no' | ''>('');
 
 	const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxBEsRVQwnVC3KgfuQBaFo9RiRcjqgxoZluNRxGG4R9eQ9n-XZGDSUGwjUAd70WW_2O/exec';
@@ -187,7 +187,7 @@
 			{:else if showGenderSelect}
 				<div class="gender-select" in:fade={{ duration: 400, delay: 300 }}>
 					<p class="gender-prompt">
-						The roles for these mysteries are pre-made with characters in two genders. Please pick your preference bearing in mind potential co:
+						The roles for these mysteries are pre-made with characters in two genders. Please pick your preference:
 					</p>
 					<div class="gender-options">
 						<label class="gender-option">
@@ -209,6 +209,16 @@
 								onchange={() => selectedGender = 'man'}
 							/>
 							<span>Man</span>
+						</label>
+						<label class="gender-option">
+							<input 
+								type="radio" 
+								name="gender" 
+								value="any" 
+								checked={selectedGender === 'any'}
+								onchange={() => selectedGender = 'any'}
+							/>
+							<span>Any</span>
 						</label>
 					</div>
 					<button 
