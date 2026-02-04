@@ -27,7 +27,7 @@
 		<div class="description">
 			<p>
 				The challenge: keep momentum on the same thing for 100 days straight. We're on round 12 -
-				join us <a href="https://inatlantis.io/community">in Atlantis</a> if you think you're cut out
+				join us <a href="https://atlantis.build/community">in Atlantis</a> if you think you're cut out
 				for it!
 			</p>
 		</div>

@@ -1,3 +1,7 @@
+<script>
+	import Webring from '$lib/components/Webring.svelte';
+</script>
+
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About this app" />
@@ -17,7 +21,7 @@
 		<div class="content">
 			<p>
 				I'm a developer and designer currently based in Canberra, Australia. I spend a lot of time
-				abroad. I love gaming (tabletop and video games), travelling, learning to play guitar, and
+				abroad. I love gaming (tabletop and video games), exploring the world, learning to play guitar, and
 				building communities.
 			</p>
 
@@ -97,7 +101,7 @@
 					<a href="https://twitch.tv/ladyofcode">Streaming</a> and working on content creation.
 				</li>
 				<li>Building video games with <a href="https://www.solarspark.au">Solarspark</a>.</li>
-				<li>Building <a href="https://inatlantis.io">the Atlantis community</a>.</li>
+				<li>Building <a href="https://atlantis.build">the Atlantis community</a>.</li>
 				<li>Hosting workshops, streams, and projects at Artifex and Atlantis.</li>
 				<li>Developing kickass community software at Grid.</li>
 				<li>
@@ -134,6 +138,19 @@
 		</div>
 		<div class="camera-sticker"></div>
 	</section>
+
+	<section class="webrings-section">
+		<div class="content">
+			<h2>Webrings</h2>
+			<div class="webrings">
+				<Webring
+					name="Hotline Webring"
+					slug="tabs"
+					baseUrl="https://hotlinewebring.club"
+				/>
+			</div>
+		</div>
+	</section>
 </main>
 
 <style>
@@ -141,6 +158,12 @@
 		height: 40px;
 		width: 40px;
 		fill: #079992;
+	}
+
+	.webrings {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-md);
 	}
 
 	section {

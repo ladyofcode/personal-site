@@ -1,7 +1,7 @@
 <script>
 	const linksSetOne = [
 		{ title: 'Lady of Code site', path: 'https://ladyofcode.com' },
-		{ title: 'Atlantis community', path: 'https://inatlantis.io' },
+		{ title: 'Atlantis community', path: 'https://atlantis.build' },
 		{ title: 'Solarpsark', path: 'https://solarspark.au' }
 	];
 

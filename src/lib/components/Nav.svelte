@@ -16,7 +16,7 @@
 
 	const dropdownItems = [
 		{ label: 'Work', path: 'https://ladyofcode.com' },
-		{ label: 'Atlantis', path: 'https://inatlantis.io/' }
+		{ label: 'Atlantis', path: 'https://atlantis.build/' }
 	];
 
 	function handleResize() {
