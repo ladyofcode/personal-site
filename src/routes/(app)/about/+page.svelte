@@ -21,13 +21,13 @@
 		<div class="content">
 			<p>
 				I'm a developer and designer currently based in Canberra, Australia. I spend a lot of time
-				abroad. I love gaming (tabletop and video games), exploring the world, learning to play guitar, and
-				building communities.
+				abroad; a lot of it in the UK. I love gaming (tabletop and video games), exploring the world, learning to play guitar, and
+				doing projects with nerds in <a href="https://atlantis.build">Atlantis</a>.
 			</p>
 
 			<p>
 				I do 100-Day Challenges. Lately, my goals for Atlantis, Grid, and myself are becoming
-				bigger. I'm at the point of my life where I'm whittling down the side projects in order to
+				bigger. I'm at a point of my life where I'm whittling down the side projects in order to
 				focus on the main ones.
 			</p>
 
@@ -100,9 +100,8 @@
 				<li>
 					<a href="https://twitch.tv/ladyofcode">Streaming</a> and working on content creation.
 				</li>
-				<li>Building video games with <a href="https://www.solarspark.au">Solarspark</a>.</li>
-				<li>Building <a href="https://atlantis.build">the Atlantis community</a>.</li>
-				<li>Hosting workshops, streams, and projects at Artifex and Atlantis.</li>
+				<li>Doing projects with <a href="https://atlantis.build">the Atlantis community</a>.</li>
+				<li>Learning improv to get better at GMing.</li>
 				<li>Developing kickass community software at Grid.</li>
 				<li>
 					Learning how to better function as a human at <a href="https://systemyou.build"
